@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minispiercing-guwol.com/sitemap.xml
