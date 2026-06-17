@@ -9,6 +9,12 @@
   <meta name="author" content="미니스 피어싱 구월점">
   <link rel="canonical" href="https://minisguwall.netlify.app/">
   
+  <!-- Preconnect to Fonts and Preload LCP Image -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="images/post_13.jpg" as="image">
+  
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -135,7 +141,7 @@
       <div class="hero-visual">
         <div class="visual-glow"></div>
         <div class="visual-image-wrapper">
-          <img src="images/post_13.jpg" alt="미니스 피어싱 구월점 대표 귀테리어 셋팅 예시">
+          <img src="images/post_13.jpg" alt="미니스 피어싱 구월점 대표 귀테리어 셋팅 예시" fetchpriority="high" decoding="async">
           <div class="badge-tag">
             <span class="dot"></span>
             <span class="text" data-i18n="hero_badge">미니스 구월점 실시간 셋팅</span>
@@ -455,8 +461,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="posts_data.js"></script>
-  <script src="translations.js"></script>
-  <script src="app.js"></script>
+  <script src="posts_data.js" defer></script>
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <div class="gallery-img-wrapper">
-          <img src="${post.image}" alt="Minis Piercing Post" loading="lazy">
+          <img src="${post.image}" alt="Minis Piercing Post" loading="lazy" decoding="async">
         </div>
         <div class="gallery-overlay">
           <p class="gallery-desc-preview">${activeDesc}</p>
