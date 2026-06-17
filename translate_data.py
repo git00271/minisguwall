@@ -654,19 +654,22 @@ for item in posts_metadata:
     translated_posts.append(translated_item)
 
 # Load and merge automatically synced posts from instagram_synced.json
+synced_posts_list = []
 synced_json_path = os.path.join("images", "instagram_synced.json")
 if os.path.exists(synced_json_path):
     try:
         with open(synced_json_path, "r", encoding="utf-8") as f:
             synced_items = json.load(f)
             for item in synced_items:
-                translated_posts.append({
+                synced_posts_list.append({
                     "id": item["id"],
                     "category": item["category"],
                     "image": item["image"],
                     "link": item["link"],
                     "description": item["description"]
                 })
+            # Prepend synced posts in reverse order (newest first) to the final list
+            translated_posts = list(reversed(synced_posts_list)) + translated_posts
             print(f"Merged {len(synced_items)} synced posts from {synced_json_path}")
     except Exception as e:
         print(f"Error loading/merging synced posts: {e}")

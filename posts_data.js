@@ -1,5 +1,173 @@
 const INSTAGRAM_POSTS = [
   {
+    "id": "sync_DZBXvslh4X0",
+    "category": "ear",
+    "image": "images/sync_DZBXvslh4X0.webp",
+    "link": "https://www.instagram.com/p/DZBXvslh4X0/",
+    "description": {
+      "ko": "🏖️ 미니스피어싱 JUNE SPECIAL EVENT 🏖️벌써 6월이라니! 뜨거운 여름의 시작을 축하하며 미니스피어싱 구월점에서 6월의 시원한 혜택들을 준비했습니다 💖이번 달 혜택도 역대급! 놓치면 진짜 손해! 친구 태그해서 같이 더 예뻐지러 오세요 👯‍♀️👯‍♂️✨ JUNE EVENT LINE-UP ✨1️⃣ 6월 생일자 & 이름 초성 이벤트 6월 생일이거나 이름에 초성 ‘ㅈ, ㅅ, ㅎ’ 중 두 개 이상 포함되면? 결제 시 3,000원 즉시 할인! (현금 & 계좌이체 시 적용)2️⃣ 골드 피어싱 특별 혜택 14K 골드 피어싱 구매 시, 귓볼 시술이 무료! 수영장이나 바다에서도 변치 않는 금 피어싱으로 올여름 완벽 포인트 완성! ✨3️⃣ 네이버 리뷰 ‘럭키박스’ 네이버 리뷰 작성하면? 랜덤 피어싱 럭키박스 참여 기회 증정! 🎁 뭐가 나올지 모르는 두근두근 럭키박스, 선물 받아가세요!⚠️ 안내사항 모든 이벤트는 중복 적용이 불가능합니다. 이벤트 기간: 6월 한 달간📍 위치: 인천 남동구 인하로 497-28 1층 (구월동 로데오 광장 인근)⏰ 영업시간: (AM 11:00 ~ 22:00)#구월동피어싱 #인천피어싱 #특수부위피어싱 #피어싱전문점 by @guwall.minis",
+      "en": "🏖️ MINI SPEARING JUNE SPECIAL EVENT 🏖️It’s already June! To celebrate the start of hot summer, we have prepared cool benefits for June at Mini Spearing’s Guwol branch 💖This month’s benefits are the best ever! If you miss it, it's a real loss! Tag a friend and come join us to become prettier together 👯‍♀️👯‍♂️✨ JUNE EVENT LINE-UP ✨1️⃣ June birthday & name initial consonant event What if your birthday is in June or your name contains two or more of the initial consonants ‘ㅈ, ㅅ, ㅎ’? Instant discount of 3,000 won upon payment! (Applies to cash & bank transfer) 2️⃣ Gold piercing special benefits When purchasing 14K gold piercing, earlobe treatment is free! A perfect look this summer with gold piercings that won't change even in the pool or the sea! ✨3️⃣ Naver Review ‘Lucky Box’ What if you write a Naver review? Opportunity to participate in random piercing lucky box! 🎁 Receive a gift from the exciting lucky box where you never know what will come! ⚠️ Information All events cannot be applied in duplicate. Event period: During the month of June📍 Location: 1st floor, 497-28 Inha-ro, Namdong-gu, Incheon (near Rodeo Square, Guwol-dong)⏰ Business hours: (AM 11:00 ~ 22:00) #Guwol-dong piercing #Incheon piercing #Special area piercing #Piercing specialty store by @guwall.minis",
+      "ja": "🏖️ミニスピアスJUNE SPECIAL EVENT 🏖️もう6月！暑い夏の始まりを祝い、ミニスピアス旧月店で6月の涼しい特典を用意しました💖今月の特典も歴代級！見逃せば本当の損害！友達にタグして一緒にもっときれいに来てください👯‍♀️👯‍♂️✨ JUNE EVENT LINE-UPお支払い時に3,000ウォンすぐに割引！ （現金＆口座振替時適用）2️⃣ゴールドピアス特別特典14Kゴールドピアス購入時、耳たぶ施術が無料！プールや海でも変わらない金ピアスで今夏完璧ポイント完成！ ✨3️⃣ネイバーレビュー「ラッキーボックス」ネイバーレビューを書くと？ランダムピアスラッキーボックス参加機会贈呈！ 🎁何が出てくるのかわからないドキドキラッキーボックス、プレゼント受け取ってください！⚠️ガイドすべてのイベントは重複適用できません。イベント期間：6月一ヶ月間📍場所：仁川南東区インハロ497-28 1階（九月洞ロデオ広場付近）⏰営業時間：（AM 11:00〜22:00）＃九月洞ピアス＃仁川ピアス＃特殊部位ピアス",
+      "ru": "🏖️ СПЕЦИАЛЬНОЕ МЕРОПРИЯТИЕ МИНИ-КОПЕНИЕ В ИЮНЕ 🏖️ Уже июнь! Чтобы отпраздновать начало жаркого лета, мы подготовили крутые призы на июнь в филиале Mini Spearing в Гуволь 💖Привилегии в этом месяце самые лучшие! Если вы пропустите это, это настоящая потеря! Отметьте друга и присоединяйтесь к нам, чтобы вместе стать красивее 👯‍♀️👯‍♂️✨ СОСТАВ ИЮНСКОГО МЕРОПРИЯТИЯ ✨1️⃣ День рождения в июне и назовите событие, посвященное первой согласной. Что, если ваш день рождения приходится на июнь или ваше имя содержит две или более начальных согласных «ㅈ, ㅅ, ㅎ»? Мгновенная скидка 3000 вон при оплате! (Применимо к наличным и банковским переводом) 2️⃣ Особые преимущества пирсинга золотом При покупке пирсинга из 14-каратного золота обработка мочки уха бесплатна! Идеальный образ этим летом с золотым пирсингом, который не изменится ни в бассейне, ни на море! ✨3️⃣ Обзор Naver «Lucky Box». Что, если вы напишете обзор Naver? Возможность поучаствовать в случайном пирсинговом счастливчике! 🎁 Получите подарок из увлекательной счастливой коробки, где никогда не знаешь, что попадется! ⚠️ Информация Все события нельзя применять в двух экземплярах. Период проведения: в июне📍 Место проведения: 1-й этаж, 497-28 Инха-ро, Намдон-гу, Инчхон (рядом с площадью Родео, Гуволь-дон)⏰ Время работы: (11:00 ~ 22:00) #Пирсинг Гуволь-дон #Пирсинг в Инчхоне #Пирсинг в особых зонах #Специализированный магазин пирсинга от @guwall.minis",
+      "ar": "🏖️ حدث خاص لشهر يونيو لسيارات MINI 🏖️ لقد حل شهر يونيو بالفعل! للاحتفال ببداية الصيف الحار، قمنا بإعداد فوائد رائعة لشهر يونيو في فرع ميني سبيرنج في جوول 💖مزايا هذا الشهر هي الأفضل على الإطلاق! إذا فاتتها، فهي خسارة حقيقية! قم بالإشارة إلى صديق وانضم إلينا لنصبح أجمل معًا 👯‍♀️👯‍♂️✨ تشكيلة أحداث شهر يونيو ✨1️⃣ عيد ميلاد شهر يونيو وحدث الحروف الساكنة الأولية ماذا لو كان عيد ميلادك في شهر يونيو أو كان اسمك يحتوي على اثنين أو أكثر من الحروف الساكنة الأولية 'ㅈ، ㅅ، ㅎ'؟ خصم فوري بقيمة 3000 وون عند الدفع! (ينطبق على النقد والتحويل البنكي) 2️⃣ فوائد خاصة لثقب الذهب عند شراء ثقب الذهب عيار 14 قيراط، يكون علاج شحمة الأذن مجانيًا! مظهر مثالي هذا الصيف مع ثقوب ذهبية لن تتغير حتى في حمام السباحة أو البحر! ✨3️⃣ مراجعة Naver لـ \"Lucky Box\" ماذا لو كتبت مراجعة لـ Naver؟ فرصة للمشاركة في صندوق الحظ للثقب العشوائي! 🎁 احصل على هدية من صندوق الحظ المثير حيث لا تعرف أبدًا ما سيأتي! ⚠️ المعلومات لا يمكن تطبيق جميع الأحداث في نسختين. فترة الحدث: خلال شهر يونيو📍 الموقع: الطابق الأول، 497-28 Inha-ro، Namdong-gu، Incheon (بالقرب من Rodeo Square، Guwol-dong) ⏰ ساعات العمل: (11:00 صباحًا ~ 22:00) # ثقب Guwol-dong # ثقب إنتشون # ثقب منطقة خاصة # متجر ثقب متخصص بواسطة @guwall.minis",
+      "zh": "🏖️迷你矛六月特别活动🏖️已经是六月了！为了庆祝炎热的夏天开始，我们在Mini Spearing九月店准备了6月份的清凉福利💖这个月的福利是有史以来最好的！如果错过了，那就真的是损失了！ Tag你的朋友，快来和我们一起变美吧👯‍♀️👯‍♂️✨六月活动阵容✨1️⃣六月生日&名字声母活动如果你的生日是在六月，或者你的名字包含两个或多个声母‘ㅈ、ㅅ、ㅎ’怎么办？付款立减3,000韩元！ （适用于现金及银行转账） 2️⃣ 黄金穿孔特别优惠 购买14K黄金穿孔，耳垂治疗免费！今年夏天的完美造型，金色穿孔即使在泳池或大海中也不会改变！ ✨3️⃣ Naver评论“Lucky Box”如果你写Naver评论怎么办？有机会参加随机穿红幸运箱！ 🎁 从令人兴奋的幸运箱中收到一份礼物，你永远不知道会发生什么！ ⚠️须知所有活动不可重复报名。活动期间：6月期间📍地点：仁川南洞区仁荷路497-28 1楼（九月洞罗德奥广场附近）⏰营业时间：(AM 11:00 ~ 22:00) #九月洞穿孔 #仁川穿孔 #特殊区域穿孔 #Piercing 专卖店 by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DX1cwpuh7Ie",
+    "category": "ear",
+    "image": "images/sync_DX1cwpuh7Ie.webp",
+    "link": "https://www.instagram.com/p/DX1cwpuh7Ie/",
+    "description": {
+      "ko": "지원금 어디서 쓸지 고민 중? 🤔답은 정해져 있다! 바로 **미니스피어싱 구월점** ✨고유가 피해지원금으로 예쁜 피어싱 겟-챠 하러 오세요! 💳신용카드, 체크카드는 물론 지역사랑상품권까지 모두 환영입니다.지금 바로 구월동 미니로 달려오기! 🏃💨...#구월동피어싱 #인천피어싱 #고유가피해지원금 #고유가지원금 #지원금 by @guwall.minis",
+      "en": "Are you wondering where to spend your support money? 🤔The answer is fixed! Come to **Mini Piercing Guwol branch** ✨Get a beautiful piercing with the high oil price relief money! 💳Credit cards, check cards, and even local love gift certificates are all welcome. Come to Guwol-dong Mini right now! 🏃💨...#Guwol-dong piercing #Incheon piercing #High oil price damage support fund #High oil price support fund #Subsidy by @guwall.minis",
+      "ja": "支援金どこで使うのか悩んでいますか？ 🤔答えは決まっている！まさに**ミニスピアスグワール店** 💳クレジットカード、チェックカードはもちろん地元の愛商品券まで全て歓迎です。 🏃💨...＃九月洞ピアス",
+      "ru": "Вы задаетесь вопросом, куда потратить деньги на поддержку? 🤔Ответ фиксирован! Приходите в **филиал «Мини-пирсинг в Гуволе»** ✨Сделайте красивый пирсинг, выиграв деньги из-за высоких цен на нефть! 💳Кредитные карты, чековые карты и даже местные подарочные сертификаты на любовь приветствуются. Приходите в Guwol-dong Mini прямо сейчас! 🏃💨...#Пирсинг Гуволь-дон #Пирсинг Инчхон #Фонд поддержки ущерба от высоких цен на нефть #Фонд поддержки высоких цен на нефть #Субсидия @guwall.minis",
+      "ar": "هل تتساءل أين تنفق أموال الدعم الخاصة بك؟ 🤔الجواب ثابت! تعالي إلى **فرع ميني بيرسنج جوول** ✨احصلي على ثقب جميل مع أموال تخفيف أسعار النفط المرتفعة! 💳 نرحب ببطاقات الائتمان وبطاقات الشيكات وحتى شهادات هدايا الحب المحلية. تعال إلى Guwol-dong Mini الآن! 🏃💨...# ثقب جووول دونج # ثقب إنتشون # صندوق دعم الأضرار الناجمة عن ارتفاع أسعار النفط # صندوق دعم ارتفاع أسعار النفط # دعم بواسطة @guwall.minis",
+      "zh": "您想知道将支持资金花在哪里吗？ 🤔答案已经确定了！快来**迷你穿孔九月店** ✨用高油价救济金来一个美丽的穿孔吧！ 💳信用卡、支票卡、甚至当地的爱心礼券都可以。赶快来九月洞Mini吧！ 🏃💨...#九月洞穿孔#仁川穿孔#高油价损害支援基金#高油价支援基金#补贴@guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DTT4FLTgc_O",
+    "category": "ear",
+    "image": "images/sync_DTT4FLTgc_O.webp",
+    "link": "https://www.instagram.com/p/DTT4FLTgc_O/",
+    "description": {
+      "ko": "#미니스피어싱 #피어싱 #인천피어싱 #구월동피어싱 #귀테리어 #피어싱전문점 #구월동로데오 #пирсингязыка #특수부위 by @guwall.minis",
+      "en": "#Mini piercing #Piercing #Incheon piercing #Guwol-dong piercing #Ear terrier #Piercing shop #Guwol-dong rodeo #пирсингязыка #Special part by @guwall.minis",
+      "ja": "#ミニスピアス",
+      "ru": "#Мини-пирсинг #Пирсинг #Инчхонский пирсинг #Пирсинг Гуволь-дон #Ушной терьер #Магазин пирсинга #Родео Гуволь-дон #пирсингязыка #Специальная часть от @guwall.minis",
+      "ar": "# ثقب صغير # ثقب # ثقب إنتشون # ثقب Guwol-dong # جحر الأذن # متجر ثقب # Guwol-dong Rodeo # пирсингязыка # جزء خاص بواسطة @guwall.minis",
+      "zh": "#迷你穿孔 #Piercing #仁川穿孔 #九月洞穿孔 #耳梗 #穿孔店 #九月洞牛仔竞技 #пирсингязыка #特别部分 @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DZkMVzZJ-lm",
+    "category": "ear",
+    "image": "images/sync_DZkMVzZJ-lm.webp",
+    "link": "https://www.instagram.com/p/DZkMVzZJ-lm/",
+    "description": {
+      "ko": "🎀블랙 리본 한 스푼🖤_____________________________________________♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경가능_____________________________________________🕐 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm 환영🛤️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )Пирсинг в Инчхоне, район Хамбак.Ждём вас 💉#피어싱 #귀테리어 #구월동피어싱 #인천피어싱 #피어싱전문점 by @guwall.minis",
+      "en": "🎀A spoonful of black ribbon🖤_____________________________________________♥ Disposable needles and surgical tools are sterilized for safety♥ Bar length, lablette, and earring needles can be changed_____________________________________________🕐 Information on operating hoursam 11:00 - pm 22:00📞 Consultation and inquiries♥ TEL 0507-1339-5187♥ INSTAGRAM - DMs welcome🛤️ Directions♥ Room 111, 1st floor, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Incheon (across from Big Olive Young) #Incheon piercing #Piercing specialty store by @guwall.minis",
+      "ja": "🎀ブラックリボンハンスプーン🖤_____________________________________________♥使い捨て針、施術道具滅菌処理で安全性♥縫製、ラブレット、イヤリング針変更可能_____________________________________________🕐 営業時間案内am 11:00 - pm 22:00📞相談及びお問い合わせ♥ INSTAGRAM - Dm Welcome",
+      "ru": "🎀Ложка черной ленточки🖤_____________________________________________♥Одноразовые иглы и хирургические инструменты стерилизуются в целях безопасности♥ Длину стержня, лаблетки и иглы для серег можно менять___________________________________________🕐 Информация о графике работы с 11:00 до 22:00📞 Консультации и вопросы♥ ТЕЛ 0507-1339-5187♥ INSTAGRAM - пишите в директ🛤️ Как добраться♥ Комната 111, 1 этаж, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Инчхон (напротив Big Olive Young) #Инчхонский пирсинг #Специализированный магазин пирсинга от @guwall.minis",
+      "ar": "🎀ملعقة من الشريط الأسود🖤____________________________________________♥♥ يتم تعقيم الإبر والأدوات الجراحية التي تستخدم لمرة واحدة من أجل السلامة♥ يمكن تغيير طول الشريط واللابليت وإبر القرط________________________________🕐 معلومات عن ساعات العملصباحاً 11:00 - مساءً 22:00 📞 الاستشارة والاستفسارات ♥ هاتف 0507-1339-5187♥ إنستغرام - رسالة مباشرة مرحبًا 🛤️ الاتجاهات♥ غرفة 111، الطابق الأول، هيوميونغ بلازا، 10 سيونغمال رو، نامدونغ غو، إنتشون (على الجانب الآخر من بيج أوليف يونغ) #ثقب إنتشون #متجر متخصص في ثقب الثقب بواسطة @guwall.minis",
+      "zh": "🎀一勺黑丝带🖤_____________________________________________♥ 一次性针头和手术工具经过消毒以确保安全♥ 条形长度、拉花针和耳环针可以更换_____________________________________________🕐 营业时间信息上午 11:00 - 下午 22:00📞 咨询和询问♥ 电话 0507-1339-5187♥ INSTAGRAM - DM欢迎🛤️ 路线♥ 仁川市南洞区城马路 10 号孝明广场 1 楼 111 室（Big Olive Young 对面）#Incheon piercing #Piercing 专卖店 by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DZZ1O9YhgeU",
+    "category": "ear",
+    "image": "images/sync_DZZ1O9YhgeU.webp",
+    "link": "https://www.instagram.com/p/DZZ1O9YhgeU/",
+    "description": {
+      "ko": "🌊여름맞이 진주와 자개꽃의 조합🌼_____________________________________________♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경가능_____________________________________________🕐 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm 환영🛤️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )Пирсинг в Инчхоне, район Хамбак.Ждём вас 💉#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #부평피어싱 by @guwall.minis",
+      "en": "🌊A combination of summer pearls and mother-of-pearl flowers🌼_____________________________________________♥ Disposable needles and surgical tools are sterilized for safety♥ Bar length, lablette, and earring needles can be changed_____________________________________________🕐 Information on operating hoursam 11:00 - pm 22:00📞 Consultation and inquiries♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm Welcome🛤️ Directions♥ Room 111, 1st floor, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Incheon (across from Big Olive Young) #Incheon piercing #Guwol-dong piercing #Bupyeong piercing by @guwall.minis",
+      "ja": "🌊夏の真珠と紫花の組み合わせ🌼_____________________________________________♥使い捨て針、手術道具の滅菌処理で安全性♥バギル、ラブレット、イヤリング針変更可能_____________________________________________🕐 営業時間ガイドam 11:00 - pm 22:00📞 相談0507-1339-5187♥ INSTAGRAM - Dm 歓迎🛤️ 来る道♥ 仁川南東区城馬路10 孝明プラザ1階111号(大きなオリーブヤングの向かい側) #ブピョピアス by @guwall.minis",
+      "ru": "🌊Сочетание летнего жемчуга и перламутровых цветов🌼___________________________________________♥ Одноразовые иглы и хирургические инструменты стерилизуются в целях безопасности♥ Длину стержня, лаблетки и иглы для сережек можно менять___________________________________________🕐 Информация о режиме работы с 11:00 до 22:00📞 Консультации и вопросы♥ ТЕЛ. 0507-1339-5187♥ INSTAGRAM - Добро пожаловать в Директ🛤️ Как добраться♥ Комната 111, 1 этаж, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Incheon (напротив Big Olive Young) #Пирсинг в Инчхоне #Пирсинг в Гуволь-доне #Пирсинг в Бупёне от @guwall.minis",
+      "ar": "🌊مزيج من اللآلئ الصيفية وزهور عرق اللؤلؤ🌼________________________________♥ يتم تعقيم الإبر وأدوات الجراحة من أجل السلامة♥ يمكن تغيير طول الشريط واللابليت وإبر القرط _____________________________________________🕐 معلومات عن ساعات العملصباحًا من الساعة 11:00 صباحًا حتى الساعة 22:00 ظهرًا الاستشارة والاستفسار♥ TEL 0507-1339-5187♥ INSTAGRAM - ترحيب عبر البريد الإلكتروني🛤️ الاتجاهات♥ غرفة 111، الطابق الأول، هيوميونغ بلازا، 10 سيونغمال-رو، نامدونغ-غو، إنتشون (على الجانب الآخر من بيج أوليف يونغ) #ثقب إنتشون #ثقب غووول-دونغ #ثقب بوبيونغ بواسطة @guwall.minis",
+      "zh": "🌊夏季珍珠和珍珠母花的组合🌼____________________________________________________________♥ 一次性针头和手术工具经过消毒，安全♥ 条形长度、拉花针和耳环针可以更换_____________________________________________🕐 营业时间信息上午11:00 - 下午22:00📞 咨询和询问♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm 欢迎🛤️ 路线♥ 仁川市南洞区城马路 10 号孝明广场 1 楼 111 室（Big Olive Young 对面） #仁川穿孔 #九月洞穿孔 #富平穿孔 by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DZPj1FKB97I",
+    "category": "ear",
+    "image": "images/sync_DZPj1FKB97I.webp",
+    "link": "https://www.instagram.com/p/DZPj1FKB97I/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #피어싱전문점 #특수부위피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #piercing specialty store #special area piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ピアス専門店＃特殊部位ピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #специализированный магазин пирсинга #пирсинг для особых зон от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # متجر متخصص في ثقب # ثقب منطقة خاصة بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #piercing 专卖店 #特殊区域穿孔 @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DZJrCkRhdts",
+    "category": "ear",
+    "image": "images/sync_DZJrCkRhdts.webp",
+    "link": "https://www.instagram.com/p/DZJrCkRhdts/",
+    "description": {
+      "ko": "#이음카드가맹점 #e음카드 #인천피어싱 #구월동피어싱 #귀뚫는곳 by @guwall.minis",
+      "en": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis",
+      "ja": "＃イムカード加盟店＃eウムカード＃仁川ピアス＃九月洞ピアス",
+      "ru": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis",
+      "ar": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis",
+      "zh": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DXfbGctElgG",
+    "category": "ear",
+    "image": "images/sync_DXfbGctElgG.webp",
+    "link": "https://www.instagram.com/p/DXfbGctElgG/",
+    "description": {
+      "ko": "피어싱 끝판왕, 사선 피어싱(Industrial)의 압도적인 존재감! ✨연결된 라인 하나로 힙한 분위기 완성 ⚡️기존 디자인에서 더 유니크한 스타일로 시술 해 드렸어요.사선 피어싱은 각도와 위치 선정 등 디테일이 가장 중요하신 거 아시죠?미니스 피어싱 구월점의 섬세한 손길로 통증은 줄이고 예쁨은 더해드릴게요! :)📍 매장 안내• 위치: 구월동 로데오거리 광장 (인하로 489번길 28)• 시간: 매일 11:00 ~ 22:00#미니스피어싱구월점 #사선피어싱 #인더스트리얼피어싱 #구월동피어싱 #인천피어싱 by @guwall.minis",
+      "en": "The ultimate piercing, the overwhelming presence of diagonal piercing (Industrial)! ✨Complete a hip atmosphere with one connected line ⚡️We performed the procedure in a more unique style than the existing design. You know that details such as angle and positioning are the most important when it comes to diagonal piercings. With the delicate touch of mini piercing Guwol branch, we will reduce pain and add beauty! :)📍 Store Information• Location: Rodeo Street Plaza, Guwol-dong (28 Inha-ro 489beon-gil)• Hours: Daily 11:00 ~ 22:00 #MiniPiercing Guwol Branch #Diagonal Piercing #Industrial Piercing #Guwol-dong Piercing #Incheon Piercing by @guwall.minis",
+      "ja": "ピアスエンドプレート王、斜線ピアス（Industrial）の圧倒的な存在感！ ✨連結されたライン一つでヒップした雰囲気完成⚡️従来のデザインでよりユニークなスタイルで施術して差し上げました。 :)📍 店舗案内•場所：九月洞ロデオ通り広場（インハロ489番ギル28）•時間：毎日11:00〜22:00＃ミニスピアシング旧月店",
+      "ru": "Абсолютный пирсинг, подавляющее присутствие диагонального пирсинга (Индастриал)! ✨Завершите модную атмосферу одной связной линией ⚡️Мы выполнили процедуру в более уникальном стиле, чем существующий дизайн. Вы знаете, что такие детали, как угол и расположение, являются наиболее важными, когда речь идет о диагональном пирсинге. Нежным прикосновением мини-прокола веточки Гуволь мы уменьшим боль и добавим красоты! :)📍Информация о магазине • Местоположение: Rodeo Street Plaza, Гуволь-дон (28 Inha-ro 489beon-gil) • Часы работы: ежедневно с 11:00 до 22:00 #Мини-пирсинг Филиал Гуволь #Диагональный пирсинг #Промышленный пирсинг #Пирсинг Гуволь-дон #Пирсинг в Инчхоне от @guwall.minis",
+      "ar": "الثقب النهائي، الحضور الساحق للثقب القطري (الصناعي)! ✨أكمل جو الورك بخط واحد متصل ⚡️قمنا بتنفيذ الإجراء بأسلوب فريد أكثر من التصميم الحالي. أنت تعلم أن التفاصيل مثل الزاوية والموضع هي الأكثر أهمية عندما يتعلق الأمر بالثقب القطري. مع اللمسة الرقيقة لفرع Guwol المصغر، سنخفف الألم ونضيف الجمال! :)📍 معلومات المتجر • الموقع: Rodeo Street Plaza، Guwol-dong (28 Inha-ro 489beon-gil) • ساعات العمل: يوميًا 11:00 ~ 22:00 #MiniPiercing فرع Guwol #Diagonal Piercing #Industrial Piercing #Guwol-dong Piercing #Incheon Piercing بواسطة @guwall.minis",
+      "zh": "终极的穿孔，斜线穿孔的压倒性存在（工业）！ ✨用一条连接线完成时尚氛围⚡️我们以比现有设计更独特的风格进行了该过程。您知道，当涉及对角穿孔时，角度和位置等细节是最重要的。迷你穿刺九月枝的细腻触感，减轻疼痛，增添美丽！ :)📍店铺信息• 地点：九月洞罗德奥街广场 (28 Inha-ro 489beon-gil)• 营业时间：每天 11:00 ~ 22:00 #MiniPiercing 九月店 #Diagonal Piercing #Induscial Piercing #Guwol-dong Piercing #Incheon Piercing by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DXQ4gRSAQ0g",
+    "category": "face",
+    "image": "images/sync_DXQ4gRSAQ0g.webp",
+    "link": "https://www.instagram.com/p/DXQ4gRSAQ0g/",
+    "description": {
+      "ko": "입술 위의 치명적인 포인트, 달리아 & 리버스 엔젤 & 입술센터 셋팅 🥀입술 양 끝의 균형을 잡아주는 달리아 피어싱과 스파이크 포인트를 준 셉텀의 조화로 독보적인 분위기를 연출해 보세요. 단순한 시술을 넘어 고객님 페이스 라인에 최적화된 위치를 잡아드립니다. 😎━━━━━━━━━━━━━━━━━━━━♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경 가능🕒 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL : 0507-1339-5187♥ INSTAGRAM : DM 환영🗺️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )#피어싱 #입술피어싱 #달리아피어싱 #인천피어싱 #구월피어싱 by @guwall.minis",
+      "en": "The fatal point on the lips, dahlia & reverse angel & lip center setting 🥀Create an unrivaled look with the combination of the dahlia piercing that balances both ends of the lips and the septum with a spike point. Beyond a simple procedure, we provide optimal positioning for your face line. 😎━━━━━━━━━━━━━━━━━━━━♥ Disposable needles and surgical tools are sterilized for safety ♥ Bar length, lablet, and earring needles can be changed 🕒 Operating hours informationam 11:00 - pm 22:00📞 Consultation and inquiries♥ TEL: 0507-1339-5187♥ INSTAGRAM: DM welcome🗺️ Directions♥ Room 111, 1st floor, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Incheon (opposite Big Olive Young) #Piercing #Lip piercing #Dahlia piercing #Incheon piercing #Guwol piercing by @guwall.minis",
+      "ja": "唇の上の致命的なポイント、ダリア＆リバースエンジェル＆唇センターの設定🥀唇両端のバランスをとるダリアピアスとスパイクポイントを与えたセプタムの調和で独特の雰囲気を演出してみてください。簡単な施術を超えてお客様のフェイスラインに最適化された位置をつかみます。 😎━━━━━━━━━━━━━━━━━━━━♥ 使い捨て針、施術道具滅菌処理で安全性♥ 縫い目、ラブレット、イヤリング針変更可能🕒 営業時間案内am 11:00 - pm 22:00📞 相談及びお問い合わせ♥ TEL5 : DM歓迎🗺️へようこそ♥仁川南東区城馬路10孝明プラザ1階111号(大きなオリーブヤングの向かい側)#ピアス #リップピアス",
+      "ru": "Роковая точка на губах, георгин, обратный ангел и центр губ 🥀Создайте непревзойденный образ, сочетая пирсинг в виде георгина, который уравновешивает оба кончика губ и перегородку с помощью острия. Помимо простой процедуры, мы обеспечиваем оптимальное позиционирование линии вашего лица. 😎━━━━━━━━━━━━━━━━━━━━♥ Одноразовые иглы и хирургические инструменты стерилизуются в целях безопасности ♥ Длина стержня, этикетки и игл для сережек могут быть изменены 🕒 Информация о часах работы в 11:00 - 22:00📞 Консультации и вопросы♥ ТЕЛ: 0507-1339-5187♥ ИНСТАГРАМ: пишите в Директ🗺️ Как добраться♥ Комната 111, 1 этаж, Хёмён Плаза, 10 Сонмаль-ро, Намдон-гу, Инчхон (напротив Big Olive Young) #Пирсинг #Пирсинг губы #Пирсинг Далия #Пирсинг Инчхон #Пирсинг Гуволь от @guwall.minis",
+      "ar": "النقطة القاتلة على الشفاه، الداليا والملاك العكسي وإعداد مركز الشفاه 🥀 اصنعي مظهرًا لا مثيل له مع مزيج من ثقب الداليا الذي يوازن طرفي الشفاه والحاجز بنقطة مدببة. بالإضافة إلى إجراء بسيط، فإننا نقدم لك الوضع الأمثل لخط وجهك. 🕒 معلومات ساعات العمل صباحا 11:00 - مساءا 22:00 الاستشارة والاستفسارات♥ هاتف: 5187-1339-0507♥ إنستغرام: مرحباً بالرسالة المباشرة🗺️ الاتجاهات♥ غرفة 111، الطابق الأول، هيوميونغ بلازا، 10 سيونغمال رو، نامدونغ غو، إنتشون (مقابل بيج أوليف يونغ) #ثقب #ثقب الشفاه #ثقب داليا #ثقب إنتشون #غووول ثقب بواسطة @guwall.minis",
+      "zh": "嘴唇上的致命点，大丽花&反向天使&唇部中心设置🥀通过大丽花穿孔的组合创造出无与伦比的外观，平衡嘴唇两端和隔膜与尖峰。除了简单的手术外，我们还为您的脸部线条提供最佳定位。 😎──────────────────────────────────────♥ 一次性针头和手术工具经过消毒以确保安全♥ 棒长、标签和耳环针可以更换🕒 营业时间信息上午 11:00 - 下午 22:00 📞 咨询和询问♥ 电话: 0507-1339-5187♥ INSTAGRAM: DM欢迎🗺️ 路线♥ 仁川市南洞区城末路 10 号孝明广场 1 楼 111 室（Big Olive Young 对面） #Piercing #Lip piercing #Dahlia piercing #Incheon piercing #Guwol piercing by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DWYmtvrAR1x",
+    "category": "ear",
+    "image": "images/sync_DWYmtvrAR1x.webp",
+    "link": "https://www.instagram.com/p/DWYmtvrAR1x/",
+    "description": {
+      "ko": "귀 라인을 따라 시원하게 떨어지는 인더스트리얼 ✨ 각도, 간격 하나하나 맞춰서 깔끔하게 잡아드렸어요. 심플한 볼 + 포인트 스파이크 조합이라 데일리로도 부담 없이, 근데 확실히 눈에 띄는 느낌.귓바퀴 라인 예쁘신 분들한테 특히 잘 어울리는 스타일이에요. 위쪽은 콘 포인트로 살짝 더 날카롭게 잡아줘서 전체적인 밸런스가 더 살아나는 스타일입니다.핏 중요하니까 상담 후 맞춤으로 진행해드립니다. 이 스타일 저장해두고 나중에 참고하셔도 좋아요 :)#인더스트리얼피어싱 #피어싱맛집 #구월동피어싱 #미니스피어싱 #인천피어싱 by @guwall.minis",
+      "en": "Industrial style that falls coolly along the ear line ✨ We created it neatly by adjusting each angle and spacing. It's a simple combination of cheeks and point spikes, so it's easy to wear daily, but it definitely stands out. It's a style that goes especially well with those with beautiful ear lines. It is a style that has a slightly sharper cone point at the top to enhance the overall balance. Since fit is important, we will customize it after consultation. You can save this style and refer to it later :) #Industrial Piercing #Piercing Restaurant #Guwol-dong Piercing #Mini Piercing #Incheon Piercing by @guwall.minis",
+      "ja": "耳のラインに沿って涼しく落ちるインダストリアル✨角度、間隔一つ一つ合わせてすっきりとつかみました。シンプルなボール＋ポイントスパイクの組み合わせなのでデイリーでも気軽に、でも確かに目立つ感じ。耳元ラインきれいな方に特によく合うスタイルです。上はコーンポイントで少しもっとシャープに握ってくれて全体的なバランスがより生きるスタイルです。このスタイルを保存して後で参考にしてもいいです:)#インダストリアルピアス",
+      "ru": "Индустриальный стиль, круто ниспадающий вдоль линии ушей ✨ Мы создали его аккуратно, регулируя каждый угол и расстояние. Это простая комбинация щечек и острых шипов, поэтому ее легко носить ежедневно, но она определенно выделяется. Этот стиль особенно хорошо подойдет тем, у кого красивая линия ушей. Это стиль, который имеет немного более острый конус наверху для улучшения общего баланса. Поскольку подгонка важна, мы настроим ее после консультации. Вы можете сохранить этот стиль и вернуться к нему позже :) #Промышленный пирсинг #Пирсинг в ресторане #Пирсинг Гуволь-дон #Мини-пирсинг #Пирсинг в Инчхоне от @guwall.minis",
+      "ar": "النمط الصناعي الذي ينساب بشكل رائع على طول خط الأذن ✨ لقد قمنا بإنشائه بدقة من خلال ضبط كل زاوية ومسافة. إنه مزيج بسيط من الخدود والمسامير المدببة، لذلك من السهل ارتداؤه يوميًا، لكنه يبرز بالتأكيد. إنه أسلوب يتناسب بشكل جيد مع أولئك الذين لديهم خطوط أذن جميلة. إنه نمط يحتوي على نقطة مخروطية أكثر وضوحًا في الأعلى لتعزيز التوازن العام. وبما أن الملاءمة مهمة، فسوف نقوم بتخصيصها بعد التشاور. يمكنك حفظ هذا النمط والرجوع إليه لاحقًا :) #الثقب الصناعي #مطعم الثقب #ثقب Guwol-dong #ثقب صغير #ثقب إنتشون بواسطة @guwall.minis",
+      "zh": "沿着耳线凉爽落下的工业风✨ 我们通过调整各个角度和间距，巧妙地创造了它。它是脸颊和尖钉的简单组合，因此很容易日常穿着，但绝对引人注目。这种风格特别适合那些拥有美丽耳线的人。这是一种顶部有稍微尖锐的锥点以增强整体平衡的款式。由于合身很重要，我们会在咨询后进行定制。您可以保存此样式并稍后参考:) #工业穿孔 #Piercing Restaurant #Guwol-dong Piercing #Mini Piercing #Incheon Piercing by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DWItNypASPj",
+    "category": "face",
+    "image": "images/sync_DWItNypASPj.webp",
+    "link": "https://www.instagram.com/p/DWItNypASPj/",
+    "description": {
+      "ko": "은은하게 반짝이는 오늘의 무드 ✨심플한 셉텀 하나로 분위기 완성🖤꾸안꾸의 정석 느낌, 딱 이거지스윗스팟 정확하게 잡아서통증 최소화 + 깔끔한 라인으로 시술 완료 ✔️기존 사용하시던 주얼리 스타일 유지하면서자연스럽게 어울리게 세팅해드렸어요#셉텀피어싱 #셉텀 #구월동피어싱 #피어싱 #코피어싱 by @guwall.minis",
+      "en": "Today's mood is softly sparkling ✨ Complete the mood with a simple septum 🖤 The classic feel of a coffin, just like this. Minimize pain by precisely hitting the sweet spot + complete the procedure with a clean line ✔️ We set it to match naturally while maintaining the existing jewelry style #Septum piercing #Septum #Guwol-dong piercing #Piercing #Nose piercing by @guwall.minis",
+      "ja": "ほのかな輝く今日のムード#九月洞ピアス #ピアス #コピアス by @guwall.minis",
+      "ru": "Сегодняшнее настроение мягко искрится ✨ Дополните настроение простой перегородкой 🖤 Классическое ощущение гроба, вот так. Минимизируйте боль, точно попав в нужную точку + завершите процедуру чистой линией ✔️ Устанавливаем естественное соответствие, сохраняя существующий стиль украшений #Пирсинг перегородки #Пирсинг перегородки #Пирсинг Гуволь-дон #Пирсинг #Пирсинг носа от @guwall.minis",
+      "ar": "مزاج اليوم متألق بهدوء ✨ أكمل المزاج بحاجز بسيط 🖤 الشعور الكلاسيكي بالتابوت، تمامًا مثل هذا. قلل الألم عن طريق ضرب المكان الجميل بدقة + أكمل الإجراء بخط نظيف ✔️ قمنا بضبطه ليتناسب بشكل طبيعي مع الحفاظ على نمط المجوهرات الحالي",
+      "zh": "今天的心情是温柔的闪闪发光✨用一个简单的隔片来完成心情🖤棺材的经典感觉，就像这样。通过精确击中最佳位置来最大程度地减少疼痛+以干净的线条完成整个过程✔️我们将其设置为自然匹配，同时保持现有的珠宝风格#Septum piercing #Septum #Guwol-dong piercing #Piercing #Nose piercing by @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DVp0kb7geux",
+    "category": "face",
+    "image": "images/sync_DVp0kb7geux.webp",
+    "link": "https://www.instagram.com/p/DVp0kb7geux/",
+    "description": {
+      "ko": "💎💎 애슐리 피어싱 = 입술 중앙 포인트 💎💎아랫입술 중앙에 들어가는 심플한 포인트.라인 맞춰 자연스럽고 깔끔하게 세팅해드려요.ㅡㅡㅡ♥ 1회용 바늘 + 멸균 소독으로 위생 시술♥ 입술 라인/두께 보고 위치·각도 맞춤♥ 바길이·볼·스톤 교체 가능 (붓기 고려 추천)♥ 시술 후 관리 방법까지 자세히 안내ㅡㅡㅡ“자연스럽게 어울리게 해주세요”이렇게 말씀해주셔도 OK.🕘 am 11:00 - pm 22:00📞 0507-1339-5187 / DM 환영📍 인천 남동구 성말로 10 효명프라자 1층 111호(구월동 로데오 / 큰 올리브영 맞은편)Ashley Piercing ✨Clean and precise piercing with single-use sterile needles.Located in Incheon, Guwol-dong. Welcome! 💉Пирсинг Ashley ✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Добро пожаловать! 💉ثقب آشلي ✨ثقب نظيف ودقيق باستخدام إبر معقمة للاستعمال مرة واحدة.الموقع: إنشون، منطقة غوول. أهلاً بكم! �#애슐리피어싱 #입술피어싱 #구월동피어싱 #인천피어싱 #피어싱전문 by @guwall.minis",
+      "en": "💎💎 Ashley piercing = center point of the lip 💎💎 A simple point that goes into the center of the lower lip. We will set it naturally and neatly according to the line. ㅡㅡㅡ♥ Hygienic treatment with disposable needle + sterilization ♥ Position and angle adjusted based on lip line/thickness ♥ Bar length, cheek and stone can be replaced (recommended considering swelling) ♥ Detailed post-treatment care instructions Information ㅡㅡㅡYou can say, “Please let us blend in naturally.” It is OK to say.🕘 am 11:00 - pm 22:00📞 0507-1339-5187 / DM welcome📍 Room 111, 1st floor, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Incheon (opposite Guwol-dong Rodeo / Big Olive Young) Ashley Piercing ✨Clean and precise piercing with single-use sterile needles.Located in Incheon, Guwol-dong. Welcome! 💉Пирсинг Ashley ✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Добро пожаловать! 💉ثقب آشلي ✨ثقب نظيف ودقيق باستخدام إبر معقمة للاستعمال مرة واحدة.الموقع: إنشون، منطقة غوول. أهلاً بكم! �#Ashley piercing #lip piercing #Guwol-dong piercing #Incheon piercing #piercing specialist by @guwall.minis",
+      "ja": "💎💎アシュリーピアス＝唇中央ポイント 💎💎下唇の中央に入るシンプルなポイント。お勧め）♥ 施術後管理方法まで詳しくご案内111号（九月洞ロデオ/ビッグオリーブヤングの向かい側）Ashley Piercing ✨Clean and precise piercing with single-use sterile needles.Located in Incheon, Guwol-dong. Welcome! 💉Пирсинг Ashley ✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Сардэчна запрашаем! 💉ثقب آشلي ✨ثقب نظيف ودقيق باستخدام إبر معقمة للاستعمال مرة واحدة.الموقم: غوول。 أهلاً بكم! ＃アシュリーピアス＃唇ピアス＃グォルドンピアス＃仁川ピアス＃ピアス",
+      "ru": "💎💎Пирсинг Эшли = центральная точка губы 💎💎Простая точка, переходящая в центр нижней губы. Мы установим его естественно и аккуратно в соответствии с линией. ㅡㅡㅡ♥ Гигиеническая обработка одноразовой иглой + стерилизация ♥ Положение и угол регулируются в зависимости от линии/толщины губ ♥ Длина бруска, щека и камень могут быть заменены (рекомендуется с учетом отеков) ♥ Подробные инструкции по уходу после процедуры Информация ㅡㅡㅡВы можете сказать: «Пожалуйста, дайте нам слиться естественным образом». Можно говорить.🕘 утра с 11:00 до 22:00📞 0507-1339-5187 / добро пожаловать в Директ📍 Комната 111, 1-й этаж, Hyomyeong Plaza, 10 Seongmal-ro, Namdong-gu, Инчхон (напротив Guwol-dong Rodeo / Big Olive Young) Эшли Пирсинг ✨Чистота и точный пирсинг одноразовыми стерильными иглами. Расположен в Инчхоне, Гуволь-дон. Добро пожаловать! 💉Пирсинг Эшли ✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Добро пожаловать! 💉ثقب آشلي ✨ثقب نظيف ودقيق باستخدام إبر معقمة للاستعمال مرة Ответ.: Дэнни, Мэнсон Сейл. Да ладно тебе! �#Пирсинг Эшли #Пирсинг губы #Пирсинг Гуволь-дон #Пирсинг Инчхон #специалист по пирсингу от @guwall.minis",
+      "ar": "💎💎 ثقب اشلي = نقطة مركزية للشفة 💎💎 نقطة بسيطة تدخل إلى وسط الشفة السفلية. سنقوم بضبطه بشكل طبيعي ومرتب وفقًا للخط. ㅡㅡㅡ♥ علاج صحي بإبرة يمكن التخلص منها + تعقيم ♥ يتم تعديل الموضع والزاوية بناءً على خط / سمك الشفاه ♥ يمكن استبدال طول القضيب والخد والحجر (يوصى به مع الأخذ في الاعتبار التورم) ♥ معلومات مفصلة عن تعليمات الرعاية بعد العلاج ㅡㅡㅡيمكنك أن تقول، \"من فضلك دعنا نندمج بشكل طبيعي.\" لا بأس أن أقول ذلك.🕘 صباحًا 11:00 - مساءً 22:00 0507-1339-5187 / ترحيب عبر الرسائل المباشرة 📍 غرفة 111، الطابق الأول، هيوميونغ بلازا، 10 سيونغمال رو، نامدونغ غو، إنتشون (مقابل غوول دونغ روديو / بيج أوليف يونغ) Ashley Piercing ✨ثقب نظيف ودقيق للاستخدام الفردي إبر معقمة. يقع في إنتشون، جووول دونغ. مرحباً! 💉 بيرسينغ آشلي ✨ بيرسينغ حقيقي ودقيق مع استخدام معقم خاص في إيجل.إنتشون، منطقة جوفول. شكرا جزيلا! 💉ثقب آشلي ✨ثقب دقيق ودقيق باستخدام إبر معقمة للاستعمال مرة واحدة.الموقع: إنشون، منطقة الغول. أهلاً بكم! �# ثقب آشلي # ثقب الشفاه # ثقب غوول دونغ # ثقب إنتشون # أخصائي ثقب بواسطة @guwall.minis",
+      "zh": "💎💎 Ashley 穿孔 = 嘴唇的中心点 💎💎 一个简单的点，进入下唇的中心。我们会按照线条自然整齐地设置。 ㅡㅡㅡ♥一次性针头卫生治疗+消毒♥根据唇线/厚度调整位置和角度♥棒长度、脸颊和石头可以更换（考虑到肿胀，建议）♥详细的治疗后护理说明信息ㅡㅡㅡ你可以说，“请让我们自然融入。”可以这么说。🕘上午11:00 - 下午22:00📞 0507-1339-5187 / DM 欢迎📍 仁川市南洞区城末路10号孝明广场1楼111室（九月洞罗德奥/大奥利夫杨对面） Ashley 穿刺 ✨干净又精准的穿刺一次性无菌针头。位于仁川九月洞。欢迎！ 💉阿什利✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Добро пожаловать！ 💉、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 。哎呀哎呀！ �#Ashley 穿孔 #lip piercing #Guwol-dong piercing #Incheon piercing #piercing 专家 by @guwall.minis"
+    }
+  },
+  {
     "id": "post_1",
     "category": "ear",
     "image": "images/post_1.webp",
