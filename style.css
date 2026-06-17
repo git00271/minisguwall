@@ -1400,3 +1400,130 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Header Right Area */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Language Selector styling */
+.lang-select-container {
+  position: relative;
+}
+
+.lang-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-smooth);
+  appearance: none; /* Hide default arrow */
+  -webkit-appearance: none;
+  padding-right: 28px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+}
+
+.lang-select:hover, .lang-select:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.lang-select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+}
+
+/* Floating BGM Player styling */
+.bgm-player-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+.bgm-btn {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.bgm-btn:hover {
+  transform: scale(1.08);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 15px var(--accent-pink-glow);
+}
+
+.bgm-btn .music-icon {
+  font-size: 1.3rem;
+  transition: var(--transition-smooth);
+}
+
+.bgm-btn.playing .music-icon {
+  display: none;
+}
+
+/* Music Wave Animation */
+.music-wave-container {
+  display: none;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+}
+
+.bgm-btn.playing .music-wave-container {
+  display: flex;
+}
+
+.wave-bar {
+  width: 3px;
+  height: 4px;
+  background-color: var(--accent-pink);
+  border-radius: 2px;
+  animation: bounceBar 1s ease-in-out infinite alternate;
+}
+
+.wave-bar:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.wave-bar:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.wave-bar:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+@keyframes bounceBar {
+  0% { height: 4px; }
+  100% { height: 18px; }
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    margin-right: 16px;
+  }
+}
