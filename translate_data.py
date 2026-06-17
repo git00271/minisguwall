@@ -1,4 +1,5 @@
 import json
+import os
 
 # Define the templates for the repeating blocks in all 6 languages
 TEMPLATES = {
@@ -651,6 +652,24 @@ for item in posts_metadata:
             translated_item["description"][lang] = full_text
             
     translated_posts.append(translated_item)
+
+# Load and merge automatically synced posts from instagram_synced.json
+synced_json_path = os.path.join("images", "instagram_synced.json")
+if os.path.exists(synced_json_path):
+    try:
+        with open(synced_json_path, "r", encoding="utf-8") as f:
+            synced_items = json.load(f)
+            for item in synced_items:
+                translated_posts.append({
+                    "id": item["id"],
+                    "category": item["category"],
+                    "image": item["image"],
+                    "link": item["link"],
+                    "description": item["description"]
+                })
+            print(f"Merged {len(synced_items)} synced posts from {synced_json_path}")
+    except Exception as e:
+        print(f"Error loading/merging synced posts: {e}")
 
 # Write to posts_data.js
 js_content = "const INSTAGRAM_POSTS = " + json.dumps(translated_posts, ensure_ascii=False, indent=2) + ";\n"
