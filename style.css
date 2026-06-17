@@ -1116,9 +1116,9 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('images/map.png');
-  background-size: cover;
-  background-position: center;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 20px 20px;
   z-index: 1;
   opacity: 0.6;
 }
