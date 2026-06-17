@@ -14,8 +14,8 @@ const TRANSLATIONS = {
     hero_btn_guide: "시술 가이드",
     hero_badge: "미니스 구월점 실시간 셋팅",
     
-    concept_title1: "100% 위생 안심 시술",
-    concept_desc1: "1회용 시술 바늘 즉시 폐기 및 전문 고압 증기 멸균 처리기(Autoclave)를 도입하여 위생을 최우선으로 시술합니다.",
+    concept_title1: "철저한 위생 소독",
+    concept_desc1: "1회용 시술 바늘 즉시 폐기 및 UV 자외선 소독기 가동과 상시 알코올 소독을 통해 위생을 철저하게 보장합니다.",
     concept_title2: "개인 맞춤형 디자인",
     concept_desc2: "개인마다 다른 귀 모양, 페이스 라인, 연골의 두께와 각도를 세심하게 분석하여 가장 돋보이는 위치에 시술해 드립니다.",
     concept_title3: "체계적인 사후 관리",
@@ -43,8 +43,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "1회용 시술 바늘 및 일체 도구 즉시 폐기",
     safety_card_desc1: "시술에 사용되는 모든 바늘은 100% 멸균 일회용 제품이며, 개봉 과정을 직접 보여드리고 사용 후 즉시 의료용 폐기물로 분리 파기합니다.",
-    safety_card_title2: "의료용 고압 증기 멸균 처리기(Autoclave)",
-    safety_card_desc2: "사용하는 모든 금속 도구와 주얼리는 시술 전 고온 고압의 증기로 세균 및 바이러스를 100% 멸균 처리하여 사용합니다.",
+    safety_card_title2: "전문 UV 자외선 소독기 및 상시 알코올 소독",
+    safety_card_desc2: "시술에 사용하는 모든 금속 도구와 주얼리는 UV 자외선 소독기 배치 및 상시 정밀 알코올 소독을 통해 유해 세균을 100% 차단합니다.",
     safety_card_title3: "개인 맞춤형 디자인 설계",
     safety_card_desc3: "페이스 라인, 연골 구조, 피부 조직 두께를 파악하고 붓기 예측 범위까지 고려하여 통증은 낮추고 안정적인 각도로 시술을 진행합니다.",
     
@@ -96,8 +96,8 @@ const TRANSLATIONS = {
     hero_btn_guide: "Piercing Guide",
     hero_badge: "Minis Guwol Real-time Styling",
     
-    concept_title1: "100% Sterile Procedure",
-    concept_desc1: "We prioritize hygiene with single-use needles and state-of-the-art autoclave sterilization for all metal tools.",
+    concept_title1: "Thorough Hygiene Sterilization",
+    concept_desc1: "We guarantee thorough hygiene by immediately disposing of single-use needles and running UV sterilizers and real-time alcohol disinfection constantly.",
     concept_title2: "Custom Curation Design",
     concept_desc2: "We carefully analyze your ear shape, facial line, and cartilage thickness to find the most flattering locations.",
     concept_title3: "Systemic Aftercare",
@@ -125,8 +125,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "Immediate Disposal of Single-Use Needles",
     safety_card_desc1: "Every needle used is a 100% sterile, single-use product, unpacked right in front of you and disposed of immediately.",
-    safety_card_title2: "Medical Autoclave Sterilizer",
-    safety_card_desc2: "All metallic instruments and jewelry are 100% sterilized under high-pressure steam before any procedure.",
+    safety_card_title2: "Professional UV Sterilizer & Constant Alcohol Disinfection",
+    safety_card_desc2: "All metallic instruments and jewelry used in procedures are placed in UV sterilizers and undergo strict alcohol disinfection to completely eliminate harmful bacteria.",
     safety_card_title3: "Personalized Angle Design",
     safety_card_desc3: "We assess your anatomy, tissue thickness, and potential swelling to pierce at the safest, most stable angle.",
     
@@ -178,11 +178,11 @@ const TRANSLATIONS = {
     hero_btn_guide: "施術ガイド",
     hero_badge: "ミニス九月店リアルタイムコーデ",
     
-    concept_title1: "100%衛生安全施術",
-    concept_desc1: "使い捨て施術針の即時廃棄と、プロ仕様のオートクレーブ高圧蒸기滅菌器を導入し、衛生を最優先に施術します。",
+    concept_title1: "徹底した衛生消毒",
+    concept_desc1: "使い捨て施術針の即時廃棄と、UV紫外線消毒器およびリアルタイムのアルコール消毒を常時稼働し、徹底した衛生管理を保証します。",
     concept_title2: "個人カスタムデザイン",
     concept_desc2: "一人ひとり異なる耳の形、フェイスライン、軟骨の厚みや角度を細かく分析し、最も美しく映える位置に施術します。",
-    concept_title3: "徹底したアフ터ケア",
+    concept_title3: "徹底したアフターケア",
     concept_desc3: "施術して終わりではありません。腫れの進行具合に応じた接続バーの交換や消毒案内など、トラブルのないケアを提供します。",
     
     guide_sub: "Ear Piercing Guide",
@@ -207,8 +207,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "使い捨ての施術針と器具の即時廃棄",
     safety_card_desc1: "使用する針は100%滅菌済みの使い捨て品で、お客様の目の前で開封し、使用後は直ちに医療廃棄物として廃棄します。",
-    safety_card_title2: "医療用オートクレーブ高圧蒸気滅菌器",
-    safety_card_desc2: "使用するすべての金属器具とジュエリーは、施術前に高温高圧の蒸気で細菌やウイルスを100%滅菌処理します。",
+    safety_card_title2: "専門UV紫外線消毒器＆常時アルコール消毒",
+    safety_card_desc2: "施術に使用するすべての金属器具とジュエリーは、UV紫外線消毒器への配置と常時の精密アルコール消毒を通じて、有害細菌を100%遮断します。",
     safety_card_title3: "個人に合わせたアングル設計",
     safety_card_desc3: "骨格、軟骨の構造、皮膚の厚みを考慮し、腫れる範囲も計算した上で、最も安定した角度で施術を行います。",
     
@@ -260,8 +260,8 @@ const TRANSLATIONS = {
     hero_btn_guide: "Гайд по проколам",
     hero_badge: "Стилизация Minis Guwol в реальном времени",
     
-    concept_title1: "100% Стерильный прокол",
-    concept_desc1: "Мы ставим гигиену на первое место, используя одноразовые стерильные иглы и автоклавную стерилизацию медицинского класса.",
+    concept_title1: "Абсолютная гигиена и стерилизация",
+    concept_desc1: "Мы гарантируем абсолютную гигиену благодаря немедленной утилизации одноразовых игл, а также постоянному использованию УФ-стерилизаторов и спиртовой дезинфекции в реальном времени.",
     concept_title2: "Индивидуальный дизайн",
     concept_desc2: "Мы тщательно анализируем форму вашего уха, контур лица и толщину хряща для выбора наиболее подходящей точки прокола.",
     concept_title3: "Профессиональный уход",
@@ -289,8 +289,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "Немедленная утилизация одноразовых игл",
     safety_card_desc1: "Все иглы на 100% стерильны и одноразовы. Мы открываем крафт-пакет при вас и утилизируем инструмент сразу после прокола.",
-    safety_card_title2: "Медицинский автоклавный стерилизатор",
-    safety_card_desc2: "Все инструменты и украшения перед процедурой проходят 100% стерилизацию под действием высокотемпературного пара под давлением.",
+    safety_card_title2: "Профессиональный УФ-стерилизатор и постоянная спиртовая дезинфекция",
+    safety_card_desc2: "Все металлические инструменты и украшения, используемые в процедурах, помещаются в УФ-стерилизаторы и проходят тщательную дезинфекцию спиртом для 100% устранения вредных бактерий.",
     safety_card_title3: "Проектирование угла прокола",
     safety_card_desc3: "Мы оцениваем анатомическое строение, плотность ткани и будущий отек хряща для выполнения прокола под самым безопасным углом.",
     
@@ -342,8 +342,8 @@ const TRANSLATIONS = {
     hero_btn_guide: "دليل الثقب",
     hero_badge: "تنسيق فوري من مينيس غوول",
     
-    concept_title1: "تعقيم طبي بنسبة 100%",
-    concept_desc1: "نضع النظافة أولاً باستخدام إبر معقمة للاستخدام لمرة واحدة وتجهيزات تعقيم كاملة بالبخار المضغوط (Autoclave).",
+    concept_title1: "تعقيم طبي ونظافة تامة",
+    concept_desc1: "نضمن النظافة التامة من خلال التخلص الفوري من الإبر ذات الاستخدام الواحد وتشغيل أجهزة التعقيم بالأشعة فوق البنفسجية (UV) والتطهير المستمر بالكحول في الوقت الفعلي.",
     concept_title2: "تنسيق مخصص لشكل أذنك",
     concept_desc2: "نقوم بتحليل دقيق لشكل الأذن وخطوط الوجه وسماكة الغضروف لتحديد المواقع الأكثر جمالاً وملاءمة.",
     concept_title3: "متابعة ورعاية شاملة",
@@ -371,8 +371,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "التخلص الفوري من الإبر المستخدمة",
     safety_card_desc1: "جميع الإبر المستخدمة معقمة بنسبة 100% وصالحة للاستخدام لمرة واحدة فقط. نفتح العبوة أمامك مباشرة ونتخلص منها فوراً.",
-    safety_card_title2: "جهاز التعقيم الطبي البخاري (Autoclave)",
-    safety_card_desc2: "تخضع جميع الأدوات المعدنية والمجوهرات لتعقيم بخاري كامل بدرجة حرارة وضغط مرتفعين قبل أي عملية ثقب.",
+    safety_card_title2: "أجهزة تعقيم بالأشعة فوق البنفسجية والتطهير المستمر بالكحول",
+    safety_card_desc2: "تخضع جميع الأدوات المعدنية والمجوهرات المستخدمة في العمليات للتعقيم بالأشعة فوق البنفسجية والتطهير الدقيق بالكحول بنسبة 100% للقضاء على البكتيريا الضارة.",
     safety_card_title3: "تصميم زاوية الثقب بدقة",
     safety_card_desc3: "نقوم بتقييم هيكل الأذن وسماكة الجلد لتنفيذ الثقب بالزاوية الأكثر أماناً واستقراراً لتقليل الألم ومنع الالتهاب.",
     
@@ -424,8 +424,8 @@ const TRANSLATIONS = {
     hero_btn_guide: "穿刺指南",
     hero_badge: "Minis九月店实时耳饰搭配",
     
-    concept_title1: "100% 无菌安全穿刺",
-    concept_desc1: "我们坚守卫生标准，采用一次性无菌穿刺针并立即丢弃，所有金属工具均经过专业高压蒸汽灭菌器（Autoclave）彻底消毒。",
+    concept_title1: "无菌安全与彻底消毒",
+    concept_desc1: "我们坚守卫生标准，采用一次性无菌穿刺针即开即弃，并常时运行专业UV紫外线消毒设备与实时酒精彻底消毒，保障绝对卫生安全。",
     concept_title2: "个人定制搭配设计",
     concept_desc2: "我们仔细分析每位顾客独特的耳型、脸部线条以及软骨的厚度和角度，为您设计并确定最完美的穿刺位置与搭配方案。",
     concept_title3: "系统化售后护理",
@@ -453,8 +453,8 @@ const TRANSLATIONS = {
     
     safety_card_title1: "一次性穿刺针具即开即弃",
     safety_card_desc1: "所有穿刺针具均为100%无菌一次性包装，在您面前当场拆封，使用后立即作为医疗废物分类丢弃，绝不重复使用。",
-    safety_card_title2: "医疗级高压蒸汽灭菌器",
-    safety_card_desc2: "所有使用的金属器具与穿刺饰品在接触皮肤前，必须经过高温高压蒸汽灭菌设备进行100%物理杀菌处理。",
+    safety_card_title2: "专业UV紫外线消毒与常时酒精消毒",
+    safety_card_desc2: "所有使用的金属器具与穿刺饰品在接触皮肤前，必须经过UV紫外线消毒设备处理与高浓度酒精精细擦拭消毒，100%隔绝有害细菌。",
     safety_card_title3: "人体工学穿刺角度设计",
     safety_card_desc3: "充分考虑顾客的皮下组织厚度、血管分布及后期肿胀范围，以最稳妥、不易拉扯的角度进行穿刺，大幅降低痛感。",
     

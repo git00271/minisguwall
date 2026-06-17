@@ -126,7 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 3. Instagram Gallery Categorization & Render
-  function getCategory(desc) {
+  function getCategory(post) {
+    if (post.category) return post.category;
+    const desc = typeof post.description === "string" ? post.description : (post.description["ko"] || "");
     const text = desc.toLowerCase();
     const earKeywords = ["귀", "귓바퀴", "사선", "이너컨츠", "아웃컨츠", "룩", "귓불", "인더스트리얼", "헬릭스", "트라거스", "귀테리어", "helix", "conch", "tragus", "industrial"];
     const faceKeywords = ["입술", "립", "눈밑", "페이스", "더멀", "코", "셉텀", "메두사", "애슐리", "혀", "dermal", "septum", "lip", "face", "tongue"];
@@ -147,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const filtered = INSTAGRAM_POSTS.filter(post => {
       if (filter === "all") return true;
-      return getCategory(post.description) === filter;
+      return getCategory(post) === filter;
     });
 
     if (filtered.length === 0) {
@@ -161,20 +163,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     filtered.forEach(post => {
-      const category = getCategory(post.description);
+      const category = getCategory(post);
       const card = document.createElement("div");
       card.className = "gallery-item";
       card.setAttribute("data-id", post.id);
       card.setAttribute("data-category", category);
 
       const viewText = TRANSLATIONS[currentLanguage]?.gallery_view_more || "자세히 보기";
+      const activeDesc = typeof post.description === "string" ? post.description : (post.description[currentLanguage] || post.description["ko"] || "");
 
       card.innerHTML = `
         <div class="gallery-img-wrapper">
           <img src="${post.image}" alt="Minis Piercing Post" loading="lazy">
         </div>
         <div class="gallery-overlay">
-          <p class="gallery-desc-preview">${post.description}</p>
+          <p class="gallery-desc-preview">${activeDesc}</p>
           <div class="gallery-instagram-icon">
             <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -209,7 +212,8 @@ document.addEventListener("DOMContentLoaded", () => {
     modalImg.alt = "Minis Piercing Review Work";
     
     // Dynamic Hashtag Highlighting
-    const descText = post.description.replace(/#\S+/g, match => {
+    const activeDesc = typeof post.description === "string" ? post.description : (post.description[currentLanguage] || post.description["ko"] || "");
+    const descText = activeDesc.replace(/#\S+/g, match => {
       return `<span style="color: var(--accent-pink); font-weight: 500;">${match}</span>`;
     });
     modalDesc.innerHTML = descText;
