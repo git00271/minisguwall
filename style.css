@@ -721,6 +721,27 @@ section {
   color: var(--accent-pink);
 }
 
+/* Gallery Mobile Swiper */
+.gallery-swiper-container {
+  position: relative;
+}
+
+.gallery-swiper-nav {
+  display: none;
+}
+
+.gallery-swiper-arrow {
+  display: none;
+}
+
+.gallery-swiper-dots {
+  display: none;
+}
+
+.gallery-swiper-counter {
+  display: none;
+}
+
 /* Modal Styling */
 .modal-overlay {
   position: fixed;
@@ -1395,6 +1416,152 @@ footer {
   
   .booking-buttons {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile Gallery Swiper */
+  .gallery-swiper-container {
+    overflow: hidden;
+  }
+
+  .gallery-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 4px 0 20px;
+    scrollbar-width: none;
+  }
+
+  .gallery-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-item {
+    flex: 0 0 calc(100vw - 52px);
+    max-width: calc(100vw - 52px);
+    scroll-snap-align: center;
+    aspect-ratio: 1;
+    border-radius: 16px;
+  }
+
+  .gallery-item:first-child {
+    margin-left: 10px;
+  }
+
+  .gallery-item:last-child {
+    margin-right: 10px;
+  }
+
+  /* Always show overlay on mobile (no hover) */
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  /* Swiper Arrow Buttons */
+  .gallery-swiper-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .gallery-swiper-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(8px);
+  }
+
+  .gallery-swiper-arrow:active {
+    background: rgba(255, 42, 122, 0.15);
+    border-color: var(--accent-pink);
+    transform: scale(0.92);
+  }
+
+  .gallery-swiper-arrow:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* Counter (e.g., "3 / 12") */
+  .gallery-swiper-counter {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    letter-spacing: 0.5px;
+    min-width: 60px;
+    justify-content: center;
+  }
+
+  .gallery-swiper-counter .current {
+    color: var(--accent-pink);
+    font-size: 1rem;
+  }
+
+  /* Dot indicators */
+  .gallery-swiper-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .gallery-swiper-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .gallery-swiper-dot.active {
+    width: 20px;
+    border-radius: 4px;
+    background: var(--accent-pink);
+  }
+
+  /* Gallery filters: horizontal scroll on mobile */
+  .gallery-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 16px 12px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 18px;
+    font-size: 0.82rem;
   }
 }
 

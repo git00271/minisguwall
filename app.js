@@ -190,7 +190,112 @@ document.addEventListener("DOMContentLoaded", () => {
       card.addEventListener("click", () => openModal(post));
       galleryGrid.appendChild(card);
     });
+
+    // Update mobile swiper after rendering
+    updateMobileSwiper();
   }
+
+  // ---- Mobile Swiper Logic ----
+  const swiperPrev = document.getElementById("swiper-prev");
+  const swiperNext = document.getElementById("swiper-next");
+  const swiperCounter = document.getElementById("swiper-counter");
+  const swiperTotal = document.getElementById("swiper-total");
+  const swiperDots = document.getElementById("swiper-dots");
+
+  let swiperCurrentIndex = 0;
+  let swiperItemCount = 0;
+
+  function isMobileView() {
+    return window.innerWidth <= 768;
+  }
+
+  function getVisibleItems() {
+    return galleryGrid.querySelectorAll(".gallery-item");
+  }
+
+  function updateSwiperUI() {
+    if (!isMobileView()) return;
+    const items = getVisibleItems();
+    swiperItemCount = items.length;
+    if (swiperItemCount === 0) return;
+
+    // Clamp index
+    if (swiperCurrentIndex >= swiperItemCount) swiperCurrentIndex = swiperItemCount - 1;
+    if (swiperCurrentIndex < 0) swiperCurrentIndex = 0;
+
+    // Update counter
+    swiperCounter.querySelector(".current").textContent = swiperCurrentIndex + 1;
+    swiperTotal.textContent = swiperItemCount;
+
+    // Update arrow states
+    swiperPrev.disabled = swiperCurrentIndex === 0;
+    swiperNext.disabled = swiperCurrentIndex === swiperItemCount - 1;
+
+    // Update dots
+    swiperDots.innerHTML = "";
+    // Show dots only if ≤ 30 items, otherwise just use counter
+    if (swiperItemCount <= 30) {
+      items.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "gallery-swiper-dot" + (i === swiperCurrentIndex ? " active" : "");
+        dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+        dot.addEventListener("click", () => scrollToIndex(i));
+        swiperDots.appendChild(dot);
+      });
+    }
+  }
+
+  function scrollToIndex(index) {
+    const items = getVisibleItems();
+    if (index < 0 || index >= items.length) return;
+    swiperCurrentIndex = index;
+    items[index].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    updateSwiperUI();
+  }
+
+  function updateMobileSwiper() {
+    swiperCurrentIndex = 0;
+    if (isMobileView()) {
+      galleryGrid.scrollLeft = 0;
+    }
+    updateSwiperUI();
+  }
+
+  // Scroll-based index detection
+  let swiperScrollTimeout;
+  galleryGrid.addEventListener("scroll", () => {
+    if (!isMobileView()) return;
+    clearTimeout(swiperScrollTimeout);
+    swiperScrollTimeout = setTimeout(() => {
+      const items = getVisibleItems();
+      if (items.length === 0) return;
+      const containerRect = galleryGrid.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+      let closestIndex = 0;
+      let closestDist = Infinity;
+      items.forEach((item, i) => {
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
+        const dist = Math.abs(itemCenter - containerCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestIndex = i;
+        }
+      });
+      swiperCurrentIndex = closestIndex;
+      updateSwiperUI();
+    }, 60);
+  }, { passive: true });
+
+  // Arrow buttons
+  swiperPrev.addEventListener("click", () => scrollToIndex(swiperCurrentIndex - 1));
+  swiperNext.addEventListener("click", () => scrollToIndex(swiperCurrentIndex + 1));
+
+  // Recalculate on resize
+  window.addEventListener("resize", () => {
+    updateSwiperUI();
+  });
+  // ---- End Mobile Swiper Logic ----
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
