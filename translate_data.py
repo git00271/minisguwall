@@ -1,5 +1,6 @@
 import json
 import os
+from PIL import Image
 
 # Define the templates for the repeating blocks in all 6 languages
 TEMPLATES = {
@@ -621,6 +622,7 @@ for item in posts_metadata:
         "id": post_id,
         "category": item["category"],
         "image": item["image"],
+        "image_mobile": item["image"].replace("images/", "images/mobile/"),
         "link": item["link"],
         "description": {}
     }
@@ -665,6 +667,7 @@ if os.path.exists(synced_json_path):
                     "id": item["id"],
                     "category": item["category"],
                     "image": item["image"],
+                    "image_mobile": item["image"].replace("images/", "images/mobile/"),
                     "link": item["link"],
                     "description": item["description"]
                 })
@@ -674,10 +677,51 @@ if os.path.exists(synced_json_path):
     except Exception as e:
         print(f"Error loading/merging synced posts: {e}")
 
+# Function to generate mobile-optimized versions of gallery images (resizing to max 480px width)
+def generate_mobile_images(posts):
+    mobile_dir = os.path.join("images", "mobile")
+    if not os.path.exists(mobile_dir):
+        os.makedirs(mobile_dir)
+        print(f"Created mobile images directory: {mobile_dir}")
+        
+    generated_count = 0
+    for post in posts:
+        orig_path = post["image"]
+        if not os.path.exists(orig_path):
+            continue
+            
+        filename = os.path.basename(orig_path)
+        mobile_path = os.path.join(mobile_dir, filename)
+        
+        # Determine if we need to resize (if mobile image doesn't exist or is older than original)
+        if not os.path.exists(mobile_path) or os.path.getmtime(orig_path) > os.path.getmtime(mobile_path):
+            try:
+                with Image.open(orig_path) as img:
+                    w, h = img.size
+                    max_width = 480
+                    if w > max_width:
+                        ratio = max_width / float(w)
+                        new_h = int(float(h) * ratio)
+                        # Use LANCZOS for high quality downsampling
+                        img_resized = img.resize((max_width, new_h), Image.Resampling.LANCZOS)
+                        img_resized.save(mobile_path, "WEBP", quality=75)
+                    else:
+                        # If already smaller than 480px, just save it to mobile directory
+                        img.save(mobile_path, "WEBP", quality=75)
+                generated_count += 1
+            except Exception as e:
+                print(f"Error generating mobile image for {orig_path}: {e}")
+                
+    if generated_count > 0:
+        print(f"Generated/updated {generated_count} mobile-optimized images in {mobile_dir}")
+
+# Automatically generate mobile images
+generate_mobile_images(translated_posts)
+
 # Write to posts_data.js
 js_content = "const INSTAGRAM_POSTS = " + json.dumps(translated_posts, ensure_ascii=False, indent=2) + ";\n"
 
 with open("posts_data.js", "w", encoding="utf-8") as f:
     f.write(js_content)
 
-print(f"Successfully compiled posts_data.js with {len(translated_posts)} translated posts.")
+print(f"Successfully compiled posts_data.js with {len(translated_posts)} translated posts (with mobile optimized images).")

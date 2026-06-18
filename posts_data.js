@@ -3,6 +3,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DZBXvslh4X0",
     "category": "ear",
     "image": "images/sync_DZBXvslh4X0.webp",
+    "image_mobile": "images/mobile/sync_DZBXvslh4X0.webp",
     "link": "https://www.instagram.com/p/DZBXvslh4X0/",
     "description": {
       "ko": "🏖️ 미니스피어싱 JUNE SPECIAL EVENT 🏖️벌써 6월이라니! 뜨거운 여름의 시작을 축하하며 미니스피어싱 구월점에서 6월의 시원한 혜택들을 준비했습니다 💖이번 달 혜택도 역대급! 놓치면 진짜 손해! 친구 태그해서 같이 더 예뻐지러 오세요 👯‍♀️👯‍♂️✨ JUNE EVENT LINE-UP ✨1️⃣ 6월 생일자 & 이름 초성 이벤트 6월 생일이거나 이름에 초성 ‘ㅈ, ㅅ, ㅎ’ 중 두 개 이상 포함되면? 결제 시 3,000원 즉시 할인! (현금 & 계좌이체 시 적용)2️⃣ 골드 피어싱 특별 혜택 14K 골드 피어싱 구매 시, 귓볼 시술이 무료! 수영장이나 바다에서도 변치 않는 금 피어싱으로 올여름 완벽 포인트 완성! ✨3️⃣ 네이버 리뷰 ‘럭키박스’ 네이버 리뷰 작성하면? 랜덤 피어싱 럭키박스 참여 기회 증정! 🎁 뭐가 나올지 모르는 두근두근 럭키박스, 선물 받아가세요!⚠️ 안내사항 모든 이벤트는 중복 적용이 불가능합니다. 이벤트 기간: 6월 한 달간📍 위치: 인천 남동구 인하로 497-28 1층 (구월동 로데오 광장 인근)⏰ 영업시간: (AM 11:00 ~ 22:00)#구월동피어싱 #인천피어싱 #특수부위피어싱 #피어싱전문점 by @guwall.minis",
@@ -17,6 +18,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DX1cwpuh7Ie",
     "category": "ear",
     "image": "images/sync_DX1cwpuh7Ie.webp",
+    "image_mobile": "images/mobile/sync_DX1cwpuh7Ie.webp",
     "link": "https://www.instagram.com/p/DX1cwpuh7Ie/",
     "description": {
       "ko": "지원금 어디서 쓸지 고민 중? 🤔답은 정해져 있다! 바로 **미니스피어싱 구월점** ✨고유가 피해지원금으로 예쁜 피어싱 겟-챠 하러 오세요! 💳신용카드, 체크카드는 물론 지역사랑상품권까지 모두 환영입니다.지금 바로 구월동 미니로 달려오기! 🏃💨...#구월동피어싱 #인천피어싱 #고유가피해지원금 #고유가지원금 #지원금 by @guwall.minis",
@@ -31,6 +33,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DTT4FLTgc_O",
     "category": "ear",
     "image": "images/sync_DTT4FLTgc_O.webp",
+    "image_mobile": "images/mobile/sync_DTT4FLTgc_O.webp",
     "link": "https://www.instagram.com/p/DTT4FLTgc_O/",
     "description": {
       "ko": "#미니스피어싱 #피어싱 #인천피어싱 #구월동피어싱 #귀테리어 #피어싱전문점 #구월동로데오 #пирсингязыка #특수부위 by @guwall.minis",
@@ -45,6 +48,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DZkMVzZJ-lm",
     "category": "ear",
     "image": "images/sync_DZkMVzZJ-lm.webp",
+    "image_mobile": "images/mobile/sync_DZkMVzZJ-lm.webp",
     "link": "https://www.instagram.com/p/DZkMVzZJ-lm/",
     "description": {
       "ko": "🎀블랙 리본 한 스푼🖤_____________________________________________♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경가능_____________________________________________🕐 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm 환영🛤️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )Пирсинг в Инчхоне, район Хамбак.Ждём вас 💉#피어싱 #귀테리어 #구월동피어싱 #인천피어싱 #피어싱전문점 by @guwall.minis",
@@ -59,6 +63,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DZZ1O9YhgeU",
     "category": "ear",
     "image": "images/sync_DZZ1O9YhgeU.webp",
+    "image_mobile": "images/mobile/sync_DZZ1O9YhgeU.webp",
     "link": "https://www.instagram.com/p/DZZ1O9YhgeU/",
     "description": {
       "ko": "🌊여름맞이 진주와 자개꽃의 조합🌼_____________________________________________♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경가능_____________________________________________🕐 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL 0507-1339-5187♥ INSTAGRAM - Dm 환영🛤️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )Пирсинг в Инчхоне, район Хамбак.Ждём вас 💉#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #부평피어싱 by @guwall.minis",
@@ -73,6 +78,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DZPj1FKB97I",
     "category": "ear",
     "image": "images/sync_DZPj1FKB97I.webp",
+    "image_mobile": "images/mobile/sync_DZPj1FKB97I.webp",
     "link": "https://www.instagram.com/p/DZPj1FKB97I/",
     "description": {
       "ko": "#구월동피어싱 #인천피어싱 #피어싱 #피어싱전문점 #특수부위피어싱 by @guwall.minis",
@@ -87,6 +93,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DZJrCkRhdts",
     "category": "ear",
     "image": "images/sync_DZJrCkRhdts.webp",
+    "image_mobile": "images/mobile/sync_DZJrCkRhdts.webp",
     "link": "https://www.instagram.com/p/DZJrCkRhdts/",
     "description": {
       "ko": "#이음카드가맹점 #e음카드 #인천피어싱 #구월동피어싱 #귀뚫는곳 by @guwall.minis",
@@ -101,6 +108,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DXfbGctElgG",
     "category": "ear",
     "image": "images/sync_DXfbGctElgG.webp",
+    "image_mobile": "images/mobile/sync_DXfbGctElgG.webp",
     "link": "https://www.instagram.com/p/DXfbGctElgG/",
     "description": {
       "ko": "피어싱 끝판왕, 사선 피어싱(Industrial)의 압도적인 존재감! ✨연결된 라인 하나로 힙한 분위기 완성 ⚡️기존 디자인에서 더 유니크한 스타일로 시술 해 드렸어요.사선 피어싱은 각도와 위치 선정 등 디테일이 가장 중요하신 거 아시죠?미니스 피어싱 구월점의 섬세한 손길로 통증은 줄이고 예쁨은 더해드릴게요! :)📍 매장 안내• 위치: 구월동 로데오거리 광장 (인하로 489번길 28)• 시간: 매일 11:00 ~ 22:00#미니스피어싱구월점 #사선피어싱 #인더스트리얼피어싱 #구월동피어싱 #인천피어싱 by @guwall.minis",
@@ -115,6 +123,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DXQ4gRSAQ0g",
     "category": "face",
     "image": "images/sync_DXQ4gRSAQ0g.webp",
+    "image_mobile": "images/mobile/sync_DXQ4gRSAQ0g.webp",
     "link": "https://www.instagram.com/p/DXQ4gRSAQ0g/",
     "description": {
       "ko": "입술 위의 치명적인 포인트, 달리아 & 리버스 엔젤 & 입술센터 셋팅 🥀입술 양 끝의 균형을 잡아주는 달리아 피어싱과 스파이크 포인트를 준 셉텀의 조화로 독보적인 분위기를 연출해 보세요. 단순한 시술을 넘어 고객님 페이스 라인에 최적화된 위치를 잡아드립니다. 😎━━━━━━━━━━━━━━━━━━━━♥ 일회용 바늘, 시술 도구 멸균처리로 안전성♥ 바길이, 라블렛, 귀걸이침 변경 가능🕒 운영 시간 안내am 11:00 - pm 22:00📞 상담 및 문의♥ TEL : 0507-1339-5187♥ INSTAGRAM : DM 환영🗺️ 오시는길♥ 인천 남동구 성말로 10 효명프라자 1층 111호( 큰 올리브영 맞은편 )#피어싱 #입술피어싱 #달리아피어싱 #인천피어싱 #구월피어싱 by @guwall.minis",
@@ -129,6 +138,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DWYmtvrAR1x",
     "category": "ear",
     "image": "images/sync_DWYmtvrAR1x.webp",
+    "image_mobile": "images/mobile/sync_DWYmtvrAR1x.webp",
     "link": "https://www.instagram.com/p/DWYmtvrAR1x/",
     "description": {
       "ko": "귀 라인을 따라 시원하게 떨어지는 인더스트리얼 ✨ 각도, 간격 하나하나 맞춰서 깔끔하게 잡아드렸어요. 심플한 볼 + 포인트 스파이크 조합이라 데일리로도 부담 없이, 근데 확실히 눈에 띄는 느낌.귓바퀴 라인 예쁘신 분들한테 특히 잘 어울리는 스타일이에요. 위쪽은 콘 포인트로 살짝 더 날카롭게 잡아줘서 전체적인 밸런스가 더 살아나는 스타일입니다.핏 중요하니까 상담 후 맞춤으로 진행해드립니다. 이 스타일 저장해두고 나중에 참고하셔도 좋아요 :)#인더스트리얼피어싱 #피어싱맛집 #구월동피어싱 #미니스피어싱 #인천피어싱 by @guwall.minis",
@@ -143,6 +153,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DWItNypASPj",
     "category": "face",
     "image": "images/sync_DWItNypASPj.webp",
+    "image_mobile": "images/mobile/sync_DWItNypASPj.webp",
     "link": "https://www.instagram.com/p/DWItNypASPj/",
     "description": {
       "ko": "은은하게 반짝이는 오늘의 무드 ✨심플한 셉텀 하나로 분위기 완성🖤꾸안꾸의 정석 느낌, 딱 이거지스윗스팟 정확하게 잡아서통증 최소화 + 깔끔한 라인으로 시술 완료 ✔️기존 사용하시던 주얼리 스타일 유지하면서자연스럽게 어울리게 세팅해드렸어요#셉텀피어싱 #셉텀 #구월동피어싱 #피어싱 #코피어싱 by @guwall.minis",
@@ -157,6 +168,7 @@ const INSTAGRAM_POSTS = [
     "id": "sync_DVp0kb7geux",
     "category": "face",
     "image": "images/sync_DVp0kb7geux.webp",
+    "image_mobile": "images/mobile/sync_DVp0kb7geux.webp",
     "link": "https://www.instagram.com/p/DVp0kb7geux/",
     "description": {
       "ko": "💎💎 애슐리 피어싱 = 입술 중앙 포인트 💎💎아랫입술 중앙에 들어가는 심플한 포인트.라인 맞춰 자연스럽고 깔끔하게 세팅해드려요.ㅡㅡㅡ♥ 1회용 바늘 + 멸균 소독으로 위생 시술♥ 입술 라인/두께 보고 위치·각도 맞춤♥ 바길이·볼·스톤 교체 가능 (붓기 고려 추천)♥ 시술 후 관리 방법까지 자세히 안내ㅡㅡㅡ“자연스럽게 어울리게 해주세요”이렇게 말씀해주셔도 OK.🕘 am 11:00 - pm 22:00📞 0507-1339-5187 / DM 환영📍 인천 남동구 성말로 10 효명프라자 1층 111호(구월동 로데오 / 큰 올리브영 맞은편)Ashley Piercing ✨Clean and precise piercing with single-use sterile needles.Located in Incheon, Guwol-dong. Welcome! 💉Пирсинг Ashley ✨Чистый и аккуратный пирсинг с использованием одноразовых стерильных игл.Инчхон, район Гуволь. Добро пожаловать! 💉ثقب آشلي ✨ثقب نظيف ودقيق باستخدام إبر معقمة للاستعمال مرة واحدة.الموقع: إنشون، منطقة غوول. أهلاً بكم! �#애슐리피어싱 #입술피어싱 #구월동피어싱 #인천피어싱 #피어싱전문 by @guwall.minis",
@@ -171,6 +183,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_1",
     "category": "ear",
     "image": "images/post_1.webp",
+    "image_mobile": "images/mobile/post_1.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DXfbGctElgG/",
     "description": {
       "ko": "피어싱 끝판왕, 사선 피어싱(Industrial)의 압도적인 존재감! ✨\n연결된 라인 하나로 힙한 분위기 완성 ⚡️\n기존 디자인에서 더 유니크한 스타일로 시술 해 드렸어요.\n사선 피어싱은 각도와 위치 선정 등 디테일이 가장 중요하신 거 아시죠?\n미니스 피어싱 구월점의 섬세한 손길로 통증은 줄이고 예쁨은 더해드릴게요! :)",
@@ -185,6 +198,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_2",
     "category": "face",
     "image": "images/post_2.webp",
+    "image_mobile": "images/mobile/post_2.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DXQ4gRSAQ0g/",
     "description": {
       "ko": "입술 위의 치명적인 포인트, 달리아 & 리버스 엔젤 & 입술센터 셋팅 🥀\n입술 양 끝의 균형을 잡아주는 달리아 피어싱과 스파이크 포인트를 준 셉텀의 조화로 독보적인 분위기를 연출해 보세요. 단순한 시술을 넘어 고객님 페이스 라인에 최적화된 위치를 잡아드립니다. 😎\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #입술피어싱 #달리아피어싱 #인천피어싱 #구월피어싱",
@@ -199,6 +213,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_3",
     "category": "ear",
     "image": "images/post_3.webp",
+    "image_mobile": "images/mobile/post_3.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DWYmtvrAR1x/",
     "description": {
       "ko": "귀 라인을 따라 시원하게 떨어지는 인더스트리얼 ✨ \n각도, 간격 하나하나 맞춰서 깔끔하게 잡아드렸어요. \n심플한 볼 + 포인트 스파이크 조합이라 \n데일리로도 부담 없이, 근데 확실히 눈에 띄는 느낌.\n\n귓바퀴 라인 예쁘신 분들한테 특히 잘 어울리는 스타일이에요. \n위쪽은 콘 포인트로 살짝 더 날카롭게 잡아줘서 \n전체적인 밸런스가 더 살아나는 스타일입니다.\n\n핏 중요하니까 상담 후 맞춤으로 진행해드립니다. \n이 스타일 저장해두고 나중에 참고하셔도 좋아요 :)",
@@ -213,6 +228,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_4",
     "category": "face",
     "image": "images/post_4.webp",
+    "image_mobile": "images/mobile/post_4.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DWItNypASPj/",
     "description": {
       "ko": "은은하게 반짝이는 오늘의 무드 ✨\n심플한 셉텀 하나로 분위기 완성🖤\n꾸안꾸의 정석 느낌, 딱 이거지\n\n스윗스팟 정확하게 잡아서\n통증 최소화 + 깔끔한 라인으로 시술 완료 ✔️\n기존 사용하시던 주얼리 스타일 유지하면서\n자연스럽게 어울리게 세팅해드렸어요",
@@ -227,6 +243,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_5",
     "category": "face",
     "image": "images/post_5.webp",
+    "image_mobile": "images/mobile/post_5.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DVp0kb7geux/",
     "description": {
       "ko": "💎💎 애슐리 피어싱 = 입술 중앙 포인트 💎💎\n아랫입술 중앙에 들어가는 심플한 포인트.\n라인 맞춰 자연스럽고 깔끔하게 세팅해드려요.\n\n“자연스럽게 어울리게 해주세요”\n이렇게 말씀해주셔도 OK.\n\nAshley Piercing ✨\nClean and precise piercing with single-use sterile needles.\nLocated in Incheon, Guwol-dong. Welcome! 💉\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )",
@@ -241,6 +258,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_6",
     "category": "face",
     "image": "images/post_6.webp",
+    "image_mobile": "images/mobile/post_6.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DUxjafvAdr9/",
     "description": {
       "ko": "🖤 메두사 피어싱 🖤\n딱 중앙. 딱 이 무드.\n은근한데 시선은 다 가져가는 포인트.\n\n과한 보정 NO,\n자연스러운 피부결 + 위치 감각으로\n시간 지나도 예쁜 메두사 피어싱",
@@ -255,6 +273,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_7",
     "category": "body",
     "image": "images/post_7.webp",
+    "image_mobile": "images/mobile/post_7.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DT2gvOcAVz5/",
     "description": {
       "ko": "배꼽피어싱 = 한 방에 무드 완성 💕\n티 살짝만 크롭해도, 허리선 딱 살아나는 그 포인트.\n라인 예쁘게 잡고 바는 티 안 나게 깔끔하게 세팅해드려요.\n\n“오늘 스타일에 어울리는 걸로 해주세요” 이것만 말해도 OK.\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#배꼽피어싱 #구월동피어싱 #인천피어싱 #피어싱전문점",
@@ -269,6 +288,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_8",
     "category": "face",
     "image": "images/post_8.webp",
+    "image_mobile": "images/mobile/post_8.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DUCfmrgAT28/",
     "description": {
       "ko": "입술 + 눈밑 더블 피어싱 시술 💕\n\n얼굴형·눈매 라인 고려한 위치 잡기\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#입술피어싱 #눈밑피어싱 #더블피어싱 #페이스피어싱 #인천피어싱 #구월동피어싱",
@@ -283,6 +303,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_9",
     "category": "face",
     "image": "images/post_9.webp",
+    "image_mobile": "images/mobile/post_9.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DTuJeTkgbXx/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -297,6 +318,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_10",
     "category": "face",
     "image": "images/post_10.webp",
+    "image_mobile": "images/mobile/post_10.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DTe7VVfgO3J/",
     "description": {
       "ko": "마이크로 더멀 피어싱💕\n_____________________________________________\n귀테리어/페이스피어싱 전문 미니스피어싱 구월점\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#더멀피어싱 #눈물피어싱 #페이스피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #피어싱전문점",
@@ -311,6 +333,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_11",
     "category": "face",
     "image": "images/post_11.webp",
+    "image_mobile": "images/mobile/post_11.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DTP30bDgdt-/",
     "description": {
       "ko": "혀피어싱 디자인 교체😝\n_____________________________________________\n위생적인 시술 도구 사용 전문점\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #혀피어싱 #인천피어싱 #구월동피어싱",
@@ -325,6 +348,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_12",
     "category": "ear",
     "image": "images/post_12.webp",
+    "image_mobile": "images/mobile/post_12.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DTDKQfkgdfX/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -339,6 +363,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_13",
     "category": "ear",
     "image": "images/post_13.webp",
+    "image_mobile": "images/mobile/post_13.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DS39iRngSKc/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -353,6 +378,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_14",
     "category": "ear",
     "image": "images/post_14.webp",
+    "image_mobile": "images/mobile/post_14.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DSoUwpTATJR/",
     "description": {
       "ko": "귓바퀴 트위스트 피어싱 사이즈 교체💕\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #귓바퀴피어싱",
@@ -367,6 +393,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_15",
     "category": "ear",
     "image": "images/post_15.webp",
+    "image_mobile": "images/mobile/post_15.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DShHVU5gdiH/",
     "description": {
       "ko": "Pink Piercing Design 💕\n_____________________________________________\n귀테리어 전문 미니스피어싱 구월점\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #피어싱전문점",
@@ -381,6 +408,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_16",
     "category": "ear",
     "image": "images/post_16.webp",
+    "image_mobile": "images/mobile/post_16.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DSe1Q_JgXVW/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -395,6 +423,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_17",
     "category": "ear",
     "image": "images/post_17.webp",
+    "image_mobile": "images/mobile/post_17.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DSMmm5PAdvu/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -409,6 +438,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_18",
     "category": "body",
     "image": "images/post_18.webp",
+    "image_mobile": "images/mobile/post_18.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DR6Z_mkATEI/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -423,6 +453,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_20",
     "category": "ear",
     "image": "images/post_20.webp",
+    "image_mobile": "images/mobile/post_20.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DRY6nmWgfo5/",
     "description": {
       "ko": "피부톤에 맞춰 핑크 키티 귀테리어 💕\n_____________________________________________\n귀테리어 맛집 미니스피어싱 구월점\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #귀테리어맛집",
@@ -437,6 +468,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_21",
     "category": "ear",
     "image": "images/post_21.webp",
+    "image_mobile": "images/mobile/post_21.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DRY6ITjgR75/",
     "description": {
       "ko": "날개 포인트 귀테리어 🪽🌀\n_____________________________________________\n귀테리어 맛집 미니스피어싱 구월점\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #피어싱전문점 #피어싱위치 #인천피어싱 #구월동피어싱 #귀테리어",
@@ -451,6 +483,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_24",
     "category": "face",
     "image": "images/post_24.webp",
+    "image_mobile": "images/mobile/post_24.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQ1XnZ3gSVB/",
     "description": {
       "ko": "눈밑 바나나 피어싱 🐰💝\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#얼굴피어싱 #바나나피어싱 #특수부위피어싱 #페이스피어싱 #인천피어싱 #구월동피어싱 #미니스피어싱",
@@ -465,6 +498,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_25",
     "category": "ear",
     "image": "images/post_25.webp",
+    "image_mobile": "images/mobile/post_25.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQyQNH5gQAl/",
     "description": {
       "ko": "꽃잎 끝에 살짝 반짝이🥀🥀💐 귀 타투에 맞춰 별존 시술 받으셨어요 🖤\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #별존피어싱",
@@ -479,6 +513,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_26",
     "category": "ear",
     "image": "images/post_26.webp",
+    "image_mobile": "images/mobile/post_26.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQyPZBYAcqR/",
     "description": {
       "ko": "귓볼에 작은 우주 만들기 🚀🛸\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #귓볼피어싱",
@@ -493,6 +528,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_27",
     "category": "ear",
     "image": "images/post_27.webp",
+    "image_mobile": "images/mobile/post_27.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQjFoNZgfan/",
     "description": {
       "ko": "고양이 피어싱 🐈\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #헬릭스 #헬릭스피어싱 #특수부위피어싱 #고양이피어싱 #인천피어싱 #구월동피어싱",
@@ -507,6 +543,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_29",
     "category": "ear",
     "image": "images/post_29.webp",
+    "image_mobile": "images/mobile/post_29.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQbZR9wgWQJ/",
     "description": {
       "ko": "할로윈 맞이 귀테리어 해드렸습니다 👻🎃\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #할로윈 #할로윈피어싱 #귀테리어 #귀테리어맛집 #구월동피어싱 #인천피어싱",
@@ -521,6 +558,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_30",
     "category": "ear",
     "image": "images/post_30.webp",
+    "image_mobile": "images/mobile/post_30.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DQbYkWhgdKz/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -535,6 +573,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_31",
     "category": "ear",
     "image": "images/post_31.webp",
+    "image_mobile": "images/mobile/post_31.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQRZQC2gSw5/",
     "description": {
       "ko": "연분홍 귀테리어 💝 헬로키티 포인트 🐈\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #귀테리어 #인천피어싱 #구월동피어싱 #키티피어싱",
@@ -549,6 +588,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_32",
     "category": "ear",
     "image": "images/post_32.webp",
+    "image_mobile": "images/mobile/post_32.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DQJgQJLAWK0/",
     "description": {
       "ko": "귀염뽀짝 귀테리어 💕🎀\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #키티피어싱 #귀테리어 #피어싱전문점 #인천피어싱 #구월동피어싱",
@@ -563,6 +603,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_33",
     "category": "ear",
     "image": "images/post_33.webp",
+    "image_mobile": "images/mobile/post_33.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DP-j9UFgKXN/",
     "description": {
       "ko": "디테일은 귀에서 완성돼 💎\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #피어싱전문점 #귀테리어 #귀테리어맛집 #인천피어싱 #구월동피어싱",
@@ -577,6 +618,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_34",
     "category": "ear",
     "image": "images/post_34.webp",
+    "image_mobile": "images/mobile/post_34.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DP-ies4Ad6X/",
     "description": {
       "ko": "정확한 각도 안전한 시술 industrial piercing 🏹💘\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#사선피어싱 #특수부위피어싱 #피어싱전문점 #구월동피어싱 #피어싱 #인천피어싱 #industrialpiercing",
@@ -591,6 +633,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_35",
     "category": "ear",
     "image": "images/post_35.webp",
+    "image_mobile": "images/mobile/post_35.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DP0-nyBgUP6/",
     "description": {
       "ko": "엔틱 귀테리어 🌹 원하시는 무드 말해주시면 개개인 맞춰서 귀테리어 조합 해드려요 🖤\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #피어싱전문점 #써지컬 #인천피어싱 #구월동피어싱",
@@ -605,6 +648,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_36",
     "category": "ear",
     "image": "images/post_36.webp",
+    "image_mobile": "images/mobile/post_36.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DPgals1Abxz/",
     "description": {
       "ko": "리본 드롭 피어싱과 반쪽 나비 조합 전 컬러 인기 만점 🎀✨\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #피어싱전문점 #귀테리어 #귀테리어맛집 #인천피어싱 #구월동피어싱",
@@ -619,6 +663,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_38",
     "category": "ear",
     "image": "images/post_38.webp",
+    "image_mobile": "images/mobile/post_38.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DPQonGjgRv6/",
     "description": {
       "ko": "귀테리어 하고 싶은데… 다들 어디부터 뚫어야 할지 고민 많이 하죠? 🤔\n\n이번엔 “덜 아픈 구역”만 모아서 보여드렸어요 ✨\n✔ 귓불 → 뚫자마자 행복 😆\n✔ 아웃컨츠 → 머리 감을 때만 조심!\n✔ 헬릭스 → 머리카락만 안 걸리면 무난 💫\n\n예쁜 건 기본이고 아픔도 참을만한 곳들이라 처음 피어싱 도전하시는 분들한테 추천해요! 💕",
@@ -633,6 +678,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_39",
     "category": "ear",
     "image": "images/post_39.webp",
+    "image_mobile": "images/mobile/post_39.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DPQl07jgXGW/",
     "description": {
       "ko": "Photo by 미니스 피어싱 구월점 / 구월동 피어싱 💎 in 미니스피어싱.",
@@ -647,6 +693,7 @@ const INSTAGRAM_POSTS = [
     "id": "post_40",
     "category": "ear",
     "image": "images/post_40.webp",
+    "image_mobile": "images/mobile/post_40.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DPQlCLnATWI/",
     "description": {
       "ko": "골드 컬러 피어싱으로 귀테리어 고급지게 💎✨\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#피어싱 #피어싱전문점 #14k피어싱 #골드피어싱 #써지컬 #구월동피어싱 #인천피어싱 #미니스피어싱",
@@ -661,6 +708,7 @@ const INSTAGRAM_POSTS = [
     "id": "body_new_3",
     "category": "body",
     "image": "images/body_new_3.webp",
+    "image_mobile": "images/mobile/body_new_3.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DLeSb9th6RS/",
     "description": {
       "ko": "깔끔하고 세련된 배꼽 피어싱 ✨ 허리 라인을 더욱 돋보이게 해주는 매력적인 포인트 주얼리입니다.\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#배꼽피어싱 #구월동피어싱 #인천피어싱 #바디피어싱",
@@ -675,6 +723,7 @@ const INSTAGRAM_POSTS = [
     "id": "body_new_4",
     "category": "body",
     "image": "images/body_new_4.webp",
+    "image_mobile": "images/mobile/body_new_4.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DLCObNehRGK/",
     "description": {
       "ko": "은은하게 빛나는 큐빅 배꼽 피어싱 💖 크롭탑 입을 때 자신감을 완성해주는 최애 부위!\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#배꼽피어싱 #구월동피어싱 #인천피어싱 #바디피어싱",
@@ -689,6 +738,7 @@ const INSTAGRAM_POSTS = [
     "id": "body_new_6",
     "category": "body",
     "image": "images/body_new_6.webp",
+    "image_mobile": "images/mobile/body_new_6.webp",
     "link": "https://www.instagram.com/guwall.minis/reel/DKwIcI4BwqL/",
     "description": {
       "ko": "유니크한 매력의 쇄골 더멀 피어싱 ✨ 목선과 쇄골 라인을 한층 더 아름답고 특별하게 연출해 줍니다.\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#쇄골피어싱 #더멀피어싱 #마이크로더멀 #구월동피어싱 #인천피어싱",
@@ -703,6 +753,7 @@ const INSTAGRAM_POSTS = [
     "id": "body_new_7",
     "category": "body",
     "image": "images/body_new_7.webp",
+    "image_mobile": "images/mobile/body_new_7.webp",
     "link": "https://www.instagram.com/guwall.minis/p/DIDpGiYh7fN/",
     "description": {
       "ko": "타투와 조화를 이루는 감각적인 배꼽 피어싱 🥀 자신만의 독특한 분위기와 스타일을 표현해 보세요.\n\n━━━━━━━━━━━━━━━━━━━━\n♥ 일회용 바늘, 시술 도구 멸균처리로 안전성\n♥ 바길이, 라블렛, 귀걸이침 변경 가능\n\n🕒 운영 시간 안내\nam 11:00 - pm 22:00\n\n📞 상담 및 문의\n♥ TEL : 0507-1339-5187\n♥ INSTAGRAM : DM 환영\n\n🗺️ 오시는길\n♥ 인천 남동구 성말로 10 효명프라자 1층 111호\n( 큰 올리브영 맞은편 )\n#배꼽피어싱 #구월동피어싱 #인천피어싱 #바디피어싱",
