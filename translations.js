@@ -70,9 +70,9 @@ const TRANSLATIONS = {
     btn_call: "📞 전화 바로 걸기",
     btn_dm: "💬 인스타 DM 문의",
     
-    map_marker_text: "미니스 피어싱 구월점",
-    map_overlay_title: "인천 남동구 성말로 10 효명프라자 1층 111호",
-    map_overlay_desc: "구월동 로데오거리 광장 인근 / 큰 올리브영 건물 맞은편 1층에 입점해 있어 쉽게 찾으실 수 있습니다.",
+    map_marker_text: "미니스 피어싱",
+    map_header_title: "인천 남동구 성말로 10 (효명프라자 1층 111호)",
+    map_footer_warning: "매장 방문 전 네이버 지도로 현재 혼잡도를 확인하실 수 있습니다.",
     map_naver: "네이버 지도에서 보기",
     map_kakao: "카카오 맵에서 보기",
     
@@ -152,9 +152,9 @@ const TRANSLATIONS = {
     btn_call: "📞 Call Now",
     btn_dm: "💬 Instagram DM Inquiry",
     
-    map_marker_text: "Minis Piercing Guwol",
-    map_overlay_title: "Rm 111, Hyomyeong Plaza, 10, Seongmal-ro, Incheon",
-    map_overlay_desc: "Located on the 1st floor opposite the large Olive Young building. Easy access from Rodeo Square.",
+    map_marker_text: "Minis Piercing",
+    map_header_title: "10, Seongmal-ro, Namdong-gu, Incheon (Rm 111, Hyomyeong Plaza)",
+    map_footer_warning: "Check real-time traffic and table congestion using Naver Map before visiting.",
     map_naver: "View on Naver Map",
     map_kakao: "View on Kakao Map",
     
@@ -230,13 +230,13 @@ const TRANSLATIONS = {
     loc_desc3: "0507-1339-5187",
     
     booking_title: "リアルタイム予約＆スタイル相談",
-    booking_desc: "カカ오トークプラス友だち、またはお電話にて、スムーズなご予約と詳細なコーディネート相談を承っております。",
+    booking_desc: "カカオトークプラス友だち、またはお電話にて、スムーズなご予約と詳細なコーディネート相談を承っております。",
     btn_call: "📞 電話をかける",
     btn_dm: "💬 インスタDMで相談",
     
-    map_marker_text: "ミニスピアッシング九月店",
-    map_overlay_title: "仁川南東区城말로 10 孝明プラザ1階 111号",
-    map_overlay_desc: "ロデオ通り広場すぐ。大型オリーブヤングビルの向かい側1階にあり、簡単に見つけることができます。",
+    map_marker_text: "ミニスピアッシング",
+    map_header_title: "仁川広域市南東区城말로 10 (孝明プラザ1階 111号)",
+    map_footer_warning: "店舗訪問前にNAVERマップで現在の混雑状況を確認できます。",
     map_naver: "NAVERマップで見る",
     map_kakao: "Kakaoマップで見る",
     
@@ -316,9 +316,9 @@ const TRANSLATIONS = {
     btn_call: "📞 Позвонить",
     btn_dm: "💬 Написать в Instagram DM",
     
-    map_marker_text: "Пирсинг Minis в Куволе",
-    map_overlay_title: "Инчхон, Сонмаль-ро 10, Hyomyeong Plaza, 1 этаж, 111",
-    map_overlay_desc: "Находится на 1 этаже напротив здания Olive Young. Легко найти со стороны площади Родео.",
+    map_marker_text: "Пирсинг Minis",
+    map_header_title: "10, Сонмаль-ро, Namdong-gu, Инчхон (офис 111, Hyomyeong Plaza)",
+    map_footer_warning: "Перед посещением магазина вы можете проверить текущую загруженность на Naver Map.",
     map_naver: "Открыть на Naver Map",
     map_kakao: "Открыть на Kakao Map",
     
@@ -398,9 +398,9 @@ const TRANSLATIONS = {
     btn_call: "📞 اتصل الآن",
     btn_dm: "💬 تواصل عبر إنستغرام DM",
     
-    map_marker_text: "مينيس بيرسينغ غوول",
-    map_overlay_title: "إنتشون، شارع سونغمال-رو 10، هيوميونغ بلازا، الطابق 1، 111",
-    map_overlay_desc: "يقع في الطابق الأول مقابل مبنى أوليف يونغ الكبير. يسهل الوصول إليه من ساحة روديو.",
+    map_marker_text: "مينيس بيرسينغ",
+    map_header_title: "شارع سونغمال-رو 10، إنتشون (مكتب 111، هيوميونغ بلازا)",
+    map_footer_warning: "يمكنك التحقق من حالة الازدحام الحالية باستخدام خريطة Naver قبل زيارة المتجر.",
     map_naver: "عرض على خريطة Naver",
     map_kakao: "عرض على خريطة Kakao",
     
@@ -480,9 +480,9 @@ const TRANSLATIONS = {
     btn_call: "📞 拨打电话",
     btn_dm: "💬 官方社交账号私信",
     
-    map_marker_text: "Minis Piercing 九月店",
-    map_overlay_title: "仁川广域市南东区城末路10 孝明广场1楼111号",
-    map_overlay_desc: "位于罗德奥广场旁，大型Olive Young大楼正对面1层，位置醒目，易于寻找。",
+    map_marker_text: "Minis Piercing",
+    map_header_title: "仁川广域市南东区城末路10号 (孝明广场1楼111号)",
+    map_footer_warning: "到店前可通过Naver地图查看当前拥挤程度。",
     map_naver: "在Naver地图中查看",
     map_kakao: "在Kakao地图中查看",
     

@@ -1108,116 +1108,290 @@ section {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Map Display (Vector styled map placeholder) */
-.map-visual-panel {
-  position: relative;
+/* Mock Map Display (Premium Vector Mock Map Styling) */
+.mock-map-box {
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: 24px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.map-embed {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  position: relative;
-  background: #18181c;
+.mock-map-header {
+  background: rgba(18, 18, 22, 0.8);
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-glass);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+}
+
+.mock-map-visual {
+  height: 400px;
+  background-color: #0b0b0d;
+  position: relative;
   overflow: hidden;
 }
 
-.map-grid-bg {
-  position: absolute;
+.map-vector-svg {
   width: 100%;
   height: 100%;
-  background-image: url('images/map.webp');
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
-.map-marker {
-  position: relative;
-  z-index: 2;
-  text-align: center;
+/* Glowing Neon Lines styling */
+#glow-accent feGaussianBlur,
+#glow-blue feGaussianBlur {
+  animation: glow-pulse-accent 3s infinite alternate;
+}
+
+@keyframes glow-pulse-accent {
+  0% { stdDeviation: 2; }
+  100% { stdDeviation: 4.5; }
+}
+
+/* Road labels styling */
+.map-road-label {
+  position: absolute;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Subway Stations (Pill-shaped glassmorphic cards) */
+.landmark-station {
+  position: absolute;
+  background: rgba(15, 15, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  animation: bounce 2s infinite ease-in-out;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
 }
 
-.map-marker-pin {
-  width: 50px;
-  height: 50px;
-  border-radius: 50% 50% 50% 0;
+.landmark-station:hover {
+  background: rgba(25, 25, 30, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -52%) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.station-icon-wrap {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #c0c4cc;
+}
+
+.station-lines {
+  display: flex;
+  gap: 3px;
+  margin-left: 2px;
+}
+
+.line-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.line-badge.ln-1 {
+  background: #0072bc; /* Incheon Line 1 Blue */
+}
+
+.line-badge.ln-2 {
+  background: #f59e0b; /* Incheon Line 2 Orange */
+}
+
+/* Major POI Landmark Cards (Glassmorphism & Interactive) */
+.landmark-poi {
+  position: absolute;
+  background: rgba(22, 22, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: default;
+  white-space: nowrap;
+}
+
+.landmark-poi i {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
+}
+
+.landmark-poi:hover {
+  background: rgba(30, 30, 38, 0.95);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -53%) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+/* Dynamic Hover colors for landmarks */
+.landmark-poi.city-hall-building:hover i {
+  color: #10b981;
+}
+.landmark-poi.gil-hospital:hover i {
+  color: #3b82f6;
+}
+.landmark-poi.rodeo-square:hover i {
+  color: var(--accent-pink);
+}
+.landmark-poi.arts-hall:hover i {
+  color: #f59e0b;
+}
+.landmark-poi.lotte-dept:hover i {
+  color: #ef4444;
+}
+.landmark-poi.olive-young-poi:hover i {
+  color: #a3e635;
+}
+
+/* Pin for Minis Piercing */
+.pin-wrapper {
+  position: absolute;
+  transform: translate(-50%, -90%);
+  z-index: 20;
+}
+
+.map-pin {
+  width: 42px;
+  height: 42px;
   background: var(--accent-pink);
+  color: #ffffff;
+  border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px var(--accent-pink-glow);
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px var(--accent-pink-glow);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  animation: bounce-pin-effect 2s infinite;
+  position: relative;
 }
 
-.map-marker-pin::after {
-  content: '💎';
-  font-size: 1.2rem;
+.map-pin i {
   transform: rotate(45deg);
 }
 
-.map-marker-shadow {
-  width: 16px;
-  height: 4px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  margin-top: 10px;
-  filter: blur(1px);
-}
-
-.map-overlay-card {
+.pulse-ring {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  background: rgba(7, 7, 8, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-glass);
-  padding: 18px;
-  border-radius: 12px;
-  z-index: 2;
+  top: 9px;
+  left: 9px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--accent-pink);
+  border-radius: 50%;
+  transform: scale(1);
+  opacity: 1;
+  animation: map-pulse-effect 2s infinite;
+  z-index: -1;
 }
 
-.map-overlay-card h4 {
-  font-size: 1rem;
-  color: var(--text-main);
-  margin-bottom: 4px;
+.pin-tooltip {
+  position: absolute;
+  background: var(--accent-pink);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.map-overlay-card p {
-  font-size: 0.85rem;
+@keyframes bounce-pin-effect {
+  0%, 100% { transform: rotate(-45deg) translate(0, 0); }
+  50% { transform: rotate(-45deg) translate(-5px, -5px); }
+}
+
+@keyframes map-pulse-effect {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+.mock-map-footer {
+  background: rgba(18, 18, 22, 0.6);
+  padding: 12px 24px;
+  font-size: 0.78rem;
   color: var(--text-sub);
+  border-top: 1px solid var(--border-glass);
 }
 
+.mock-map-footer p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+/* Map Actions Footer */
 .map-actions {
   display: flex;
   border-top: 1px solid var(--border-glass);
-  background: var(--bg-glass);
+  background: rgba(18, 18, 22, 0.8);
 }
 
 .map-actions a {
   flex: 1;
   text-align: center;
   padding: 16px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-sub);
   border-right: 1px solid var(--border-glass);
+  transition: var(--transition-smooth);
 }
 
 .map-actions a:last-child {
@@ -1225,8 +1399,44 @@ section {
 }
 
 .map-actions a:hover {
-  background: rgba(255, 42, 122, 0.05);
+  background: rgba(255, 42, 122, 0.08);
   color: var(--accent-pink);
+}
+
+/* Toast Notification (Glassmorphism popup) */
+.toast-notification {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(18, 18, 22, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 42, 122, 0.3);
+  padding: 14px 28px;
+  border-radius: 50px;
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 42, 122, 0.2);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  color: var(--accent-pink);
+  font-size: 1.1rem;
 }
 
 /* Footer Section */

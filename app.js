@@ -491,3 +491,56 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+// Instagram DM copy template and redirect automation
+window.handleInstaDMClick = function() {
+  const template = `[미니스 피어싱 구월점 예약 문의]
+- 성함: 
+- 연락처: 
+- 예약 희망 일시: 
+- 시술/세팅 부위: 
+- 참고 사진 첨부 여부: `;
+
+  const langSelect = document.getElementById("lang-select");
+  const lang = langSelect ? langSelect.value : "ko";
+  
+  let msg = "📋 예약 양식이 복사되었습니다! DM 창에 붙여넣어(꾹 누르기/붙여넣기) 문의해 주세요.";
+  if (lang === "en") msg = "📋 Reservation template copied! Please paste it in the DM window to inquire.";
+  else if (lang === "ja") msg = "📋 予約フォームがコピーされました！DM画面に貼り付けて（長押し/貼り付け）お問い合わせください。";
+  else if (lang === "ru") msg = "📋 Шаблон бронирования скопирован! Пожалуйста, вставьте его в окно DM для запроса.";
+  else if (lang === "ar") msg = "📋 تم نسخ نموذج الحجز! يرجى لصقه في نافذة رسائل DM للاستفسار.";
+  else if (lang === "zh") msg = "📋 预约模板已复制！请粘贴到私信（DM）窗口中发送以进行咨询。";
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(template).then(() => {
+    // Show premium toast alert
+    window.showToast(msg);
+    
+    // Redirect to Instagram DM (ig.me opens direct message in Instagram app)
+    setTimeout(() => {
+      window.open("https://ig.me/m/guwall.minis", "_blank");
+    }, 2000);
+  }).catch(err => {
+    // Fallback if clipboard copy fails
+    window.open("https://ig.me/m/guwall.minis", "_blank");
+  });
+};
+
+// Premium Toast Notification helper
+window.showToast = function(message) {
+  let toast = document.getElementById("toast-notification");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "toast-notification";
+    toast.className = "toast-notification";
+    toast.innerHTML = `<span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span><span class="toast-text"></span>`;
+    document.body.appendChild(toast);
+  }
+  
+  toast.querySelector(".toast-text").textContent = message;
+  toast.classList.add("show");
+  
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3500);
+};

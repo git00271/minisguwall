@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preload" href="images/mobile/post_13.webp" as="image" media="(max-width: 768px)">
   <link rel="preload" href="images/post_13.webp" as="image" media="(min-width: 769px)">
   
@@ -377,25 +380,144 @@
           </p>
           <div class="booking-buttons">
             <a href="tel:0507-1339-5187" class="btn-booking phone" data-i18n="btn_call">📞 전화 바로 걸기</a>
-            <a href="https://www.instagram.com/guwall.minis/" target="_blank" rel="noopener noreferrer" class="btn-booking kakaotalk" data-i18n="btn_dm">💬 인스타 DM 문의</a>
+            <a href="javascript:void(0)" class="btn-booking instagram-dm" onclick="handleInstaDMClick()" data-i18n="btn_dm">💬 인스타 DM 문의</a>
           </div>
         </div>
       </div>
 
       <!-- Vector Map Panel -->
-      <div class="map-visual-panel">
-        <div class="map-embed">
-          <div class="map-grid-bg"></div>
-          <div class="map-marker">
-            <div class="map-marker-pin"></div>
-            <div class="map-marker-shadow"></div>
-            <span id="map-marker-label" style="font-size: 0.85rem; font-weight: 700; color: #fff; margin-top: 8px; z-index: 2;" data-i18n="map_marker_text">미니스 피어싱 구월점</span>
+      <div class="mock-map-box">
+        <div class="mock-map-header">
+          <i class="fa-solid fa-location-dot" style="color: #ff2a7a; margin-right: 8px;"></i>
+          <span data-i18n="map_header_title">인천 남동구 성말로 10 (효명프라자 1층 111호)</span>
+        </div>
+        <div class="mock-map-visual">
+          <!-- SVG Vector Map Layer (800x500 Coordinate System) -->
+          <svg class="map-vector-svg" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+              </pattern>
+              <!-- Neon Glow Filters -->
+              <filter id="glow-accent" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+              <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            <!-- Main Roads (Broad Gray Paths) -->
+            <!-- 구월로 (Guwol-ro) -->
+            <path d="M 0 80 L 800 80" stroke="#2c2c30" stroke-width="44" stroke-linecap="square" fill="none" />
+            <!-- 인주대로 (Inju-daero) -->
+            <path d="M 0 420 L 800 420" stroke="#2c2c30" stroke-width="44" stroke-linecap="square" fill="none" />
+            
+            <!-- 예술로 (Yesul-ro) -->
+            <path d="M 120 0 L 120 500" stroke="#2c2c30" stroke-width="36" stroke-linecap="square" fill="none" />
+            <!-- 성말로 (Seongmal-ro) -->
+            <path d="M 400 0 L 400 500" stroke="#222226" stroke-width="26" stroke-linecap="square" fill="none" />
+            <!-- 남동대로 (Namdong-daero) -->
+            <path d="M 680 0 L 680 500" stroke="#2c2c30" stroke-width="44" stroke-linecap="square" fill="none" />
+            
+            <!-- Sub Roads & Connecting Alleys -->
+            <!-- 인하로 (Inha-ro) -->
+            <path d="M 120 250 L 800 250" stroke="#1d1d21" stroke-width="20" stroke-linecap="square" fill="none" />
+            <!-- 로데오 광장/올리브영 골목 -->
+            <path d="M 400 320 L 800 320" stroke="#1d1d21" stroke-width="16" stroke-linecap="square" fill="none" />
+            
+            <!-- Inner Road Markings (Subtle dashed center lines) -->
+            <path d="M 0 80 L 800 80" stroke="#4a4a52" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+            <path d="M 0 420 L 800 420" stroke="#4a4a52" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+            <path d="M 120 0 L 120 500" stroke="#4a4a52" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+            <path d="M 680 0 L 680 500" stroke="#4a4a52" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+            <path d="M 400 0 L 400 500" stroke="#3a3a42" stroke-dasharray="8, 6" stroke-width="1" fill="none" />
+            
+            <!-- Subway Lines Overlay (Glow Neon) -->
+            <!-- Incheon Subway Line 1 (Blue) - under 예술로 -->
+            <path d="M 120 0 L 120 500" stroke="#0072bc" stroke-width="4" fill="none" filter="url(#glow-blue)" />
+            <!-- Incheon Subway Line 2 (Orange) - under 구월로 -->
+            <path d="M 0 80 L 800 80" stroke="#f59e0b" stroke-width="4" fill="none" filter="url(#glow-accent)" />
+          </svg>
+          
+          <!-- Road Name Labels -->
+          <div class="map-road-label label-guwol-ro" style="top: 13%; left: 45%;">구월로 (인천2호선)</div>
+          <div class="map-road-label label-inju-daero" style="top: 81%; left: 45%;">인주대로</div>
+          <div class="map-road-label label-yesul-ro" style="top: 2%; left: 10%; transform: rotate(-90deg); transform-origin: left top;">예술로 (인천1호선)</div>
+          <div class="map-road-label label-seongmal-ro" style="top: 2%; left: 47%; transform: rotate(-90deg); transform-origin: left top;">성말로</div>
+          <div class="map-road-label label-namdong-daero" style="top: 2%; left: 81.5%; transform: rotate(-90deg); transform-origin: left top;">남동대로</div>
+          
+          <!-- Subway Stations -->
+          <div class="landmark-station city-hall" style="left: 15%; top: 16%;">
+            <div class="station-icon-wrap"><i class="fa-solid fa-subway"></i></div>
+            <span>인천시청역</span>
+            <div class="station-lines">
+              <span class="line-badge ln-1">1</span>
+              <span class="line-badge ln-2">2</span>
+            </div>
           </div>
-          <div class="map-overlay-card">
-            <h4 data-i18n="map_overlay_title">인천 남동구 성말로 10 효명프라자 1층 111호</h4>
-            <p data-i18n="map_overlay_desc">구월동 로데오거리 광장 인근 / 큰 올리브영 건물 맞은편 1층에 입점해 있어 쉽게 찾으실 수 있습니다.</p>
+          <div class="landmark-station arts-center" style="left: 15%; top: 50%;">
+            <div class="station-icon-wrap"><i class="fa-solid fa-subway"></i></div>
+            <span>예술회관역</span>
+            <div class="station-lines">
+              <span class="line-badge ln-1">1</span>
+            </div>
+          </div>
+          
+          <!-- Major Landmarks & POI Cards -->
+          <div class="landmark-poi lotte-dept" style="left: 17%; top: 72%;">
+            <i class="fa-solid fa-building"></i> 롯데백화점
+          </div>
+          
+          <div class="landmark-poi arts-hall" style="left: 20%; top: 38%;">
+            <i class="fa-solid fa-masks-theater"></i> 예술회관
+          </div>
+          
+          <div class="landmark-poi city-hall-building" style="left: 36%; top: 16%;">
+            <i class="fa-solid fa-building-shield"></i> 인천광역시청
+          </div>
+          
+          <div class="landmark-poi central-library" style="left: 55%; top: 16%;">
+            <i class="fa-solid fa-book-open"></i> 중앙도서관
+          </div>
+          
+          <div class="landmark-poi gil-hospital" style="left: 81%; top: 62%;">
+            <i class="fa-solid fa-hospital"></i> 가천대 길병원
+          </div>
+          
+          <div class="landmark-poi rodeo-square" style="left: 40%; top: 50%;">
+            <i class="fa-solid fa-tree"></i> 로데오광장
+          </div>
+          
+          <div class="landmark-poi link-126" style="left: 56%; top: 50%;">
+            <i class="fa-solid fa-store"></i> 링크126
+          </div>
+          
+          <div class="landmark-poi olive-young-poi" style="left: 58%; top: 64%;">
+            <i class="fa-solid fa-basket-shopping"></i> 올리브영
+          </div>
+          
+          <div class="landmark-poi guwol-middle" style="left: 77%; top: 32%;">
+            <i class="fa-solid fa-school"></i> 구월중학교
+          </div>
+          
+          <!-- Destination Pin for Minis Piercing (Hyomyeong Plaza) -->
+          <div class="pin-wrapper" style="left: 50%; top: 64%;">
+            <div class="pulse-ring"></div>
+            <div class="map-pin">
+              <i class="fa-solid fa-gem"></i>
+              <div class="pin-tooltip" data-i18n="map_marker_text">미니스 피어싱</div>
+            </div>
           </div>
         </div>
+        
+        <div class="mock-map-footer">
+          <p><i class="fa-solid fa-circle-exclamation"></i> <span data-i18n="map_footer_warning">매장 방문 전 네이버 지도로 현재 혼잡도를 확인하실 수 있습니다.</span></p>
+        </div>
+        
         <div class="map-actions">
           <a href="https://map.naver.com/v5/search/%EB%AF%B8%EB%8B%88%EC%8A%A4%20%ED%94%BC%EC%96%B4%EC%8B%B1%20%EA%B5%AC%EC%9B%94%EC%A0%90" target="_blank" rel="noopener noreferrer" data-i18n="map_naver">네이버 지도에서 보기</a>
           <a href="https://map.kakao.com/?q=%EB%AF%B8%EB%8B%88%EC%8A%A4%20%ED%94%BC%EC%96%B4%EC%8B%B1%20%EA%B5%AC%EC%9B%94%EC%A0%90" target="_blank" rel="noopener noreferrer" data-i18n="map_kakao">카카오 맵에서 보기</a>
