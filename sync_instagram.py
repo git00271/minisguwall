@@ -29,6 +29,16 @@ def extract_shortcode(url):
         return parts[-1]
     return ""
 
+def shortcode_to_id(shortcode):
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
+    media_id = 0
+    for char in shortcode:
+        try:
+            media_id = (media_id * 64) + alphabet.index(char)
+        except ValueError:
+            return 0
+    return media_id
+
 def classify_category(caption):
     if not caption:
         return "ear"
@@ -109,10 +119,66 @@ def main():
     items = soup.find_all(class_='item')
     print(f"Found {len(items)} items on Imginn.")
     
+    # 1. Parse scraped items to get shortcodes and decoded media IDs
+    parsed_items = []
+    for item in items:
+        a_tag = item.find('a')
+        if not a_tag:
+            continue
+        href = a_tag.get('href', '')
+        if not href or '/p/' not in href:
+            continue
+        shortcode = extract_shortcode(href)
+        if shortcode:
+            parsed_items.append((item, shortcode, shortcode_to_id(shortcode)))
+            
+    # 2. Identify pinned posts (a post is pinned if there exists any post after it in profile order with a larger ID)
+    pinned_shortcodes = set()
+    non_pinned_items = []
+    for idx, (item, shortcode, media_id) in enumerate(parsed_items):
+        is_pinned = False
+        for _, _, later_media_id in parsed_items[idx+1:]:
+            if later_media_id > media_id:
+                is_pinned = True
+                break
+        if is_pinned:
+            print(f"Detected pinned post: {shortcode} (excluding)")
+            pinned_shortcodes.add(shortcode)
+        else:
+            non_pinned_items.append(item)
+            
+    print(f"Filtered feed: {len(non_pinned_items)} non-pinned items out of {len(parsed_items)} total.")
+    
     new_posts_added = 0
     
+    # Self-healing clean-up: if any currently pinned post was previously synced, remove it and delete its images
+    updated_synced_posts = []
+    removed_any_pinned = False
+    for post in synced_posts:
+        post_shortcode = post["id"].replace("sync_", "")
+        if post_shortcode in pinned_shortcodes:
+            print(f"Removing previously synced pinned post from database: {post['id']}")
+            # Delete original and mobile WebP image files
+            for img_path in [post["image"], post["image"].replace("images/", "images/mobile/")]:
+                if os.path.exists(img_path):
+                    try:
+                        os.remove(img_path)
+                        print(f"Deleted image: {img_path}")
+                    except Exception as e:
+                        print(f"Error deleting image {img_path}: {e}")
+            removed_any_pinned = True
+        else:
+            updated_synced_posts.append(post)
+            
+    if removed_any_pinned:
+        synced_posts = updated_synced_posts
+        # Force a rewrite by setting new_posts_added to at least 1
+        new_posts_added = max(new_posts_added, 1)
+        
+    synced_ids = {post["id"] for post in synced_posts}
+
     # Process items in chronological order (oldest first) so they append in correct order in database
-    for item in reversed(items):
+    for item in reversed(non_pinned_items):
         # Extract post link
         a_tag = item.find('a')
         if not a_tag:
