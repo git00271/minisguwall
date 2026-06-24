@@ -246,6 +246,108 @@ section {
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
+}
+
+/* Background container */
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Moving glow blobs (CSS mesh gradient fallback) */
+.moving-glow-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #0d0d11 0%, #030303 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.12;
+  animation: moveBlob 20s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-pink);
+  top: -10%;
+  left: 10%;
+  animation-duration: 25s;
+}
+
+.blob2 {
+  width: 400px;
+  height: 400px;
+  background: #a855f7; /* Purple */
+  bottom: 5%;
+  right: 5%;
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.blob3 {
+  width: 300px;
+  height: 300px;
+  background: #06b6d4; /* Cyan */
+  bottom: -10%;
+  left: 40%;
+  animation-duration: 18s;
+  animation-delay: -10s;
+}
+
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, 80px) scale(1.15);
+  }
+  100% {
+    transform: translate(-40px, -60px) scale(0.9);
+  }
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28; /* Blended */
+  z-index: 2;
+}
+
+/* Legibility Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 3, 3, 0.4) 0%,
+    rgba(3, 3, 3, 0.78) 75%,
+    #030303 100%
+  );
+  z-index: 3;
 }
 
 .hero-grid {
@@ -254,6 +356,8 @@ section {
   gap: 60px;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {

@@ -401,12 +401,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("minis_lang");
     if (saved) return saved;
 
-    const browserLang = (navigator.language || navigator.userLanguage || "ko").toLowerCase();
-    if (browserLang.startsWith("ja")) return "ja";
-    if (browserLang.startsWith("ru")) return "ru";
-    if (browserLang.startsWith("ar")) return "ar";
-    if (browserLang.startsWith("zh")) return "zh";
-    if (browserLang.startsWith("en")) return "en";
+    const supportedLangs = ["ko", "en", "ja", "ru", "ar", "zh"];
+    const systemLangs = [];
+
+    if (navigator.languages && navigator.languages.length > 0) {
+      navigator.languages.forEach(lang => systemLangs.push(lang.toLowerCase()));
+    }
+    if (navigator.language) {
+      systemLangs.push(navigator.language.toLowerCase());
+    }
+    if (navigator.userLanguage) {
+      systemLangs.push(navigator.userLanguage.toLowerCase());
+    }
+
+    for (const sysLang of systemLangs) {
+      for (const targetLang of supportedLangs) {
+        if (sysLang === targetLang || sysLang.startsWith(targetLang + "-")) {
+          return targetLang;
+        }
+      }
+    }
+
     return "ko";
   }
 
@@ -488,6 +503,50 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       window.addEventListener("click", playOnInteraction);
       window.addEventListener("touchstart", playOnInteraction);
+    }
+  }
+
+  // Fade-out on scroll for Hero Background Video only
+  const heroBg = document.querySelector(".hero-bg-container");
+
+  if (heroBg) {
+    let tick = false;
+
+    window.addEventListener("scroll", () => {
+      if (!tick) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+          const heroHeight = window.innerHeight;
+
+          if (scrolled <= heroHeight) {
+            // Parallax movement of the background only (translate3d for GPU acceleration)
+            const yOffset = scrolled * 0.45;
+            // Fade out: starts from 1 at scroll=0, and reaches 0 at scroll=550
+            const opacity = Math.max(1 - scrolled / 550, 0);
+            // Scale down slightly: starts from 1 and reaches 0.95
+            const scale = 1 - Math.min(scrolled / 2500, 0.05);
+
+            heroBg.style.transform = `translate3d(0, ${yOffset}px, 0) scale(${scale})`;
+            heroBg.style.opacity = opacity;
+          }
+          tick = false;
+        });
+        tick = true;
+      }
+    }, { passive: true });
+  }
+
+  // Update hero representative image dynamically with the most recent synced post
+  if (typeof INSTAGRAM_POSTS !== "undefined" && INSTAGRAM_POSTS.length > 0) {
+    const latestPost = INSTAGRAM_POSTS[0];
+    const heroImg = document.getElementById("hero-representative-img");
+    const heroSrcMobile = document.getElementById("hero-source-mobile");
+
+    if (heroImg && latestPost.image) {
+      heroImg.src = latestPost.image;
+    }
+    if (heroSrcMobile && latestPost.image_mobile) {
+      heroSrcMobile.srcset = latestPost.image_mobile;
     }
   }
 });

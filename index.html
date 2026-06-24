@@ -127,6 +127,20 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
+    <!-- Dynamic background elements -->
+    <div class="hero-bg-container">
+      <div class="moving-glow-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+      </div>
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="images/hero-bg.mp4" type="video/mp4">
+        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
     <div class="hero-grid">
       <div class="hero-content">
         <h1 data-i18n="hero_title">나만의 스타일을 찾다,<br><span class="gradient">Define Your Style</span></h1>
@@ -135,7 +149,7 @@
         <div class="hero-ctas">
           <button class="btn-primary" onclick="document.getElementById('gallery').scrollIntoView();">
             <span data-i18n="hero_btn_gallery">인스타 갤러리</span>
-            <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24">
+            <svg style="width: 18px; height: 18px; fill: currentColor; margin-left: 6px;" viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
             </svg>
           </button>
@@ -145,7 +159,10 @@
       <div class="hero-visual">
         <div class="visual-glow"></div>
         <div class="visual-image-wrapper">
-          <img src="images/post_13.webp" alt="미니스 피어싱 구월점 대표 귀테리어 셋팅 예시" fetchpriority="high" decoding="async">
+          <picture id="hero-representative-pic">
+            <source id="hero-source-mobile" media="(max-width: 768px)" srcset="images/mobile/sync_DZkMVzZJ-lm.webp">
+            <img id="hero-representative-img" src="images/sync_DZkMVzZJ-lm.webp" alt="미니스 피어싱 구월점 대표 귀테리어 셋팅 예시" fetchpriority="high" decoding="async">
+          </picture>
           <div class="badge-tag">
             <span class="dot"></span>
             <span class="text" data-i18n="hero_badge">미니스 구월점 실시간 셋팅</span>
