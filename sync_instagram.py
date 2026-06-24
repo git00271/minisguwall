@@ -3,6 +3,8 @@ import json
 import requests
 import sys
 import subprocess
+import base64
+import uuid
 from PIL import Image
 from io import BytesIO
 from bs4 import BeautifulSoup
@@ -38,6 +40,15 @@ def shortcode_to_id(shortcode):
         except ValueError:
             return 0
     return media_id
+
+def id_to_shortcode(media_id):
+    media_id = int(str(media_id).split('_')[0])
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
+    shortcode = ''
+    while media_id > 0:
+        media_id, remainder = divmod(media_id, 64)
+        shortcode = alphabet[remainder] + shortcode
+    return shortcode
 
 def classify_category(caption):
     if not caption:
@@ -101,49 +112,69 @@ def main():
                         curated_shortcodes.add(shortcode)
     except Exception as e:
         print(f"Warning: Could not parse translate_data.py for curated links: {e}")
-
-    # Fetch from Imginn public viewer
-    url = "https://imginn.com/guwall.minis/"
+    url = "https://insta-story.com/api/v1/web/profile"
+    visitor_id = str(uuid.uuid4())
+    payload = {
+        "username": "guwall.minis",
+        "visitor_id": visitor_id
+    }
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept-Language': 'ko,en-US;q=0.9,en;q=0.8'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json, text/plain, */*'
     }
     
-    print("Fetching posts from Imginn public viewer...")
-    res = requests.get(url, headers=headers, timeout=15)
+    print("Fetching posts from insta-story API...")
+    res = requests.post(url, json=payload, headers=headers, timeout=15)
     if res.status_code != 200:
-        print(f"Error fetching from Imginn: {res.status_code}")
+        print(f"Error fetching from API: {res.status_code}")
         return
         
-    soup = BeautifulSoup(res.text, 'html.parser')
-    items = soup.find_all(class_='item')
-    print(f"Found {len(items)} items on Imginn.")
+    try:
+        data = res.json()
+    except Exception as e:
+        print(f"Failed to parse JSON response: {e}")
+        return
+        
+    posts = data.get("posts", [])
+    print(f"Found {len(posts)} items on API.")
     
-    # 1. Parse scraped items to get shortcodes and decoded media IDs
+    # 1. Parse JSON items to get shortcodes and media IDs
     parsed_items = []
-    for item in items:
-        a_tag = item.find('a')
-        if not a_tag:
+    for post in posts:
+        media_id_str = post.get("id")
+        if not media_id_str:
             continue
-        href = a_tag.get('href', '')
-        if not href or '/p/' not in href:
+        media_id = int(media_id_str.split('_')[0])
+        shortcode = id_to_shortcode(media_id)
+        source_b64 = post.get("source")
+        if not source_b64:
             continue
-        shortcode = extract_shortcode(href)
-        if shortcode:
-            parsed_items.append((item, shortcode, shortcode_to_id(shortcode)))
+        try:
+            img_url = base64.b64decode(source_b64).decode('utf-8')
+        except Exception:
+            continue
             
+        parsed_items.append({
+            "shortcode": shortcode,
+            "media_id": media_id,
+            "img_url": img_url,
+            "taken_at": post.get("taken_at")
+        })
+        
     # 2. Identify pinned posts (a post is pinned if there exists any post after it in profile order with a larger ID)
     pinned_shortcodes = set()
     non_pinned_items = []
-    for idx, (item, shortcode, media_id) in enumerate(parsed_items):
+    for idx, item in enumerate(parsed_items):
         is_pinned = False
-        for _, _, later_media_id in parsed_items[idx+1:]:
-            if later_media_id > media_id:
+        media_id = item["media_id"]
+        for later_item in parsed_items[idx+1:]:
+            if later_item["media_id"] > media_id:
                 is_pinned = True
                 break
         if is_pinned:
-            print(f"Detected pinned post: {shortcode} (excluding)")
-            pinned_shortcodes.add(shortcode)
+            print(f"Detected pinned post: {item['shortcode']} (excluding)")
+            pinned_shortcodes.add(item['shortcode'])
         else:
             non_pinned_items.append(item)
             
@@ -176,18 +207,15 @@ def main():
         new_posts_added = max(new_posts_added, 1)
         
     synced_ids = {post["id"] for post in synced_posts}
+    
+    # Pre-define current timestamp for new posts
+    from datetime import datetime, timezone, timedelta
+    kst = timezone(timedelta(hours=9))
+    current_time_str = datetime.now(kst).strftime("%Y-%m-%dT%H:%M:%S%z")
 
     # Process items in chronological order (oldest first) so they append in correct order in database
     for item in reversed(non_pinned_items):
-        # Extract post link
-        a_tag = item.find('a')
-        if not a_tag:
-            continue
-        href = a_tag.get('href', '')
-        if not href or '/p/' not in href:
-            continue
-            
-        shortcode = extract_shortcode(href)
+        shortcode = item["shortcode"]
         post_id = f"sync_{shortcode}"
         permalink = f"https://www.instagram.com/p/{shortcode}/"
         
@@ -198,25 +226,13 @@ def main():
             print(f"Skipping post {post_id} (shortcode {shortcode}) as it is already in curated posts.")
             continue
             
-        # Extract image URL and caption
-        img_tag = item.find('img')
-        if not img_tag:
-            continue
-            
-        img_url = img_tag.get('src') or img_tag.get('data-src')
-        caption = img_tag.get('alt', '').strip()
-        
-        if not img_url:
-            print(f"No image url found for {post_id}. Skipping.")
-            continue
-            
         print(f"Processing new post ID: {post_id} ({permalink})")
         
         # Download image
         try:
-            img_res = requests.get(img_url, headers=headers, timeout=15)
+            img_res = requests.get(item["img_url"], headers=headers, timeout=15)
             if img_res.status_code != 200:
-                print(f"Failed to download image from {img_url}. Status code: {img_res.status_code}")
+                print(f"Failed to download image from {item['img_url']}. Status code: {img_res.status_code}")
                 continue
                 
             # Convert to WebP
@@ -229,6 +245,7 @@ def main():
             continue
             
         # Classify category
+        caption = "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis"
         category = classify_category(caption)
         print(f"Classified category: {category}")
         
@@ -242,7 +259,7 @@ def main():
             "image": f"images/sync_{shortcode}.webp",
             "link": permalink,
             "description": translations,
-            "timestamp": "2026-06-17T19:00:00+0900"
+            "timestamp": current_time_str
         }
         synced_posts.append(new_post)
         new_posts_added += 1
