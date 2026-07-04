@@ -1,5 +1,20 @@
 const INSTAGRAM_POSTS = [
   {
+    "id": "sync_DaYFe_WBC9E",
+    "category": "ear",
+    "image": "images/sync_DaYFe_WBC9E.webp",
+    "image_mobile": "images/mobile/sync_DaYFe_WBC9E.webp",
+    "link": "https://www.instagram.com/p/DaYFe_WBC9E/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #mini piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # ثقب صغير بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #mini 穿孔 @guwall.minis"
+    }
+  },
+  {
     "id": "sync_DaOqV22BOiM",
     "category": "ear",
     "image": "images/sync_DaOqV22BOiM.webp",
