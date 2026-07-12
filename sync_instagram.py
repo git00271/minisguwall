@@ -158,53 +158,8 @@ def main():
         parsed_items.append({
             "shortcode": shortcode,
             "media_id": media_id,
-            "img_url": img_url,
-            "taken_at": post.get("taken_at")
+            "img_url": img_url
         })
-        
-    # 2. Identify pinned posts (a post is pinned if there exists any post after it in profile order with a larger ID)
-    pinned_shortcodes = set()
-    non_pinned_items = []
-    for idx, item in enumerate(parsed_items):
-        is_pinned = False
-        media_id = item["media_id"]
-        for later_item in parsed_items[idx+1:]:
-            if later_item["media_id"] > media_id:
-                is_pinned = True
-                break
-        if is_pinned:
-            print(f"Detected pinned post: {item['shortcode']} (excluding)")
-            pinned_shortcodes.add(item['shortcode'])
-        else:
-            non_pinned_items.append(item)
-            
-    print(f"Filtered feed: {len(non_pinned_items)} non-pinned items out of {len(parsed_items)} total.")
-    
-    new_posts_added = 0
-    
-    # Self-healing clean-up: if any currently pinned post was previously synced, remove it and delete its images
-    updated_synced_posts = []
-    removed_any_pinned = False
-    for post in synced_posts:
-        post_shortcode = post["id"].replace("sync_", "")
-        if post_shortcode in pinned_shortcodes:
-            print(f"Removing previously synced pinned post from database: {post['id']}")
-            # Delete original and mobile WebP image files
-            for img_path in [post["image"], post["image"].replace("images/", "images/mobile/")]:
-                if os.path.exists(img_path):
-                    try:
-                        os.remove(img_path)
-                        print(f"Deleted image: {img_path}")
-                    except Exception as e:
-                        print(f"Error deleting image {img_path}: {e}")
-            removed_any_pinned = True
-        else:
-            updated_synced_posts.append(post)
-            
-    if removed_any_pinned:
-        synced_posts = updated_synced_posts
-        # Force a rewrite by setting new_posts_added to at least 1
-        new_posts_added = max(new_posts_added, 1)
         
     synced_ids = {post["id"] for post in synced_posts}
     
@@ -213,8 +168,10 @@ def main():
     kst = timezone(timedelta(hours=9))
     current_time_str = datetime.now(kst).strftime("%Y-%m-%dT%H:%M:%S%z")
 
+    new_posts_added = 0
+
     # Process items in chronological order (oldest first) so they append in correct order in database
-    for item in reversed(non_pinned_items):
+    for item in reversed(parsed_items):
         shortcode = item["shortcode"]
         post_id = f"sync_{shortcode}"
         permalink = f"https://www.instagram.com/p/{shortcode}/"

@@ -671,9 +671,22 @@ if os.path.exists(synced_json_path):
                     "link": item["link"],
                     "description": item["description"]
                 })
-            # Prepend synced posts in reverse order (newest first) to the final list
-            translated_posts = list(reversed(synced_posts_list)) + translated_posts
-            print(f"Merged {len(synced_items)} synced posts from {synced_json_path}")
+            # Helper to convert shortcode in post ID to numeric media ID
+            def get_media_id(post):
+                shortcode = post["id"].replace("sync_", "")
+                alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
+                media_id = 0
+                for char in shortcode:
+                    try:
+                        media_id = (media_id * 64) + alphabet.index(char)
+                    except ValueError:
+                        pass
+                return media_id
+
+            # Sort synced posts list by media ID descending (newest first)
+            synced_posts_list.sort(key=get_media_id, reverse=True)
+            translated_posts = synced_posts_list + translated_posts
+            print(f"Merged {len(synced_items)} sorted synced posts from {synced_json_path}")
     except Exception as e:
         print(f"Error loading/merging synced posts: {e}")
 

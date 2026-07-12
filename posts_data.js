@@ -30,6 +30,21 @@ const INSTAGRAM_POSTS = [
     }
   },
   {
+    "id": "sync_DaOqV22BOiM",
+    "category": "ear",
+    "image": "images/sync_DaOqV22BOiM.webp",
+    "image_mobile": "images/mobile/sync_DaOqV22BOiM.webp",
+    "link": "https://www.instagram.com/p/DaOqV22BOiM/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #mini piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # ثقب صغير بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #mini 穿孔 @guwall.minis"
+    }
+  },
+  {
     "id": "sync_DZ-I1QtgcPB",
     "category": "ear",
     "image": "images/sync_DZ-I1QtgcPB.webp",
@@ -102,6 +117,21 @@ const INSTAGRAM_POSTS = [
       "ru": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis",
       "ar": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis",
       "zh": "#EumCardAffiliate #EumCard #IncheonPiercing #Guwol-DongPiercing #EarPiercingPlaceby@guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DX1cwpuh7Ie",
+    "category": "ear",
+    "image": "images/sync_DX1cwpuh7Ie.webp",
+    "image_mobile": "images/mobile/sync_DX1cwpuh7Ie.webp",
+    "link": "https://www.instagram.com/p/DX1cwpuh7Ie/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #mini piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # ثقب صغير بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #mini 穿孔 @guwall.minis"
     }
   },
   {

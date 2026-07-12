@@ -54,7 +54,7 @@ jobs:
           
           # Check if there are any changes staged
           if ! git diff --cached --quiet; then
-            git commit -m "chore: auto-sync instagram posts [skip ci]"
+            git commit -m "chore: auto-sync instagram posts"
             git push origin main
           else
             echo "No new Instagram posts to sync."
