@@ -1,5 +1,35 @@
 const INSTAGRAM_POSTS = [
   {
+    "id": "sync_DbF0btWpR5E",
+    "category": "ear",
+    "image": "images/sync_DbF0btWpR5E.webp",
+    "image_mobile": "images/mobile/sync_DbF0btWpR5E.webp",
+    "link": "https://www.instagram.com/p/DbF0btWpR5E/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #mini piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # ثقب صغير بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #mini 穿孔 @guwall.minis"
+    }
+  },
+  {
+    "id": "sync_DbFqKBvhz3L",
+    "category": "ear",
+    "image": "images/sync_DbFqKBvhz3L.webp",
+    "image_mobile": "images/mobile/sync_DbFqKBvhz3L.webp",
+    "link": "https://www.instagram.com/p/DbFqKBvhz3L/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#Guwol-dong piercing #Incheon piercing #piercing #mini piercing by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "# ثقب Guwol-dong # ثقب إنتشون # ثقب # ثقب صغير بواسطة @guwall.minis",
+      "zh": "#九月洞穿孔 #仁川穿孔 #piercing #mini 穿孔 @guwall.minis"
+    }
+  },
+  {
     "id": "sync_DbDToHqp6CA",
     "category": "ear",
     "image": "images/sync_DbDToHqp6CA.webp",
