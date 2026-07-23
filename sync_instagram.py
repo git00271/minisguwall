@@ -55,8 +55,8 @@ def classify_category(caption):
         return "ear"
     caption_lower = caption.lower()
     
-    body_keywords = ["배꼽", "바디", "쇄골", "더멀", "dermal", "belly", "navel", "collarbone", "대이비스"]
-    face_keywords = ["입술", "셉텀", "눈썹", "코피어싱", "보조개", "lip", "septum", "eyebrow", "nose", "dahlia", "medusa", "달리아", "메두사", "딩플"]
+    body_keywords = ["배꼽", "바디", "쇄골", "더멀", "dermal", "belly", "navel", "collarbone", "대이비스", "플랫서페이스", "플렛서페이스", "서페이스", "surface", "손가락", "finger", "가슴", "chest", "목", "neck", "손목", "wrist"]
+    face_keywords = ["입술", "셉텀", "눈썹", "코피어싱", "보조개", "lip", "septum", "eyebrow", "nose", "dahlia", "medusa", "달리아", "메두사", "딩플", "셉텀피어싱", "눈썹피어싱", "코", "피어싱코", "입술피어싱", "피어싱입술", "보조개피어싱", "혀", "tongue", "혀피어싱", "딤플", "dimple"]
     
     if any(k in caption_lower for k in body_keywords):
         return "body"
@@ -112,54 +112,119 @@ def main():
                         curated_shortcodes.add(shortcode)
     except Exception as e:
         print(f"Warning: Could not parse translate_data.py for curated links: {e}")
-    url = "https://insta-story.com/api/v1/web/profile"
-    visitor_id = str(uuid.uuid4())
-    payload = {
-        "username": "guwall.minis",
-        "visitor_id": visitor_id
-    }
+    # Primary API: storynavigation.com
+    parsed_items = []
+    success_api = False
+    
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Content-Type': 'application/json',
-        'Accept': 'application/json, text/plain, */*'
+        'Accept-Language': 'ko,en-US;q=0.9,en;q=0.8'
     }
     
-    print("Fetching posts from insta-story API...")
-    res = requests.post(url, json=payload, headers=headers, timeout=15)
-    if res.status_code != 200:
-        print(f"Error fetching from API: {res.status_code}")
-        return
-        
     try:
-        data = res.json()
-    except Exception as e:
-        print(f"Failed to parse JSON response: {e}")
-        return
+        print("Fetching posts from storynavigation.com API...")
+        session = requests.Session()
+        profile_url = "https://storynavigation.com/user/guwall.minis"
         
-    posts = data.get("posts", [])
-    print(f"Found {len(posts)} items on API.")
-    
-    # 1. Parse JSON items to get shortcodes and media IDs
-    parsed_items = []
-    for post in posts:
-        media_id_str = post.get("id")
-        if not media_id_str:
-            continue
-        media_id = int(media_id_str.split('_')[0])
-        shortcode = id_to_shortcode(media_id)
-        source_b64 = post.get("source")
-        if not source_b64:
-            continue
+        # Load user page to establish session and extract CSRF token
+        page_res = session.get(profile_url, headers=headers, timeout=15)
+        if page_res.status_code == 200:
+            soup = BeautifulSoup(page_res.text, 'html.parser')
+            csrf_tag = soup.find('meta', {'name': 'csrf-token'})
+            if csrf_tag:
+                csrf_token = csrf_tag.get('content')
+                
+                # Fetch medias JSON using the extracted CSRF token
+                medias_url = "https://storynavigation.com/get-user-medias"
+                medias_headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json;charset=UTF-8',
+                    'X-CSRF-TOKEN': csrf_token,
+                    'Referer': profile_url
+                }
+                payload = {"user_name": "guwall.minis"}
+                post_res = session.post(medias_url, json=payload, headers=medias_headers, timeout=15)
+                
+                if post_res.status_code == 200:
+                    medias_data = post_res.json()
+                    if isinstance(medias_data, list):
+                        print(f"Successfully retrieved {len(medias_data)} items from storynavigation.")
+                        for post in medias_data:
+                            shortcode = post.get("id") # E.g., DbFqKBvhz3L
+                            if not shortcode:
+                                continue
+                            
+                            b64_url = post.get("thumbnailUrl")
+                            if not b64_url:
+                                continue
+                                
+                            try:
+                                img_url = base64.b64decode(b64_url).decode('utf-8')
+                            except Exception:
+                                continue
+                                
+                            caption = post.get("caption", "")
+                            
+                            # Re-construct a numeric media_id for chronological sorting helpers
+                            media_id = shortcode_to_id(shortcode)
+                            
+                            parsed_items.append({
+                                "shortcode": shortcode,
+                                "media_id": media_id,
+                                "img_url": img_url,
+                                "caption": caption
+                            })
+                        success_api = True
+    except Exception as e:
+        print(f"Warning: Failed to fetch from storynavigation API: {e}")
+
+    # Fallback API: insta-story.com
+    if not success_api:
+        print("Falling back to insta-story.com API...")
+        url = "https://insta-story.com/api/v1/web/profile"
+        visitor_id = str(uuid.uuid4())
+        payload = {
+            "username": "guwall.minis",
+            "visitor_id": visitor_id
+        }
+        fallback_headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Content-Type': 'application/json',
+            'Accept': 'application/json, text/plain, */*'
+        }
+        
         try:
-            img_url = base64.b64decode(source_b64).decode('utf-8')
-        except Exception:
-            continue
-            
-        parsed_items.append({
-            "shortcode": shortcode,
-            "media_id": media_id,
-            "img_url": img_url
-        })
+            res = requests.post(url, json=payload, headers=fallback_headers, timeout=15)
+            if res.status_code == 200:
+                data = res.json()
+                # Handle posts list being None
+                posts = data.get("posts") or []
+                print(f"Found {len(posts)} items on fallback API.")
+                for post in posts:
+                    media_id_str = post.get("id")
+                    if not media_id_str:
+                        continue
+                    media_id = int(media_id_str.split('_')[0])
+                    shortcode = id_to_shortcode(media_id)
+                    source_b64 = post.get("source")
+                    if not source_b64:
+                        continue
+                    try:
+                        img_url = base64.b64decode(source_b64).decode('utf-8')
+                    except Exception:
+                        continue
+                        
+                    parsed_items.append({
+                        "shortcode": shortcode,
+                        "media_id": media_id,
+                        "img_url": img_url,
+                        "caption": "" # No captions available on fallback API
+                    })
+            else:
+                print(f"Fallback API failed with status: {res.status_code}")
+        except Exception as e:
+            print(f"Error calling fallback API: {e}")
         
     synced_ids = {post["id"] for post in synced_posts}
     
@@ -202,7 +267,9 @@ def main():
             continue
             
         # Classify category
-        caption = "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis"
+        caption = item.get("caption")
+        if not caption:
+            caption = "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis"
         category = classify_category(caption)
         print(f"Classified category: {category}")
         
