@@ -1,0 +1,45 @@
+'profile' occurrences: 2
+  Snippet: /assets/2.DJ59jJdb.css" rel="stylesheet"> 		<link href="./_app/immutable/assets/ProfileView.D4fMgqsQ.css" rel="stylesheet"> 		<link href="./_app/immutable/asset
+  Snippet: stagram Highlights are permanent collections of stories that users pin to their profiles. InstaNavigation lets you browse and download highlights from any publi
+'user' occurrences: 8
+  Snippet: ighlights from any public Instagram account. No login required â just enter a username and start browsing anonymously."/><!----><title>InstaNavigation â Ano
+  Snippet: pe="text" class="inp-search inp-search-body svelte-1002zyw" placeholder="Search username (haileybieber e.g.)" value="" autocapitalize="none" autocorrect="off" a
+  Snippet: ng and downloading Instagram Stories and Highlights anonymously. Simply enter a username to browse any public account without revealing your identity.</p></div>
+  Snippet: Navigation fetches publicly available Instagram stories and highlights. Enter a username, and our tool retrieves the content for you to view and download â no
+  Snippet: ighlights from any public Instagram account. No login required â just enter a username and start browsing anonymously.</p> <h2 class="svelte-ktd53y">View Inst
+  Snippet: igation, viewing Instagram stories has never been easier. Search for any public username at the top of the page, and our tool will instantly load their active s
+  Snippet: ="svelte-ktd53y">Instagram Highlights are permanent collections of stories that users pin to their profiles. InstaNavigation lets you browse and download highli
+  Snippet: n lets you browse and download highlights from any public account. Search for a username, switch to the Highlights tab, and explore all available collections. S
+'search' occurrences: 9
+  Snippet: ----></div> <div class="bdy-inner bdy-inner-after-ad svelte-ktd53y"><div class="search-in-body body-wrap svelte-1002zyw"><input type="text" class="inp-search in
+  Snippet: v class="search-in-body body-wrap svelte-1002zyw"><input type="text" class="inp-search inp-search-body svelte-1002zyw" placeholder="Search username (haileybiebe
+  Snippet: arch-in-body body-wrap svelte-1002zyw"><input type="text" class="inp-search inp-search-body svelte-1002zyw" placeholder="Search username (haileybieber e.g.)" va
+  Snippet: nput type="text" class="inp-search inp-search-body svelte-1002zyw" placeholder="Search username (haileybieber e.g.)" value="" autocapitalize="none" autocorrect=
+  Snippet: autocapitalize="none" autocorrect="off" autocomplete="off"/> <button class="inp-search-body-button svelte-1002zyw" type="submit" aria-label="Search"><!--[-1--><
+  Snippet: <button class="inp-search-body-button svelte-1002zyw" type="submit" aria-label="Search"><!--[-1--><svg aria-hidden="true" focusable="false" class="search-in-bod
+  Snippet: aria-label="Search"><!--[-1--><svg aria-hidden="true" focusable="false" class="search-in-body-icon svelte-1002zyw" xmlns="http://www.w3.org/2000/svg" viewBox="
+  Snippet: -ktd53y">With InstaNavigation, viewing Instagram stories has never been easier. Search for any public username at the top of the page, and our tool will instant
+  Snippet: nstaNavigation lets you browse and download highlights from any public account. Search for a username, switch to the Highlights tab, and explore all available c
+'story' occurrences: 69
+  Snippet: ting.js"></script> 	<!--10ehbbt--><meta name="description" content="Watch Insta Story anonymously and download InstaStory Highlights instantly! Use Instagram St
+  Snippet: eta name="description" content="Watch Insta Story anonymously and download InstaStory Highlights instantly! Use Instagram Story Viewer â no login, no limits,
+  Snippet: a Story anonymously and download InstaStory Highlights instantly! Use Instagram Story Viewer â no login, no limits, totally private."/> <meta property="og:sit
+  Snippet: gin, no limits, totally private."/> <meta property="og:site_name" content="InstaStory"/> <meta property="og:type" content="website"/> <meta property="og:title"
+  Snippet: property="og:type" content="website"/> <meta property="og:title" content="Insta Story â Instagram Story Viewer"/> <meta property="og:description" content="Wat
+  Snippet: ontent="website"/> <meta property="og:title" content="Insta Story â Instagram Story Viewer"/> <meta property="og:description" content="Watch Insta Story anony
+  Snippet: Instagram Story Viewer"/> <meta property="og:description" content="Watch Insta Story anonymously and download InstaStory Highlights instantly! Use Instagram St
+  Snippet: perty="og:description" content="Watch Insta Story anonymously and download InstaStory Highlights instantly! Use Instagram Story Viewer â no login, no limits,
+  Snippet: a Story anonymously and download InstaStory Highlights instantly! Use Instagram Story Viewer â no login, no limits, totally private."/> <meta property="og:url
+  Snippet: , no limits, totally private."/> <meta property="og:url" content="https://insta-story.com/instanavigation"/> <meta property="og:image" content="https://insta-st
+'post' occurrences: 0
+'stories' occurrences: 18
+  Snippet: plicationCategory":"Instagram Story Viewer","featureList":["Insta Story","Insta Stories","Insta Story Viewer","Story Viewer"],"contentRating":"Everyone","aggreg
+  Snippet: ation is a free Instagram Story Viewer that lets you browse, view, and download stories and highlights from any public Instagram account. No login required â
+  Snippet: -1jijdvl"><div class="nav svelte-1jijdvl nav-home"><a href="/download-instagram-stories" class="nav-bar-link svelte-1jijdvl"><div class="nav-in nav-in-home svel
+  Snippet: te(1127.011 255.97)"></path></svg></div> <div class="nav-titles svelte-1jijdvl">Stories</div></div></a> <!--[0--><a href="/download-highlights" class="nav-bar-l
+  Snippet: an> <p class="p-feature svelte-ktd53y">Enjoy every detail â view and download stories in crystal-clear full resolution.</p></div> <div class="feature svelte-k
+  Snippet: e-ktd53y">Fast</span> <p class="p-feature svelte-ktd53y">Blazing-fast requests. Stories and highlights load instantly, no waiting around.</p></div> <div class="
+  Snippet: iv></div> <div class="tools-section svelte-2e5lro"><a href="/download-instagram-stories" class="svelte-2e5lro"><div class="tools-box svelte-2e5lro"><svg class="
+  Snippet: 5.97)"></path></svg> <span class="tools-title svelte-2e5lro">Download Instagram Stories</span></div></a> <a href="/download-highlights" class="svelte-2e5lro"><d
+  Snippet: 3y">InstaNavigation is a free online tool for viewing and downloading Instagram Stories and Highlights anonymously. Simply enter a username to browse any public
+  Snippet: tps://schema.org/Question"><h3 itemprop="name" class="svelte-ktd53y">Can I view stories anonymously with InstaNavigation?</h3> <div itemscope="" itemprop="accep
