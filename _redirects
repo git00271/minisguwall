@@ -1,2 +1,4 @@
-/staff    https://161.33.208.191.sslip.io/staff    200!
-/api/*    https://161.33.208.191.sslip.io/api/:splat    200!
+/staff            https://161.33.208.191.sslip.io/staff            200!
+/manual_images/*  https://161.33.208.191.sslip.io/manual_images/:splat  200!
+/media/*          https://161.33.208.191.sslip.io/media/:splat          200!
+/api/*            https://161.33.208.191.sslip.io/api/:splat            200!

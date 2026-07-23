@@ -5,6 +5,18 @@
   force = true
 
 [[redirects]]
+  from = "/manual_images/*"
+  to = "https://161.33.208.191.sslip.io/manual_images/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/media/*"
+  to = "https://161.33.208.191.sslip.io/media/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "https://161.33.208.191.sslip.io/api/:splat"
   status = 200
