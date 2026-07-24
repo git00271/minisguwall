@@ -5,6 +5,12 @@
   force = true
 
 [[redirects]]
+  from = "/user"
+  to = "https://161.33.208.191.sslip.io/user"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/privacy"
   to = "https://161.33.208.191.sslip.io/privacy"
   status = 200
