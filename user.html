@@ -495,17 +495,36 @@
         function formatMessageText(text) {
             if (!text) return '';
             
+            let tokens = [];
+
+            // 1. 마크다운 이미지: ![alt](url) -> 토큰화
             let formatted = text.replace(/!\[(.*?)\]\((https?:\/\/[^\s\)]+)\)/g, function(match, alt, url) {
-                return `<img src="${url}" alt="${alt}" class="ig-img-card" onclick="window.open('${url}', '_blank')">`;
+                let id = `___TOKEN_IMG_${tokens.length}___`;
+                tokens.push({
+                    id: id,
+                    html: `<img src="${url}" alt="${alt}" class="ig-img-card" onclick="window.open('${url}', '_blank')">`
+                });
+                return id;
             });
 
+            // 2. 마크다운 링크: [label](url) -> 토큰화
             formatted = formatted.replace(/\[(.*?)\]\((https?:\/\/[^\s\)]+)\)/g, function(match, label, url) {
-                return `<a href="${url}" target="_blank" class="ig-link">${label}</a>`;
+                let id = `___TOKEN_LINK_${tokens.length}___`;
+                tokens.push({
+                    id: id,
+                    html: `<a href="${url}" target="_blank" class="ig-link">${label}</a>`
+                });
+                return id;
             });
 
-            formatted = formatted.replace(/(?<!href=")(https?:\/\/[^\s<)]+)/g, function(match) {
-                if (match.includes('class="ig-link"') || match.includes('class="ig-img-card"')) return match;
-                return `<a href="${match}" target="_blank" class="ig-link">${match}</a>`;
+            // 3. 순수 URL 자동 <a> 링크 변환
+            formatted = formatted.replace(/(https?:\/\/[^\s<)]+)/g, function(url) {
+                return `<a href="${url}" target="_blank" class="ig-link">${url}</a>`;
+            });
+
+            // 4. 토큰 복원 (HTML 태그 오염 완전히 차단)
+            tokens.forEach(function(token) {
+                formatted = formatted.replace(token.id, token.html);
             });
 
             return formatted;
