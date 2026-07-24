@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>미니스피어싱 구월점 - 인스타그램 DM 고객 체감 시뮬레이터</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ig-bg: #000000;
+            --ig-card-bg: #121212;
+            --ig-border: #262626;
+            --ig-blue: #3797f0;
+            --ig-bubble-received: #262626;
+            --ig-bubble-sent: #3797f0;
+            --text-main: #f5f5f5;
+            --text-sub: #a8a8a8;
+            --accent-gold: #ffd700;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--ig-bg);
+            color: var(--text-main);
+            height: 100vh;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+            border-left: 1px solid var(--ig-border);
+            border-right: 1px solid var(--ig-border);
+        }
+
+        header {
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--ig-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .back-btn {
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar-box {
+            position: relative;
+        }
+
+        .profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid #333;
+        }
+
+        .active-dot {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 11px;
+            height: 11px;
+            background-color: #10b981;
+            border: 2px solid #000;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .username-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .username {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .verified-badge {
+            color: #3897f0;
+            font-size: 0.85rem;
+        }
+
+        .sub-status {
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .quick-chips-wrapper {
+            padding: 10px 14px;
+            background: #090909;
+            border-bottom: 1px solid var(--ig-border);
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+        .quick-chips-wrapper::-webkit-scrollbar { display: none; }
+
+        .chip-btn {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            color: #dbdbdb;
+            font-size: 0.78rem;
+            padding: 7px 12px;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .chip-btn:hover, .chip-btn:active {
+            background: #2a2a2a;
+            color: #fff;
+            border-color: #555;
+        }
+
+        .chip-btn i {
+            color: var(--ig-blue);
+        }
+
+        .chat-thread {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            scroll-behavior: smooth;
+        }
+
+        .msg-group {
+            display: flex;
+            gap: 8px;
+            max-width: 86%;
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .msg-group.received {
+            align-self: flex-start;
+        }
+
+        .msg-group.sent {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .msg-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .bubble {
+            padding: 11px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            word-break: break-word;
+            white-space: pre-wrap;
+        }
+
+        .msg-group.received .bubble {
+            background: var(--ig-bubble-received);
+            color: #efefef;
+            border-top-left-radius: 6px;
+        }
+
+        .msg-group.sent .bubble {
+            background: var(--ig-bubble-sent);
+            color: #ffffff;
+            border-top-right-radius: 6px;
+        }
+
+        .ig-link {
+            color: #70b5f9 !important;
+            text-decoration: underline;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .ig-img-card {
+            width: 230px;
+            height: 230px;
+            max-width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-top: 8px;
+            margin-bottom: 4px;
+            display: block;
+            border: 1px solid #333;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .typing-box {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 14px;
+            background: var(--ig-bubble-received);
+            border-radius: 18px;
+            width: fit-content;
+            margin-left: 36px;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background: #8e8e8e;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+
+        .input-bar {
+            padding: 10px 14px;
+            background: #000;
+            border-top: 1px solid var(--ig-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-box-container {
+            flex: 1;
+            background: #121212;
+            border: 1px solid #262626;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 4px 12px 4px 16px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 0.92rem;
+            padding: 8px 0;
+        }
+
+        .chat-input::placeholder {
+            color: #737373;
+        }
+
+        .img-upload-btn {
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .send-btn {
+            background: transparent;
+            border: none;
+            color: var(--ig-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 6px 8px;
+            opacity: 0.5;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        .send-btn.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #file-input { display: none; }
+
+        .img-preview-box {
+            position: relative;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .img-preview-thumb {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .remove-img-btn {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <i class="fa-solid fa-chevron-left back-btn"></i>
+            <div class="profile-container">
+                <div class="avatar-box">
+                    <img src="https://minisguwall.shop/media/app_icon_1024.jpg" alt="미니스피어싱" class="profile-img" onerror="this.src='https://via.placeholder.com/40/8256e6/ffffff?text=MINIS'">
+                    <div class="active-dot"></div>
+                </div>
+                <div class="profile-info">
+                    <div class="username-row">
+                        <span class="username">guwall.minis</span>
+                        <i class="fa-solid fa-circle-check verified-badge"></i>
+                    </div>
+                    <span class="sub-status">미니스피어싱 구월점 · 지금 활동 중</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-circle-info fa-regular"></i>
+        </div>
+    </header>
+
+    <div class="quick-chips-wrapper">
+        <button class="chip-btn" onclick="sendQuickText('귓볼 시술비랑 가격 얼마예요?')">
+            <i class="fa-solid fa-gem"></i> 귓볼 시술비 & 가격
+        </button>
+        <button class="chip-btn" onclick="sendQuickText('코 피어싱 착용샷 보여주세요!')">
+            <i class="fa-solid fa-camera"></i> 코 피어싱 사진
+        </button>
+        <button class="chip-btn" onclick="sendQuickText('영업시간이 어떻게 되나요?')">
+            <i class="fa-regular fa-clock"></i> 영업시간 & 위치
+        </button>
+        <button class="chip-btn" onclick="sendQuickText('미성년자 부모님 동반 필수인가요?')">
+            <i class="fa-solid fa-user-shield"></i> 미성년자 규정
+        </button>
+        <button class="chip-btn" onclick="sendQuickText('가져온 개인 귀걸이로 뚫어도 되나요?')">
+            <i class="fa-solid fa-ban"></i> 개인 귀걸이 시술
+        </button>
+    </div>
+
+    <div class="chat-thread" id="chat-thread">
+        <div class="msg-group received">
+            <img src="https://minisguwall.shop/media/app_icon_1024.jpg" class="msg-avatar" onerror="this.src='https://via.placeholder.com/28/8256e6/ffffff?text=M'">
+            <div class="bubble">안녕하세요! 미니스피어싱 구월점이에요 😊✨
+궁금하신 점이나 피어싱 시술/가격 문의 편하게 남겨주세요 💕</div>
+        </div>
+    </div>
+
+    <div class="typing-box" id="typing-box" style="display: none;">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+    </div>
+
+    <div class="input-bar">
+        <label for="file-input" class="img-upload-btn">
+            <i class="fa-regular fa-image"></i>
+        </label>
+        <input type="file" id="file-input" accept="image/*" onchange="handleImageSelect(event)">
+        
+        <div class="input-box-container">
+            <div id="preview-container"></div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="메시지 보내기..." onkeypress="handleKeyPress(event)" oninput="toggleSendBtn()">
+        </div>
+        
+        <button class="send-btn" id="send-btn" onclick="sendMessage()">보내기</button>
+    </div>
+
+    <script>
+        let selectedBase64Image = null;
+
+        function toggleSendBtn() {
+            const text = document.getElementById('chat-input').value.trim();
+            const sendBtn = document.getElementById('send-btn');
+            if (text || selectedBase64Image) {
+                sendBtn.classList.add('active');
+            } else {
+                sendBtn.classList.remove('active');
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendQuickText(text) {
+            document.getElementById('chat-input').value = text;
+            toggleSendBtn();
+            sendMessage();
+        }
+
+        function handleImageSelect(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                selectedBase64Image = evt.target.result;
+                renderPreview(selectedBase64Image);
+                toggleSendBtn();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function renderPreview(base64Str) {
+            const container = document.getElementById('preview-container');
+            container.innerHTML = `
+                <div class="img-preview-box">
+                    <img src="${base64Str}" class="img-preview-thumb">
+                    <div class="remove-img-btn" onclick="removeImage()">✕</div>
+                </div>
+            `;
+        }
+
+        function removeImage() {
+            selectedBase64Image = null;
+            document.getElementById('preview-container').innerHTML = '';
+            document.getElementById('file-input').value = '';
+            toggleSendBtn();
+        }
+
+        function formatMessageText(text) {
+            if (!text) return '';
+            
+            let formatted = text.replace(/!\[(.*?)\]\((https?:\/\/[^\s\)]+)\)/g, function(match, alt, url) {
+                return `<img src="${url}" alt="${alt}" class="ig-img-card" onclick="window.open('${url}', '_blank')">`;
+            });
+
+            formatted = formatted.replace(/\[(.*?)\]\((https?:\/\/[^\s\)]+)\)/g, function(match, label, url) {
+                return `<a href="${url}" target="_blank" class="ig-link">${label}</a>`;
+            });
+
+            formatted = formatted.replace(/(?<!href=")(https?:\/\/[^\s<)]+)/g, function(match) {
+                if (match.includes('class="ig-link"') || match.includes('class="ig-img-card"')) return match;
+                return `<a href="${match}" target="_blank" class="ig-link">${match}</a>`;
+            });
+
+            return formatted;
+        }
+
+        async function sendMessage() {
+            const inputEl = document.getElementById('chat-input');
+            const text = inputEl.value.trim();
+
+            if (!text && !selectedBase64Image) return;
+
+            const thread = document.getElementById('chat-thread');
+            const userMsgGroup = document.createElement('div');
+            userMsgGroup.className = 'msg-group sent';
+            
+            let userContentHtml = '';
+            if (selectedBase64Image) {
+                userContentHtml += `<img src="${selectedBase64Image}" class="ig-img-card"><br>`;
+            }
+            if (text) {
+                userContentHtml += text;
+            }
+
+            userMsgGroup.innerHTML = `<div class="bubble">${userContentHtml}</div>`;
+            thread.appendChild(userMsgGroup);
+
+            const currentImg = selectedBase64Image;
+            inputEl.value = '';
+            removeImage();
+            toggleSendBtn();
+
+            thread.scrollTop = thread.scrollHeight;
+
+            const typingBox = document.getElementById('typing-box');
+            typingBox.style.display = 'flex';
+            thread.appendChild(typingBox);
+            thread.scrollTop = thread.scrollHeight;
+
+            try {
+                const response = await fetch('/api/user/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: text,
+                        image_base64: currentImg,
+                        user_id: 'test_user_ig'
+                    })
+                });
+
+                const data = await response.json();
+                typingBox.style.display = 'none';
+
+                const aiMsgGroup = document.createElement('div');
+                aiMsgGroup.className = 'msg-group received';
+                
+                const replyHtml = formatMessageText(data.reply || '답변을 생성하지 못했습니다.');
+                
+                aiMsgGroup.innerHTML = `
+                    <img src="https://minisguwall.shop/media/app_icon_1024.jpg" class="msg-avatar" onerror="this.src='https://via.placeholder.com/28/8256e6/ffffff?text=M'">
+                    <div class="bubble">${replyHtml}</div>
+                `;
+
+                thread.appendChild(aiMsgGroup);
+                thread.scrollTop = thread.scrollHeight;
+
+            } catch (err) {
+                typingBox.style.display = 'none';
+                console.error('Error:', err);
+                
+                const errGroup = document.createElement('div');
+                errGroup.className = 'msg-group received';
+                errGroup.innerHTML = `
+                    <img src="https://minisguwall.shop/media/app_icon_1024.jpg" class="msg-avatar">
+                    <div class="bubble">잠시 연결이 원활하지 않아요 😅 잠시 후 다시 문의해 주세요!</div>
+                `;
+                thread.appendChild(errGroup);
+                thread.scrollTop = thread.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
