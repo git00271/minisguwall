@@ -112,74 +112,131 @@ def main():
                         curated_shortcodes.add(shortcode)
     except Exception as e:
         print(f"Warning: Could not parse translate_data.py for curated links: {e}")
-    # Primary API: storynavigation.com
+    # 1. Primary API: Meta Graph API (Official)
     parsed_items = []
     success_api = False
     
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept-Language': 'ko,en-US;q=0.9,en;q=0.8'
-    }
-    
-    try:
-        print("Fetching posts from storynavigation.com API...")
-        session = requests.Session()
-        profile_url = "https://storynavigation.com/user/guwall.minis"
-        
-        # Load user page to establish session and extract CSRF token
-        page_res = session.get(profile_url, headers=headers, timeout=15)
-        if page_res.status_code == 200:
-            soup = BeautifulSoup(page_res.text, 'html.parser')
-            csrf_tag = soup.find('meta', {'name': 'csrf-token'})
-            if csrf_tag:
-                csrf_token = csrf_tag.get('content')
-                
-                # Fetch medias JSON using the extracted CSRF token
-                medias_url = "https://storynavigation.com/get-user-medias"
-                medias_headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-Type': 'application/json;charset=UTF-8',
-                    'X-CSRF-TOKEN': csrf_token,
-                    'Referer': profile_url
-                }
-                payload = {"user_name": "guwall.minis"}
-                post_res = session.post(medias_url, json=payload, headers=medias_headers, timeout=15)
-                
-                if post_res.status_code == 200:
-                    medias_data = post_res.json()
-                    if isinstance(medias_data, list):
-                        print(f"Successfully retrieved {len(medias_data)} items from storynavigation.")
-                        for post in medias_data:
-                            shortcode = post.get("id") # E.g., DbFqKBvhz3L
-                            if not shortcode:
-                                continue
-                            
-                            b64_url = post.get("thumbnailUrl")
-                            if not b64_url:
-                                continue
-                                
-                            try:
-                                img_url = base64.b64decode(b64_url).decode('utf-8')
-                            except Exception:
-                                continue
-                                
-                            caption = post.get("caption", "")
-                            
-                            # Re-construct a numeric media_id for chronological sorting helpers
-                            media_id = shortcode_to_id(shortcode)
-                            
-                            parsed_items.append({
-                                "shortcode": shortcode,
-                                "media_id": media_id,
-                                "img_url": img_url,
-                                "caption": caption
-                            })
-                        success_api = True
-    except Exception as e:
-        print(f"Warning: Failed to fetch from storynavigation API: {e}")
+    token = os.environ.get("INSTAGRAM_PAGE_ACCESS_TOKEN", "").strip()
+    if not token:
+        aichat_env_paths = [
+            os.path.join("..", "AIChat", ".env"),
+            r"C:\Users\git00\workspace\AIChat\.env"
+        ]
+        for env_path in aichat_env_paths:
+            if os.path.exists(env_path):
+                try:
+                    with open(env_path, "r", encoding="utf-8") as f:
+                        for line in f:
+                            if line.startswith("INSTAGRAM_PAGE_ACCESS_TOKEN="):
+                                token = line.split("=", 1)[1].strip()
+                                if token:
+                                    print(f"Loaded Meta Graph API Token from {env_path}")
+                                    break
+                except Exception as e:
+                    print(f"Warning: Could not read token from {env_path}: {e}")
+            if token:
+                break
 
-    # Fallback API: insta-story.com
+    if token:
+        try:
+            print("Fetching posts from Meta Graph API...")
+            graph_url = f'https://graph.facebook.com/v19.0/me?fields=instagram_business_account{{media{{id,caption,media_type,media_url,permalink,thumbnail_url,timestamp}}}}&access_token={token}'
+            graph_res = requests.get(graph_url, timeout=20)
+            if graph_res.status_code == 200:
+                media_list = graph_res.json().get('instagram_business_account', {}).get('media', {}).get('data', [])
+                print(f"Successfully retrieved {len(media_list)} items from Meta Graph API.")
+                for item in media_list:
+                    permalink = item.get("permalink", "")
+                    shortcode = extract_shortcode(permalink)
+                    if not shortcode:
+                        continue
+                    
+                    if item.get("media_type") == "VIDEO":
+                        img_url = item.get("thumbnail_url") or item.get("media_url")
+                    else:
+                        img_url = item.get("media_url") or item.get("thumbnail_url")
+                    if not img_url:
+                        continue
+                        
+                    caption = item.get("caption", "")
+                    media_id = shortcode_to_id(shortcode)
+                    
+                    parsed_items.append({
+                        "shortcode": shortcode,
+                        "media_id": media_id,
+                        "img_url": img_url,
+                        "caption": caption
+                    })
+                success_api = True
+            else:
+                print(f"Warning: Meta Graph API failed with status {graph_res.status_code}: {graph_res.text[:150]}")
+        except Exception as e:
+            print(f"Warning: Meta Graph API exception: {e}")
+
+    # Fallback 1: storynavigation.com
+    if not success_api:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept-Language': 'ko,en-US;q=0.9,en;q=0.8'
+        }
+        
+        try:
+            print("Falling back to storynavigation.com API...")
+            session = requests.Session()
+            profile_url = "https://storynavigation.com/user/guwall.minis"
+            
+            # Load user page to establish session and extract CSRF token
+            page_res = session.get(profile_url, headers=headers, timeout=15)
+            if page_res.status_code == 200:
+                soup = BeautifulSoup(page_res.text, 'html.parser')
+                csrf_tag = soup.find('meta', {'name': 'csrf-token'})
+                if csrf_tag:
+                    csrf_token = csrf_tag.get('content')
+                    
+                    # Fetch medias JSON using the extracted CSRF token
+                    medias_url = "https://storynavigation.com/get-user-medias"
+                    medias_headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json;charset=UTF-8',
+                        'X-CSRF-TOKEN': csrf_token,
+                        'Referer': profile_url
+                    }
+                    payload = {"user_name": "guwall.minis"}
+                    post_res = session.post(medias_url, json=payload, headers=medias_headers, timeout=15)
+                    
+                    if post_res.status_code == 200:
+                        medias_data = post_res.json()
+                        if isinstance(medias_data, list):
+                            print(f"Successfully retrieved {len(medias_data)} items from storynavigation.")
+                            for post in medias_data:
+                                shortcode = post.get("id") # E.g., DbFqKBvhz3L
+                                if not shortcode:
+                                    continue
+                                
+                                b64_url = post.get("thumbnailUrl")
+                                if not b64_url:
+                                    continue
+                                    
+                                try:
+                                    img_url = base64.b64decode(b64_url).decode('utf-8')
+                                except Exception:
+                                    continue
+                                    
+                                caption = post.get("caption", "")
+                                media_id = shortcode_to_id(shortcode)
+                                
+                                parsed_items.append({
+                                    "shortcode": shortcode,
+                                    "media_id": media_id,
+                                    "img_url": img_url,
+                                    "caption": caption
+                                })
+                            success_api = True
+        except Exception as e:
+            print(f"Warning: Failed to fetch from storynavigation API: {e}")
+
+    # Fallback 2: insta-story.com
     if not success_api:
         print("Falling back to insta-story.com API...")
         url = "https://insta-story.com/api/v1/web/profile"
@@ -198,7 +255,6 @@ def main():
             res = requests.post(url, json=payload, headers=fallback_headers, timeout=15)
             if res.status_code == 200:
                 data = res.json()
-                # Handle posts list being None
                 posts = data.get("posts") or []
                 print(f"Found {len(posts)} items on fallback API.")
                 for post in posts:
@@ -236,6 +292,10 @@ def main():
     new_posts_added = 0
 
     # Process items in chronological order (oldest first) so they append in correct order in database
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    
     for item in reversed(parsed_items):
         shortcode = item["shortcode"]
         post_id = f"sync_{shortcode}"

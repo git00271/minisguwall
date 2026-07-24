@@ -31,6 +31,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run sync script
+        env:
+          INSTAGRAM_PAGE_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_PAGE_ACCESS_TOKEN }}
         run: |
           python sync_instagram.py
 
