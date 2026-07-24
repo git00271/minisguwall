@@ -495,6 +495,9 @@
         function formatMessageText(text) {
             if (!text) return '';
             
+            // 0. 볼드체 마크다운 별표(**) 제거 -> 일반 텍스트로 깔끔하게 치환
+            text = text.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*/g, '');
+
             let tokens = [];
 
             // 1. 마크다운 이미지: ![alt](url) -> 토큰화
