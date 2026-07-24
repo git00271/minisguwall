@@ -24,6 +24,12 @@
 
 
 [[redirects]]
+  from = "/webhook/*"
+  to = "https://161.33.208.191.sslip.io/webhook/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/manual_images/*"
   to = "https://161.33.208.191.sslip.io/manual_images/:splat"
   status = 200
