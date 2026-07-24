@@ -5,6 +5,25 @@
   force = true
 
 [[redirects]]
+  from = "/privacy"
+  to = "https://161.33.208.191.sslip.io/privacy"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/terms"
+  to = "https://161.33.208.191.sslip.io/terms"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/data-deletion"
+  to = "https://161.33.208.191.sslip.io/data-deletion"
+  status = 200
+  force = true
+
+
+[[redirects]]
   from = "/manual_images/*"
   to = "https://161.33.208.191.sslip.io/manual_images/:splat"
   status = 200
