@@ -98,7 +98,8 @@ const TRANSLATIONS = {
     booking_title: "실시간 예약 및 스타일 문의",
     booking_desc: "카카오톡 플러스친구 혹은 전화 문의를 통해 빠르고 상세한 예약 안내를 도와드립니다.",
     btn_call: "📞 전화 바로 걸기",
-    btn_dm: "💬 인스타 DM 문의",
+    btn_dm: "💬 인스타 DM",
+    btn_ai_chat: "🤖 AI 문의",
     
     map_marker_text: "미니스 피어싱",
     map_header_title: "인천 남동구 성말로 10 (효명프라자 1층 111호)",
@@ -209,8 +210,9 @@ const TRANSLATIONS = {
     
     booking_title: "Real-time Booking & Style Inquiry",
     booking_desc: "Contact us via KakaoTalk or phone for fast booking and styling consultations.",
-    btn_call: "📞 Call Now",
-    btn_dm: "💬 Instagram DM Inquiry",
+    btn_call: "📞 Call Store",
+    btn_dm: "💬 Instagram DM",
+    btn_ai_chat: "🤖 AI Support",
     
     map_marker_text: "Minis Piercing",
     map_header_title: "10, Seongmal-ro, Namdong-gu, Incheon (Rm 111, Hyomyeong Plaza)",
@@ -312,6 +314,7 @@ const TRANSLATIONS = {
     booking_desc: "カカオトークプラス友だち、またはお電話にて、スムーズなご予約と詳細なコーディネート相談を承っております。",
     btn_call: "📞 電話をかける",
     btn_dm: "💬 インスタDMで相談",
+    btn_ai_chat: "🤖 AI問合せ",
     
     map_marker_text: "ミニスピアッシング",
     map_header_title: "仁川広域市南東区城말로 10 (孝明プラザ1階 111号)",
@@ -412,7 +415,8 @@ const TRANSLATIONS = {
     booking_title: "Запись в реальном времени и консультация",
     booking_desc: "Свяжитесь с нами по телефону или через соцсети для быстрой записи и обсуждения стиля.",
     btn_call: "📞 Позвонить",
-    btn_dm: "💬 Написать в Instagram DM",
+    btn_dm: "💬 Написать в DM",
+    btn_ai_chat: "🤖 AI Чат",
     
     map_marker_text: "Пирсинг Minis",
     map_header_title: "10, Сонмаль-ро, Namdong-gu, Инчхон (офис 111, Hyomyeong Plaza)",
@@ -512,8 +516,9 @@ const TRANSLATIONS = {
     
     booking_title: "الحجز الفوري والاستشارات المباشرة",
     booking_desc: "تواصل معنا عبر الهاتف أو وسائل التواصل الاجتماعي للحصول على حجز سريع واستشارة مخصصة للنمط الذي تفضله.",
-    btn_call: "📞 اتصل الآن",
-    btn_dm: "💬 تواصل عبر إنستغرام DM",
+    btn_call: "📞 الاتصال بنا",
+    btn_dm: "💬 رسالة إنستغرام",
+    btn_ai_chat: "🤖 استفسار AI",
     
     map_marker_text: "مينيس بيرسينغ",
     map_header_title: "شارع سونغمال-رو 10، إنتشون (مكتب 111، هيوميونغ بلازا)",
@@ -614,7 +619,8 @@ const TRANSLATIONS = {
     booking_title: "实时预约与搭配风格咨询",
     booking_desc: "欢迎通过电话或社交平台私信与我们联系，我们将为您提供快捷的预约及详细的款式搭配建议。",
     btn_call: "📞 拨打电话",
-    btn_dm: "💬 官方社交账号私信",
+    btn_dm: "💬 私信咨询",
+    btn_ai_chat: "🤖 AI 咨询",
     
     map_marker_text: "Minis Piercing",
     map_header_title: "仁川广域市南东区城末路10号 (孝明广场1楼111号)",
