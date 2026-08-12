@@ -653,30 +653,29 @@ section {
 }
 
 .piercing-point .label-bg {
-  fill: rgba(24, 24, 27, 0.88);
-  stroke: rgba(255, 42, 122, 0.4);
-  stroke-width: 1;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  fill: #09090b;
+  stroke: #ff2a7a;
+  stroke-width: 1.5;
+  transition: all 0.25s ease;
 }
 
 .piercing-point .label-text {
-  fill: #e4e4e7;
-  font-size: 11px;
-  font-weight: 600;
+  fill: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
   font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  letter-spacing: -0.3px;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 /* Hover & Active State for Piercing Points */
 .piercing-point:hover circle.outer,
 .piercing-point.active circle.outer {
-  fill: rgba(255, 42, 122, 0.75);
+  fill: rgba(255, 42, 122, 0.65);
   stroke: #ff6b9d;
   stroke-width: 2.5;
-  r: 15px;
-  filter: drop-shadow(0 0 10px rgba(255, 42, 122, 0.8));
+  r: 16px;
 }
 
 .piercing-point:hover circle.inner,
@@ -687,53 +686,52 @@ section {
 
 .piercing-point:hover .label-bg,
 .piercing-point.active .label-bg {
-  fill: var(--accent-pink);
+  fill: #ff2a7a;
   stroke: #ffffff;
-  stroke-width: 1.5;
-  filter: drop-shadow(0 0 12px rgba(255, 42, 122, 0.8));
+  stroke-width: 2;
 }
 
 .piercing-point:hover .label-text,
 .piercing-point.active .label-text {
   fill: #ffffff;
-  font-weight: 700;
+  font-weight: 800;
 }
 
-/* Quick Select Buttons Bar */
+/* Quick Select Buttons Bar - High Contrast Text */
 .ear-quick-select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-  max-width: 350px;
+  gap: 10px;
+  margin-top: 24px;
+  max-width: 360px;
 }
 
 .ear-select-chip {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--text-sub);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f4f4f5;
+  padding: 8px 16px;
+  border-radius: 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .ear-select-chip:hover {
-  background: rgba(255, 42, 122, 0.2);
-  border-color: rgba(255, 42, 122, 0.5);
+  background: rgba(255, 42, 122, 0.3);
+  border-color: #ff2a7a;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
 .ear-select-chip.active {
-  background: linear-gradient(135deg, #ff2a7a, #ff6b9d);
-  border-color: #ff2a7a;
+  background: linear-gradient(135deg, #ff2a7a, #ff5393);
+  border-color: #ffffff;
   color: #ffffff;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(255, 42, 122, 0.45);
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(255, 42, 122, 0.55);
   transform: translateY(-2px);
 }
 
