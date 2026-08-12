@@ -42,7 +42,7 @@
   <meta name="twitter:description" content="인천 구월동 피어싱 전문점 미니스 피어싱 구월점. 철저한 위생 소독(UV 소독 및 알코올 소독), 맞춤형 귀테리어 디자인, 배꼽·입술·더멀 바디 피어싱 시술 포트폴리오 안내.">
   <meta name="twitter:image" content="https://minisguwall.shop/images/post_13.webp">
 
-  <link rel="stylesheet" href="style.css?v=20260812_5">
+  <link rel="stylesheet" href="style.css?v=20260812_6">
 
   <!-- JSON-LD Structured Data (LocalBusiness) for Search Engines -->
   <script type="application/ld+json">
@@ -287,13 +287,13 @@
 
         <!-- Quick Select Buttons Bar -->
         <div class="ear-quick-select">
-          <button class="ear-select-chip active" data-piercing="helix">귓바퀴</button>
-          <button class="ear-select-chip" data-piercing="conch">이너컨츠</button>
-          <button class="ear-select-chip" data-piercing="tragus">트라거스</button>
-          <button class="ear-select-chip" data-piercing="lobe">귓볼</button>
-          <button class="ear-select-chip" data-piercing="outconch">아웃컨츠</button>
-          <button class="ear-select-chip" data-piercing="rook">룩</button>
-          <button class="ear-select-chip" data-piercing="industrial">사선피어싱</button>
+          <button class="ear-select-chip active" data-piercing="helix" data-i18n="p_name_helix">귓바퀴</button>
+          <button class="ear-select-chip" data-piercing="conch" data-i18n="p_name_conch">이너컨츠</button>
+          <button class="ear-select-chip" data-piercing="tragus" data-i18n="p_name_tragus">트라거스</button>
+          <button class="ear-select-chip" data-piercing="lobe" data-i18n="p_name_lobe">귓볼</button>
+          <button class="ear-select-chip" data-piercing="outconch" data-i18n="p_name_outconch">아웃컨츠</button>
+          <button class="ear-select-chip" data-piercing="rook" data-i18n="p_name_rook">룩</button>
+          <button class="ear-select-chip" data-piercing="industrial" data-i18n="p_name_industrial">사선피어싱</button>
         </div>
       </div>
 
@@ -644,8 +644,8 @@
           <span class="ai-online-dot"></span>
         </div>
         <div class="ai-chat-header-info">
-          <div class="ai-chat-header-name">미니스 AI 매니저</div>
-          <div class="ai-chat-header-status">응답 가능</div>
+          <div class="ai-chat-header-name" data-i18n="ai_chat_title">미니스 AI 매니저 💬</div>
+          <div class="ai-chat-header-status" data-i18n="ai_chat_status">온라인 | 24시간 실시간 답변</div>
         </div>
         <button class="ai-chat-close-btn" id="ai-chat-close-btn" aria-label="채팅 닫기">
           <i class="fa-solid fa-xmark"></i>
@@ -670,12 +670,13 @@
         <textarea
           class="ai-chat-input"
           id="ai-chat-input"
+          data-i18n-placeholder="ai_chat_placeholder"
           placeholder="피어싱에 대해 뭐든 물어보세요 💬"
           rows="1"
           maxlength="500"
           aria-label="메시지 입력"
         ></textarea>
-        <button class="ai-chat-send-btn" id="ai-chat-send-btn" aria-label="전송">
+        <button class="ai-chat-send-btn" id="ai-chat-send-btn" aria-label="전송" data-i18n-title="ai_chat_send" title="전송">
           <i class="fa-solid fa-paper-plane"></i>
         </button>
       </div>
@@ -686,7 +687,7 @@
       <span class="ai-chat-fab-notif" id="ai-fab-notif"></span>
       <span class="fab-icon">💬</span>
     </button>
-    <span class="ai-chat-fab-label">AI 문의</span>
+    <span class="ai-chat-fab-label" data-i18n="ai_fab_label">AI 문의</span>
   </div>
 
   <!-- Floating BGM Player Controller -->
@@ -729,6 +730,6 @@
   <!-- Scripts -->
   <script src="posts_data.js" defer></script>
   <script src="translations.js" defer></script>
-  <script src="app.js?v=20260812_5" defer></script>
+  <script src="app.js?v=20260812_6" defer></script>
 </body>
 </html>

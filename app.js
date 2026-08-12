@@ -445,12 +445,78 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (langSelect) langSelect.value = lang;
 
-    // Apply translations
+    // Apply text translations
     document.querySelectorAll("[data-i18n]").forEach(elem => {
       const key = elem.getAttribute("data-i18n");
       const translation = TRANSLATIONS[lang]?.[key];
       if (translation) {
         elem.innerHTML = translation;
+      }
+    });
+
+    // Apply placeholder translations
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(elem => {
+      const key = elem.getAttribute("data-i18n-placeholder");
+      const translation = TRANSLATIONS[lang]?.[key];
+      if (translation) {
+        elem.placeholder = translation;
+      }
+    });
+
+    // Apply title translations
+    document.querySelectorAll("[data-i18n-title]").forEach(elem => {
+      const key = elem.getAttribute("data-i18n-title");
+      const translation = TRANSLATIONS[lang]?.[key];
+      if (translation) {
+        elem.title = translation;
+      }
+    });
+
+    // Translate AI Chat Quick Question Buttons
+    const quickData = {
+      ko: [
+        { msg: "가격이 궁금해요", label: "💰 가격문의" },
+        { msg: "예약하고 싶어요", label: "📅 예약" },
+        { msg: "영업시간 알려주세요", label: "⏰ 영업시간" },
+        { msg: "위치 알려주세요", label: "📍 위치" }
+      ],
+      en: [
+        { msg: "I want to know the prices", label: "💰 Pricing" },
+        { msg: "I would like to make a reservation", label: "📅 Booking" },
+        { msg: "What are your business hours?", label: "⏰ Hours" },
+        { msg: "Where is the shop located?", label: "📍 Location" }
+      ],
+      ja: [
+        { msg: "料金を教えてください", label: "💰 料金問合せ" },
+        { msg: "予約したいです", label: "📅 予約" },
+        { msg: "営業時間を教えてください", label: "⏰ 営業時間" },
+        { msg: "アクセスを教えてください", label: "📍 アクセス" }
+      ],
+      ru: [
+        { msg: "Какова стоимость пирсинга?", label: "💰 Цены" },
+        { msg: "Хочу записаться", label: "📅 Запись" },
+        { msg: "Часы работы", label: "⏰ Режим работы" },
+        { msg: "Где вы находитесь?", label: "📍 Локация" }
+      ],
+      ar: [
+        { msg: "ما هي الأسعار؟", label: "💰 الأسعار" },
+        { msg: "أرغب في الحجز", label: "📅 الحجز" },
+        { msg: "ما هي ساعات العمل؟", label: "⏰ ساعات العمل" },
+        { msg: "أين يقع الموعد؟", label: "📍 الموقع" }
+      ],
+      zh: [
+        { msg: "想了解价格", label: "💰 价格咨询" },
+        { msg: "我想预约", label: "📅 预约" },
+        { msg: "营业时间是什么时候", label: "⏰ 营业时间" },
+        { msg: "店铺位置在哪里", label: "📍 位置" }
+      ]
+    };
+    const qList = quickData[lang] || quickData["ko"];
+    const qBtns = document.querySelectorAll(".ai-quick-btn");
+    qBtns.forEach((btn, idx) => {
+      if (qList[idx]) {
+        btn.setAttribute("data-msg", qList[idx].msg);
+        btn.textContent = qList[idx].label;
       }
     });
 
@@ -463,7 +529,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("rtl-mode");
     }
 
-    // Refresh components
+    // Refresh Ear Guide component placement data
     updateEarInfo(activeEarPlacement);
     
     // Remember current active filter and redraw gallery

@@ -37,6 +37,24 @@ const TRANSLATIONS = {
     guide_desc: "귀 부위의 명칭을 클릭하면 상세 설명, 관리 기간, 그리고 통증 지수를 확인할 수 있습니다.",
     guide_touch_hint: "원하는 피어싱 부위를 터치해 보세요!",
     
+    p_name_industrial: "사선피어싱",
+    p_name_helix: "귓바퀴",
+    p_name_rook: "룩",
+    p_name_outconch: "아웃컨츠",
+    p_name_conch: "이너컨츠",
+    p_name_tragus: "트라거스",
+    p_name_lobe: "귓볼",
+    
+    ai_fab_label: "AI 문의",
+    ai_chat_title: "미니스 AI 매니저 💬",
+    ai_chat_status: "온라인 | 24시간 실시간 답변",
+    ai_chat_placeholder: "피어싱에 대해 뭐든 물어보세요 💬",
+    ai_chat_send: "전송",
+    ai_welcome_title: "미니스 AI 매니저예요!",
+    ai_welcome_desc: "피어싱 가격은 물론, 위치 및 관리법까지 편하게 물어보세요 ✨",
+    
+    modal_btn_insta: "인스타그램에서 원본 게시글 보기",
+    
     stat_healing_label: "평균 관리 기간",
     stat_pain_label: "통증 지수",
     
@@ -131,6 +149,24 @@ const TRANSLATIONS = {
     guide_desc: "Click on any part of the ear diagram to view detailed descriptions, average healing times, and pain levels.",
     guide_touch_hint: "Tap any piercing placement to check!",
     
+    p_name_industrial: "Industrial",
+    p_name_helix: "Helix",
+    p_name_rook: "Rook",
+    p_name_outconch: "Outer Conch",
+    p_name_conch: "Inner Conch",
+    p_name_tragus: "Tragus",
+    p_name_lobe: "Lobe",
+    
+    ai_fab_label: "AI Support",
+    ai_chat_title: "Minis AI Manager 💬",
+    ai_chat_status: "Online | 24/7 Live Answers",
+    ai_chat_placeholder: "Ask anything about piercings... 💬",
+    ai_chat_send: "Send",
+    ai_welcome_title: "Minis AI Manager Here!",
+    ai_welcome_desc: "Feel free to ask about pricing, placement, or aftercare tips ✨",
+    
+    modal_btn_insta: "View Original Post on Instagram",
+    
     stat_healing_label: "Avg. Healing Time",
     stat_pain_label: "Pain Level",
     
@@ -213,6 +249,24 @@ const TRANSLATIONS = {
     guide_title: "部位別ピアスガイド",
     guide_desc: "耳の部位名をクリックすると、詳細な説明、完成までの期間、痛みの目安を確認できます。",
     guide_touch_hint: "ご希望の部位をタップしてください！",
+    
+    p_name_industrial: "인더스트리얼",
+    p_name_helix: "ヘリックス",
+    p_name_rook: "ルック",
+    p_name_outconch: "アウターコンク",
+    p_name_conch: "インナーコンク",
+    p_name_tragus: "トラガス",
+    p_name_lobe: "耳たぶ",
+    
+    ai_fab_label: "AI問合せ",
+    ai_chat_title: "ミニス AIマネージャー 💬",
+    ai_chat_status: "オンライン | 24時間リアルタイム回答",
+    ai_chat_placeholder: "ピアスについて何でも聞いてください 💬",
+    ai_chat_send: "送信",
+    ai_welcome_title: "ミニス AIマネージャーです！",
+    ai_welcome_desc: "料金、位置、アフターケアまで何でもお気軽にお聞きください ✨",
+    
+    modal_btn_insta: "Instagramで元の投稿を見る",
     
     stat_healing_label: "平均ケア期間",
     stat_pain_label: "痛みのレベル",
@@ -297,6 +351,24 @@ const TRANSLATIONS = {
     guide_desc: "Нажмите на любое место на схеме уха, чтобы просмотреть подробное описание, время заживления и уровень боли.",
     guide_touch_hint: "Нажмите на нужную зону уха!",
     
+    p_name_industrial: "Индастриал",
+    p_name_helix: "Хеликс",
+    p_name_rook: "Рук",
+    p_name_outconch: "Аутконч",
+    p_name_conch: "Конч",
+    p_name_tragus: "Трагус",
+    p_name_lobe: "Мочка",
+    
+    ai_fab_label: "AI Чат",
+    ai_chat_title: "Minis AI Менеджер 💬",
+    ai_chat_status: "Онлайн | 24/7 Ответы в реальном времени",
+    ai_chat_placeholder: "Задайте любой вопрос о пирсинге... 💬",
+    ai_chat_send: "Отправить",
+    ai_welcome_title: "Я AI-менеджер Minis!",
+    ai_welcome_desc: "Спрашивайте о ценах, уходе и расположении салона ✨",
+    
+    modal_btn_insta: "Посмотреть исходный пост в Instagram",
+    
     stat_healing_label: "Срок заживления",
     stat_pain_label: "Уровень боли",
     
@@ -380,6 +452,24 @@ const TRANSLATIONS = {
     guide_desc: "انقر على أي جزء في رسم الأذن لمشاهدة الوصف التفصيلي، ومتوسط فترة الشفاء، ومستوى الألم المتوقع.",
     guide_touch_hint: "اضغط على أي موضع لتفقد التفاصيل!",
     
+    p_name_industrial: "ثقب صناعي",
+    p_name_helix: "غضروف 외곽",
+    p_name_rook: "الروك",
+    p_name_outconch: "غضروف مسطح",
+    p_name_conch: "غضروف 내각",
+    p_name_tragus: "وتد",
+    p_name_lobe: "شحمة",
+    
+    ai_fab_label: "استفسار AI",
+    ai_chat_title: "مدير Minis الذكي 💬",
+    ai_chat_status: "متصل | إجابة فورية 24/7",
+    ai_chat_placeholder: "اسأل أي شيء عن الثقوب... 💬",
+    ai_chat_send: "إرسال",
+    ai_welcome_title: "أنا مدير Minis الذكي!",
+    ai_welcome_desc: "اسأل عن الأسعار والمواقع ونصائح العناية بكل راحة ✨",
+    
+    modal_btn_insta: "عرض المنشور الأصلي على إنستغرام",
+    
     stat_healing_label: "متوسط فترة الشفاء",
     stat_pain_label: "مستوى الألم",
     
@@ -462,6 +552,24 @@ const TRANSLATIONS = {
     guide_title: "耳部穿刺部位指南",
     guide_desc: "点击耳部结构图上的各部位名称，即可查看对应的详细介绍、平均愈合时间以及疼痛指数。",
     guide_touch_hint: "点击任意部位查看疼痛感与技巧！",
+    
+    p_name_industrial: "工业对穿",
+    p_name_helix: "耳轮",
+    p_name_rook: "洛克",
+    p_name_outconch: "外耳廓",
+    p_name_conch: "内耳廓",
+    p_name_tragus: "耳屏",
+    p_name_lobe: "耳垂",
+    
+    ai_fab_label: "AI 咨询",
+    ai_chat_title: "Minis AI 经理 💬",
+    ai_chat_status: "在线 | 24小时实时解答",
+    ai_chat_placeholder: "关于穿刺有任何疑问请随时提问 💬",
+    ai_chat_send: "发送",
+    ai_welcome_title: "我是 Minis AI 经理！",
+    ai_welcome_desc: "欢迎随时咨询价格、部位及护理技巧 ✨",
+    
+    modal_btn_insta: "在 Instagram 查看原帖",
     
     stat_healing_label: "平均愈合时间",
     stat_pain_label: "疼痛指数",
