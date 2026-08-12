@@ -603,3 +603,159 @@ window.showToast = function(message) {
     toast.classList.remove("show");
   }, 3500);
 };
+
+/* ==========================================================
+   Minis AI Chat Widget - connects to AIChat FastAPI backend
+========================================================== */
+(function() {
+  var AI_API_URL = 'https://minisguwall.shop/api/user/chat';
+  var SESSION_ID = 'web_' + Math.random().toString(36).substring(2, 11);
+  var fabBtn, chatWindow, closeBtn, messagesEl, inputEl, sendBtn, quickBtnsEl, fabNotif;
+  var isOpen = false, isLoading = false, hasShownWelcome = false;
+
+  function init() {
+    fabBtn      = document.getElementById('ai-chat-fab-btn');
+    chatWindow  = document.getElementById('ai-chat-window');
+    closeBtn    = document.getElementById('ai-chat-close-btn');
+    messagesEl  = document.getElementById('ai-chat-messages');
+    inputEl     = document.getElementById('ai-chat-input');
+    sendBtn     = document.getElementById('ai-chat-send-btn');
+    quickBtnsEl = document.getElementById('ai-quick-btns');
+    fabNotif    = document.getElementById('ai-fab-notif');
+    if (!fabBtn) return;
+    fabBtn.addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', closeChat);
+    sendBtn.addEventListener('click', handleSend);
+    inputEl.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); }
+    });
+    inputEl.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+    });
+    if (quickBtnsEl) {
+      quickBtnsEl.querySelectorAll('.ai-quick-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var msg = btn.getAttribute('data-msg');
+          if (msg) { inputEl.value = msg; handleSend(); quickBtnsEl.style.display = 'none'; }
+        });
+      });
+    }
+    document.addEventListener('click', function(e) {
+      if (isOpen && !document.getElementById('ai-chat-fab').contains(e.target)) closeChat();
+    });
+    setTimeout(function() {
+      if (!hasShownWelcome && fabNotif) fabNotif.style.display = 'block';
+    }, 3000);
+  }
+
+  function toggleChat() { isOpen ? closeChat() : openChat(); }
+
+  function openChat() {
+    isOpen = true;
+    chatWindow.classList.add('is-open');
+    fabBtn.classList.add('is-open');
+    if (fabNotif) fabNotif.style.display = 'none';
+    if (!hasShownWelcome) { hasShownWelcome = true; showWelcome(); }
+    setTimeout(function() { inputEl.focus(); }, 350);
+  }
+
+  function closeChat() {
+    isOpen = false;
+    chatWindow.classList.remove('is-open');
+    fabBtn.classList.remove('is-open');
+  }
+
+  window.openAIChat = openChat;
+
+  function showWelcome() {
+    var card = document.createElement('div');
+    card.className = 'ai-welcome-card';
+    card.innerHTML =
+      '<div class="ai-welcome-emoji">&#x1F495;</div>' +
+      '<div class="ai-welcome-title">미니스 AI 매니저예요!</div>' +
+      '<div class="ai-welcome-desc">피어싱 가격은 무론, 예약 및 사후관리까지<br>나는 듯 편하게 묻어보세요 &#x2728;</div>';
+    messagesEl.appendChild(card);
+    scrollToBottom();
+  }
+
+  function handleSend() {
+    var text = inputEl.value.trim();
+    if (!text || isLoading) return;
+    appendMessage('user', text);
+    inputEl.value = '';
+    inputEl.style.height = 'auto';
+    var typingEl = showTyping();
+    isLoading = true;
+    sendBtn.disabled = true;
+    fetch(AI_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, user_id: SESSION_ID })
+    }).then(function(res) {
+      if (!res.ok) throw new Error('API error ' + res.status);
+      return res.json();
+    }).then(function(data) {
+      removeTyping(typingEl);
+      isLoading = false;
+      sendBtn.disabled = false;
+      var chunks = (data.chunks && data.chunks.length) ? data.chunks : [data.reply || '잠시 후 다시 시도해 주세요!'];
+      var cardUrls = data.card_image_urls || (data.card_image_url ? [data.card_image_url] : []);
+      chunks.forEach(function(chunk, i) {
+        setTimeout(function() {
+          appendMessage('ai', chunk, i === chunks.length - 1 ? cardUrls : []);
+        }, i * 320);
+      });
+    }).catch(function(err) {
+      console.warn('[Minis AI Chat]', err);
+      removeTyping(typingEl);
+      isLoading = false;
+      sendBtn.disabled = false;
+      appendMessage('ai', '앉, 잠긄 연결이 안 됩어요! 잠시 후 다시 시도해주세요 &#x1F64F;');
+    });
+  }
+
+  function appendMessage(role, text, cardUrls) {
+    var group = document.createElement('div');
+    group.className = 'ai-msg-group from-' + (role === 'user' ? 'user' : 'ai');
+    var bubble = document.createElement('div');
+    bubble.className = 'ai-msg-bubble';
+    bubble.textContent = text;
+    group.appendChild(bubble);
+    if (role === 'ai' && cardUrls && cardUrls.length > 0) {
+      var wrap = document.createElement('div');
+      wrap.className = 'ai-card-images';
+      cardUrls.forEach(function(url) {
+        var img = document.createElement('img');
+        img.className = 'ai-card-img';
+        img.src = url;
+        img.alt = '시술 포트폴리오';
+        img.loading = 'lazy';
+        img.onerror = function() { this.style.display = 'none'; };
+        img.onclick = function() { window.open(url, '_blank'); };
+        wrap.appendChild(img);
+      });
+      group.appendChild(wrap);
+    }
+    messagesEl.appendChild(group);
+    scrollToBottom();
+  }
+
+  function showTyping() {
+    var el = document.createElement('div');
+    el.className = 'ai-msg-group from-ai';
+    el.innerHTML = '<div class="ai-typing-indicator"><span class="ai-typing-dot"></span><span class="ai-typing-dot"></span><span class="ai-typing-dot"></span></div>';
+    messagesEl.appendChild(el);
+    scrollToBottom();
+    return el;
+  }
+
+  function removeTyping(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
+  function scrollToBottom() { requestAnimationFrame(function() { messagesEl.scrollTop = messagesEl.scrollHeight; }); }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
