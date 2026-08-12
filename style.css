@@ -655,49 +655,49 @@ section {
 }
 
 .piercing-point .label-bg {
-  fill: #09090b;
+  fill: #0c0d14;
   stroke: #ff2a7a;
   stroke-width: 2;
-  transition: all 0.25s ease;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
+  transition: fill 0.2s ease, stroke 0.2s ease;
 }
 
 .piercing-point .label-text {
   fill: #ffffff;
   font-size: 13px;
   font-weight: 700;
-  font-family: 'Noto Sans KR', -apple-system, sans-serif;
-  letter-spacing: -0.2px;
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  letter-spacing: 0px;
   pointer-events: none;
-  transition: all 0.25s ease;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Hover & Active State for Piercing Points */
 .piercing-point:hover circle.outer,
 .piercing-point.active circle.outer {
-  fill: rgba(255, 42, 122, 0.85);
+  fill: #ff2a7a;
   stroke: #ffffff;
-  stroke-width: 3;
-  r: 18px;
+  stroke-width: 2.5;
+  r: 17px;
 }
 
 .piercing-point:hover circle.inner,
 .piercing-point.active circle.inner {
   fill: #ffffff;
-  r: 6px;
+  r: 5.5px;
 }
 
 .piercing-point:hover .label-bg,
 .piercing-point.active .label-bg {
   fill: #ff2a7a;
   stroke: #ffffff;
-  stroke-width: 2.5;
+  stroke-width: 2;
 }
 
 .piercing-point:hover .label-text,
 .piercing-point.active .label-text {
   fill: #ffffff;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 /* Quick Select Header & Buttons Bar */

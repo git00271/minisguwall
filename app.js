@@ -756,10 +756,14 @@ window.showToast = function(message) {
   function showWelcome() {
     var card = document.createElement('div');
     card.className = 'ai-welcome-card';
+    var lang = window.currentLang || 'ko';
+    var tObj = (window.TRANSLATIONS && window.TRANSLATIONS[lang]) ? window.TRANSLATIONS[lang] : (window.TRANSLATIONS ? window.TRANSLATIONS.ko : {});
+    var titleText = tObj.ai_welcome_title || '미니스 AI 매니저예요!';
+    var descText = tObj.ai_welcome_desc || '피어싱 가격은 물론, 위치 및 관리법까지 편하게 물어보세요 ✨';
     card.innerHTML =
       '<div class="ai-welcome-emoji">&#x1F495;</div>' +
-      '<div class="ai-welcome-title">미니스 AI 매니저예요!</div>' +
-      '<div class="ai-welcome-desc">피어싱 가격은 무론, 예약 및 사후관리까지<br>나는 듯 편하게 묻어보세요 &#x2728;</div>';
+      '<div class="ai-welcome-title" data-i18n="ai_welcome_title">' + titleText + '</div>' +
+      '<div class="ai-welcome-desc" data-i18n="ai_welcome_desc">' + descText + '</div>';
     messagesEl.appendChild(card);
     scrollToBottom();
   }
