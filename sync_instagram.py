@@ -50,6 +50,18 @@ def id_to_shortcode(media_id):
         shortcode = alphabet[remainder] + shortcode
     return shortcode
 
+EVENT_EXCLUDE_KEYWORDS = [
+    "이벤트", "event", "e음카드", "이음카드", "피해지원금", "지원금", 
+    "캐시백", "고유가", "생일자", "초성", "럭키박스", "할인행사", 
+    "special event", "수능", "혜택", "캐쉬백", "사용처", "공지사항", "안내문"
+]
+
+def is_non_piercing_event_post(caption):
+    if not caption:
+        return False
+    caption_lower = caption.lower()
+    return any(kw in caption_lower for kw in EVENT_EXCLUDE_KEYWORDS)
+
 def classify_category(caption):
     if not caption:
         return "ear"
@@ -307,7 +319,13 @@ def main():
         if shortcode and shortcode in curated_shortcodes:
             print(f"Skipping post {post_id} (shortcode {shortcode}) as it is already in curated posts.")
             continue
-            
+
+        # Check if non-piercing event / notice post
+        caption = item.get("caption") or ""
+        if is_non_piercing_event_post(caption):
+            print(f"Skipping non-piercing event/notice post {post_id}: {caption[:50]}...")
+            continue
+
         print(f"Processing new post ID: {post_id} ({permalink})")
         
         # Download image
