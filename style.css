@@ -2412,12 +2412,14 @@ footer {
 
 /* ── 말풍선 ── */
 .ai-msg-bubble {
-  max-width: 82%;
+  max-width: 85%;
   padding: 9px 13px;
   border-radius: 18px;
   font-size: 0.85rem;
   line-height: 1.55;
-  word-break: break-word;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
   font-family: var(--font-body);
 }
 
