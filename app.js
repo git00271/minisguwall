@@ -21,7 +21,7 @@ const PIERCING_INFO = {
   industrial: {
     ko: { name: "사선 피어싱", name_en: "Industrial", healing: "3 ~ 4개월", pain: 4, desc: "귀 위쪽 두 군데의 구멍을 하나의 긴 바벨로 연결하는 유니크하고 압도적인 존재감의 시술입니다. 힙하고 스트릿한 무드를 극대화해주며 남들과 다른 독보적인 스타일을 원할 때 제격입니다.", tip: "두 구멍의 각도와 위치 선정이 완벽해야 귀 모양이 변형되지 않으므로 미니스 구월점의 전문적인 맞춤 시술이 필수입니다." },
     en: { name: "Industrial", name_en: "Industrial", healing: "3 ~ 4 months", pain: 4, desc: "A unique, bold procedure connecting two separate cartilage piercings with a single straight barbell. It maximizes street-style aesthetic and is perfect for expressing a distinct, rebellious vibe.", tip: "The angles and placement of both holes must align perfectly to prevent ear shape distortion. Professional curation at Minis Guwol is essential." },
-    ja: { name: "インダストリアル", name_en: "Industrial", healing: "3 〜 4ヶ月", pain: 4, desc: "耳の上部2箇所の軟骨に穴を開け、1本の長いストレートバーベルでつなぐ、圧倒的な存在感を放つ施術です。ストリート感のあるクールな雰囲気を極限まで高めてくれます。", tip: "2つの穴の角度と位置が完璧に揃っていないと耳の変形の原因になるため、ミニス九月店のプロによる正確な施術が不可欠です。" },
+    ja: { name: "インダストリアル", name_en: "Industrial", healing: "3 〜 4ヶ月", pain: 4, desc: "耳の上部2箇所の軟骨に穴を開け、1本の長いストレートバーベルでつなぐ、圧倒的な存在感を放つ施術です。ストリート感のあるクールな雰囲気を極限まで高めてくれます。", tip: "2つの穴の角度と位置が完璧に揃っていないと耳의 변형의 원인이 되므로, ミニス九月店のプロによる正確な施術が不可欠です。" },
     ru: { name: "Индастриал", name_en: "Industrial", healing: "3 ~ 4 месяца", pain: 4, desc: "Уникальный прокол, соединяющий два отверстия в хряще одной длинной прямой штангой. Придает образу дерзкий уличный стиль и подходит тем, кто ищет максимальное самовыражение.", tip: "Углы и расположение отверстий должны идеально совпадать, чтобы хрящ не деформировался. Доверяйте этот прокол только профессионалам Minis." },
     ar: { name: "الثقب الصناعي", name_en: "Industrial", healing: "3 ~ 4 أشهر", pain: 4, desc: "ثقب فريد وجريء يربط بين ثقبين منفصلين في الغضروف العلوي بواسطة قضيب معدني طويل مستقيم. يمنحك مظهراً عصرياً وجريئاً ومثالي للتعبير عن أسلوب متمرد ومميز.", tip: "يجب محاذاة زوايا الثقبين بدقة متناهية لمنع تشوه شكل الأذن. خبرة صالون مينيس غوول تضمن لك ذلك." },
     zh: { name: "工业对穿", name_en: "Industrial", healing: "3 ~ 4个月", pain: 4, desc: "用一根直长双头杠铃横跨并连接耳轮上方的两个对穿孔，视觉冲击力极强。能极大彰显街头风与个性，是追求独特张扬风格的最佳选择。", tip: "两个穿孔的角度和间距必须精准对称以防耳骨受力变形，此项目必须由Minis九月店专业技师精细操作。" }
@@ -37,7 +37,7 @@ const PIERCING_INFO = {
   tragus: {
     ko: { name: "트라거스", name_en: "Tragus", healing: "2 ~ 3개월", pain: 3, desc: "귓구멍 바로 앞쪽의 작은 연골 부위로, 귀 안쪽과 얼굴형을 동시에 밝혀주는 작지만 확실한 포인트입니다. 주로 심플한 라블렛(뒷면이 납작한 피어싱)을 사용하여 깔끔한 데일리 세팅을 추천합니다.", tip: "시술 초기에는 이어폰(에어팟 등) 사용을 자제하고 라블렛 피어싱을 착용하는 것이 빠른 회복에 큰 도움이 됩니다." },
     en: { name: "Tragus", name_en: "Tragus", healing: "2 ~ 3 months", pain: 3, desc: "The small flap of cartilage directly in front of the ear canal. A subtle yet distinct point that brightens up both your ear curation and facial features. We recommend flat-back labrets for comfort.", tip: "Avoid using in-ear headphones (AirPods, etc.) during the early healing phase and wear flat-back labrets to prevent friction." },
-    ja: { name: "トラガス", name_en: "Tragus", healing: "2 〜 3ヶ月", pain: 3, desc: "耳穴の真前にある小さな三角形の軟骨で、耳の内側とお顔立ちを 동시에 明るく引き立てるポイントです。裏側が平らなラブレットスタッドを使用し、すっきりとした日常使いの設定をおすすめします。", tip: "完成するまでは、イヤホン（AirPodsなど）の使用を控え、ラブレットピアスを着用することが順調な回復に繋がります。" },
+    ja: { name: "トラガス", name_en: "Tragus", healing: "2 〜 3ヶ月", pain: 3, desc: "耳穴の真前にある小さな三角形の軟骨で、耳の内側とお顔立ちを同時に明るく引き立てるポイントです。裏側が平らなラブレットスタッドを使用し、すっきりとした日常使いの設定をおすすめします。", tip: "完成するまでは、イヤホン（AirPodsなど）の使用を控え、ラブレットピアスを着用することが順調な回復に繋がります。" },
     ru: { name: "Трагус", name_en: "Tragus", healing: "2 ~ 3 месяца", pain: 3, desc: "Прокол небольшого хрящевого выступа прямо перед слуховым проходом. Маленький, но выразительный акцент, освежающий черты лица. Рекомендуется носить лабреты с плоской обратной стороной.", tip: "В первые недели заживления откажитесь от использования внутриканальных наушников (AirPods) и носите лабреты для минимизации трения." },
     ar: { name: "وتد الأذن", name_en: "Tragus", healing: "2 ~ 3 أشهر", pain: 3, desc: "الغضروف الصغير البارز مباشرة أمام فتحة الأذن. نقطة ناعمة وواضحة تضيء تنسيق الأذن وملامح الوجه معاً. نوصي بارتداء أقراط مسطحة الخلفية (Labret) لمزيد من الراحة.", tip: "تجنب استخدام سماعات الأذن الداخلية (AirPods وغيرها) خلال المراحل الأولى من الشفاء وارتد أقراطاً مسطحة الخلفية لتجنب الاحتكاك." },
     zh: { name: "耳屏", name_en: "Tragus", healing: "2 ~ 3个月", pain: 3, desc: "外耳道正前方的软骨小凸起。能同时点亮耳朵内侧和面部线条，是精巧别致的点睛之笔。通常建议选用背面扁平的平底耳钉（Labret）以确保舒适。", tip: "穿刺初期需暂停使用入耳式耳机（如AirPods），佩戴平底耳钉可极大避免摩擦，有利于快速消肿。" }
@@ -45,7 +45,7 @@ const PIERCING_INFO = {
   rook: {
     ko: { name: "룩", name_en: "Rook", healing: "3 ~ 4개월", pain: 4, desc: "귀 안쪽 윗부분의 접힌 연골을 세로로 관통하는 난이도 높은 시술입니다. 미니 바나나 바벨이나 링 주얼리를 이용해 디테일하고 정교한 스타일링을 할 수 있어 매니아가 많은 세련된 부위입니다.", tip: "접혀 있는 좁은 틈새에 위치하므로 염증 예방을 위해 손으로 만지지 않는 것이 가장 중요합니다." },
     en: { name: "Rook", name_en: "Rook", healing: "3 ~ 4 months", pain: 4, desc: "A vertical cartilage piercing placed in the upper inner ear's fold. It allows for delicate and intricate styling with curved barbells or small rings, making it a favorite for piercing enthusiasts.", tip: "Located in a tight, folded gap. The absolute most important rule is not to touch or pick at it to prevent irritation and infection." },
-    ja: { name: "ルック", name_en: "Rook", healing: "3 〜 4ヶ月", pain: 4, desc: "耳の内側上部にある折り重なった軟骨を垂直に貫通する、難易度の高い施術です。ミニバナナバーベルや小さなリングを使用して、繊細でエッジの効いたコーディネートが楽しめます。", tip: "軟骨の狭い隙間に位置しているため、炎症を防ぐために手で触らないよう徹底することが重要です。" },
+    ja: { name: "ルック", name_en: "Rook", healing: "3 〜 4ヶ月", pain: 4, desc: "耳の内側上部にある折り重なった軟骨を垂直に貫通する、難易度の高い施術です。ミニバナナバーベルや小さなリングを使用して、繊細でエッジ의 効いたコーディネートが楽しめます。", tip: "軟骨の狭い隙間に位置しているため、炎症を防ぐために手で触らないよう徹底することが重要です。" },
     ru: { name: "Рук", name_en: "Rook", healing: "3 ~ 4 месяца", pain: 4, desc: "Вертикальный прокол складки хряща в верхней внутренней части уха. Позволяет создавать изящные акценты с помощью изогнутых штанг (бананов) или колечек. Любим ценителями необычного пирсинга.", tip: "Находится в узкой складке ушной раковины. Главное правило — не трогать прокол руками для предотвращения воспалений." },
     ar: { name: "الروك", name_en: "Rook", healing: "3 ~ 4 أشهر", pain: 4, desc: "ثقب عمودي صعب يمر عبر طية الغضروف الداخلي العلوي للأذن. يتيح تنسيقاً ناعماً ودقيقاً باستخدام قضبان منحنية (Barbell) أو حلقات صغيرة، مما يجعله مفضلاً لعشاق الثقوب المميزة.", tip: "بسبب موقعه الضيق في طيات الأذن، فإن القاعدة الأكثر أهمية هي عدم لمسه أو العبث به باليد لمنع التهيج والعدوى." },
     zh: { name: "洛克", name_en: "Rook", healing: "3 ~ 4个月", pain: 4, desc: "垂直穿过耳朵内侧上部折叠状软骨隆起的高难度项目。可选用精细的弧形弯针（Banana Barbell）或小细圈，充满精致的几何感，深受穿刺发烧友追捧。", tip: "因地处折叠紧凑的缝隙，日常护理最忌讳用手指去抠弄或频繁调整，避免诱发严重的耳骨炎。" }
@@ -57,28 +57,6 @@ const PIERCING_INFO = {
     ru: { name: "Флэт / Аутконч", name_en: "Outer Conch / Flat", healing: "2 ~ 3 месяца", pain: 3, desc: "Широкая плоская часть хряща в верхней половине уха. Отличное полотно для крупных акцентных украшений, кластеров и ярких накруток с россыпью кристаллов.", tip: "Часто травмируется дужками очков, масками или при расчесывании. Будьте аккуратны, чтобы избежать постоянного трения." },
     ar: { name: "غضروف الأذن المسطح", name_en: "Outer Conch / Flat", healing: "2 ~ 3 أشهر", pain: 3, desc: "المساحة الغضروفية المسطحة في الجزء العلوي من الأذن. مثل اللوحة الفنية، فهو المكان المثالي لعرض المجوهرات المميزة أو الفصوص الكبيرة. يمنحك أقصى درجات التنوع في التنسيق.", tip: "عرضة للاحتكاك الشديد بذراع النظارة أو خيوط الكمامة. يرجى الانتباه والحرص لتقليل الاحتكاك قدر الإمكان." },
     zh: { name: "外耳廓 / 平坦区", name_en: "Outer Conch / Flat", healing: "2 ~ 3个月", pain: 3, desc: "耳朵上方开阔平坦的软骨区（Flat）。如画布一般，最适合佩戴显眼的大吊坠、组合排钻饰品或设计复杂的耳钉。具有极强的可塑性与搭配空间。", tip: "极易摩擦到眼镜腿、发夹或口罩挂绳。日常佩戴这些物品时，需要格外轻缓，防止反复拉扯拉伤伤口。" }
-  }
-};tip: "Avoid using in-ear headphones (AirPods, etc.) during the early healing phase and wear flat-back labrets to prevent friction." },
-    ja: { name: "トラガス (Tragus)", healing: "2 〜 3ヶ月", pain: 3, desc: "耳穴の真前にある小さな三角形の軟骨で、耳の内側とお顔立ちを同時に明るく引き立てるポイントです。裏側が平らなラブレットスタッドを使用し、すっきりとした日常使いの設定をおすすめします。", tip: "完成するまでは、イヤホン（AirPodsなど）の使用を控え、ラブレットピアスを着用することが順調な回復に繋がります。" },
-    ru: { name: "Трагус (Tragus)", healing: "2 ~ 3 месяца", pain: 3, desc: "Прокол небольшого хрящевого выступа прямо перед слуховым проходом. Маленький, но выразительный акцент, освежающий черты лица. Рекомендуется носить лабреты с плоской обратной стороной.", tip: "В первые недели заживления откажитесь от использования внутриканальных наушников (AirPods) и носите лабреты для минимизации трения." },
-    ar: { name: "وتد الأذن (Tragus)", healing: "2 ~ 3 أشهر", pain: 3, desc: "الغضروف الصغير البارز مباشرة أمام فتحة الأذن. نقطة ناعمة وواضحة تضيء تنسيق الأذن وملامح الوجه معاً. نوصي بارتداء أقراط مسطحة الخلفية (Labret) لمزيد من الراحة.", tip: "تجنب استخدام سماعات الأذن الداخلية (AirPods وغيرها) خلال المراحل الأولى من الشفاء وارتد أقراطاً مسطحة الخلفية لتجنب الاحتكاك." },
-    zh: { name: "耳屏 (Tragus)", healing: "2 ~ 3个月", pain: 3, desc: "外耳道正前方的软骨小凸起。能同时点亮耳朵内侧和面部线条，是精巧别致的点睛之笔。通常建议选用背面扁平的平底耳钉（Labret）以确保舒适。", tip: "穿刺初期需暂停使用入耳式耳机（如AirPods），佩戴平底耳钉可极大避免摩擦，有利于快速消肿。" }
-  },
-  rook: {
-    ko: { name: "룩", healing: "3 ~ 4개월", pain: 4, desc: "귀 안쪽 윗부분의 접힌 연골을 세로로 관통하는 난이도 높은 시술입니다. 미니 바나나 바벨이나 링 주얼리를 이용해 디테일하고 정교한 스타일링을 할 수 있어 매니아가 많은 세련된 부위입니다.", tip: "접혀 있는 좁은 틈새에 위치하므로 염증 예방을 위해 손으로 만지지 않는 것이 가장 중요합니다." },
-    en: { name: "Rook", healing: "3 ~ 4 months", pain: 4, desc: "A vertical cartilage piercing placed in the upper inner ear's fold. It allows for delicate and intricate styling with curved barbells or small rings, making it a favorite for piercing enthusiasts.", tip: "Located in a tight, folded gap. The absolute most important rule is not to touch or pick at it to prevent irritation and infection." },
-    ja: { name: "ルック (Rook)", healing: "3 〜 4ヶ月", pain: 4, desc: "耳の内側上部にある折り重なった軟骨を垂直に貫通する、難易度の高い施術です。ミニバナナバーベルや小さなリングを使用して、繊細でエッジの効いたコーディネートが楽しめます。", tip: "軟骨の狭い隙間に位置しているため、炎症を防ぐために手で触らないよう徹底することが重要です。" },
-    ru: { name: "Рук (Rook)", healing: "3 ~ 4 месяца", pain: 4, desc: "Вертикальный прокол складки хряща в верхней внутренней части уха. Позволяет создавать изящные акценты с помощью изогнутых штанг (бананов) или колечек. Любим ценителями необычного пирсинга.", tip: "Находится в узкой складке ушной раковины. Главное правило — не трогать прокол руками для предотвращения воспалений." },
-    ar: { name: "الروك (Rook)", healing: "3 ~ 4 أشهر", pain: 4, desc: "ثقب عمودي صعب يمر عبر طية الغضروف الداخلي العلوي للأذن. يتيح تنسيقاً ناعماً ودقيقاً باستخدام قضبان منحنية (Barbell) أو حلقات صغيرة، مما يجعله مفضلاً لعشاق الثقوب المميزة.", tip: "بسبب موقعه الضيق في طيات الأذن، فإن القاعدة الأكثر أهمية هي عدم لمسه أو العبث به باليد لمنع التهيج والعدوى." },
-    zh: { name: "洛克 (Rook)", healing: "3 ~ 4个月", pain: 4, desc: "垂直穿过耳朵内侧上部折叠状软骨隆起的高难度项目。可选用精细的弧形弯针（Banana Barbell）或小细圈，充满精致的几何感，深受穿刺发烧友追捧。", tip: "因地处折叠紧凑的缝隙，日常护理最忌讳用手指去抠弄或频繁调整，避免诱发严重的耳骨炎。" }
-  },
-  outconch: {
-    ko: { name: "아웃컨츠 / 플랫", healing: "2 ~ 3개월", pain: 3, desc: "귀 위쪽 넓고 평평한 연골 부위(플랫)로, 화려하고 큰 팬던트나 멀티 스톤 주얼리를 세팅하기 가장 좋은 캔버스 같은 공간입니다. 넓은 면적 덕분에 다채로운 디자인 연출이 가능합니다.", tip: "안경 다리나 마스크 끈에 닿아 자극을 받기 쉬우므로 쓸리지 않도록 섬세한 주의가 요구됩니다." },
-    en: { name: "Outer Conch / Flat", healing: "2 ~ 3 months", pain: 3, desc: "The flat cartilage space in the upper ear. Like a canvas, it's the perfect spot for showcase jewelry, large pendants, or clustered studs. Offers maximum styling versatility.", tip: "It is highly susceptible to rubbing against glasses arms, hairpins, or face mask loops. Pay close attention to keep it friction-free." },
-    ja: { name: "アウターコンク (Outer Conch / Flat)", healing: "2 〜 3ヶ月", pain: 3, desc: "耳の上部にある平らな軟骨部分（フラット）で、華やかで大ぶりなチャームやマルチストーンを飾るのに最適なキャンバスのようなスペースです。広い面積のおかげで、個性的な表現が可能です。", tip: "メガネのつるやマスクの紐が当たりやすく刺激を受けやすいため、擦れないように細心の注意を払う必要があります。" },
-    ru: { name: "Флэт / Аутконч (Outer Conch / Flat)", healing: "2 ~ 3 месяца", pain: 3, desc: "Широкая плоская часть хряща в верхней половине уха. Отличное полотно для крупных акцентных украшений, кластеров и ярких накруток с россыпью кристаллов.", tip: "Часто травмируется дужками очков, масками или при расчесывании. Будьте аккуратны, чтобы избежать постоянного трения." },
-    ar: { name: "غضروف الأذن المسطح (Outer Conch / Flat)", healing: "2 ~ 3 أشهر", pain: 3, desc: "المساحة الغضروفية المسطحة في الجزء العلوي من الأذن. مثل اللوحة الفنية، فهو المكان المثالي لعرض المجوهرات المميزة أو الفصوص الكبيرة. يمنحك أقصى درجات التنوع في التنسيق.", tip: "عرضة للاحتكاك الشديد بذراع النظارة أو خيوط الكمامة. يرجى الانتباه والحرص لتقليل الاحتكاк قدر الإمكان." },
-    zh: { name: "外耳廓 / 平坦区 (Outer Conch / Flat)", healing: "2 ~ 3个月", pain: 3, desc: "耳朵上方开阔平坦的软骨区（Flat）。如画布一般，最适合佩戴显眼的大吊坠、组合排钻饰品或设计复杂的耳钉。具有极强的可塑性与搭配空间。", tip: "极易摩擦到眼镜腿、发夹或口罩挂绳。日常佩戴这些物品时，需要格外轻缓，防止反复拉扯拉伤伤口。" }
   }
 };
 
@@ -472,7 +450,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = elem.getAttribute("data-i18n");
       const translation = TRANSLATIONS[lang]?.[key];
       if (translation) {
-        elem.innerHTML = translation;
+        if (elem.tagName.toLowerCase() === "text") {
+          elem.textContent = translation;
+        } else {
+          elem.innerHTML = translation;
+        }
       }
     });
 
