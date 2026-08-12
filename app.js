@@ -691,7 +691,9 @@ window.showToast = function(message) {
    Minis AI Chat Widget - connects to AIChat FastAPI backend
 ========================================================== */
 (function() {
-  var AI_API_URL = 'https://minisguwall.shop/api/user/chat';
+  var AI_API_URL = window.location.hostname === 'minisguwall.shop'
+    ? 'https://minisguwall.shop/api/user/chat'
+    : 'https://161.33.208.191.sslip.io/api/user/chat';
   var SESSION_ID = 'web_' + Math.random().toString(36).substring(2, 11);
   var fabBtn, chatWindow, closeBtn, messagesEl, inputEl, sendBtn, quickBtnsEl, fabNotif;
   var isOpen = false, isLoading = false, hasShownWelcome = false;
