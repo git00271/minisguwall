@@ -567,7 +567,10 @@
             thread.scrollTop = thread.scrollHeight;
 
             try {
-                const response = await fetch('/api/user/chat', {
+                const apiTargetUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:')
+                    ? 'http://127.0.0.1:8000/api/user/chat'
+                    : 'https://161.33.208.191.sslip.io/api/user/chat';
+                const response = await fetch(apiTargetUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({

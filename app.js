@@ -691,8 +691,8 @@ window.showToast = function(message) {
    Minis AI Chat Widget - connects to AIChat FastAPI backend
 ========================================================== */
 (function() {
-  var AI_API_URL = window.location.hostname === 'minisguwall.shop'
-    ? 'https://minisguwall.shop/api/user/chat'
+  var AI_API_URL = (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://127.0.0.1:8000/api/user/chat'
     : 'https://161.33.208.191.sslip.io/api/user/chat';
   var SESSION_ID = 'web_' + Math.random().toString(36).substring(2, 11);
   var fabBtn, chatWindow, closeBtn, messagesEl, inputEl, sendBtn, quickBtnsEl, fabNotif;
@@ -800,7 +800,7 @@ window.showToast = function(message) {
       removeTyping(typingEl);
       isLoading = false;
       sendBtn.disabled = false;
-      appendMessage('ai', '앉, 잠긄 연결이 안 됩어요! 잠시 후 다시 시도해주세요 &#x1F64F;');
+      appendMessage('ai', '앗, 잠시 연결이 원활하지 않아요 😅 잠시 후 다시 시도해 주세요!');
     });
   }
 
