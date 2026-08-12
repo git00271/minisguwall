@@ -35,6 +35,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "피어싱 부위별 가이드",
     guide_desc: "귀 부위의 명칭을 클릭하면 상세 설명, 관리 기간, 그리고 통증 지수를 확인할 수 있습니다.",
+    guide_touch_hint: "원하는 피어싱 부위를 터치해 보세요!",
     
     stat_healing_label: "평균 관리 기간",
     stat_pain_label: "통증 지수",
@@ -128,6 +129,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "Ear Placement Guide",
     guide_desc: "Click on any part of the ear diagram to view detailed descriptions, average healing times, and pain levels.",
+    guide_touch_hint: "Tap any piercing placement to check!",
     
     stat_healing_label: "Avg. Healing Time",
     stat_pain_label: "Pain Level",
@@ -210,6 +212,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "部位別ピアスガイド",
     guide_desc: "耳の部位名をクリックすると、詳細な説明、完成までの期間、痛みの目安を確認できます。",
+    guide_touch_hint: "ご希望の部位をタップしてください！",
     
     stat_healing_label: "平均ケア期間",
     stat_pain_label: "痛みのレベル",
@@ -292,6 +295,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "Гайд по местам проколов",
     guide_desc: "Нажмите на любое место на схеме уха, чтобы просмотреть подробное описание, время заживления и уровень боли.",
+    guide_touch_hint: "Нажмите на нужную зону уха!",
     
     stat_healing_label: "Срок заживления",
     stat_pain_label: "Уровень боли",
@@ -374,6 +378,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "دليل مواضع ثقب الأذن",
     guide_desc: "انقر على أي جزء في رسم الأذن لمشاهدة الوصف التفصيلي، ومتوسط فترة الشفاء، ومستوى الألم المتوقع.",
+    guide_touch_hint: "اضغط على أي موضع لتفقد التفاصيل!",
     
     stat_healing_label: "متوسط فترة الشفاء",
     stat_pain_label: "مستوى الألم",
@@ -456,6 +461,7 @@ const TRANSLATIONS = {
     guide_sub: "Ear Piercing Guide",
     guide_title: "耳部穿刺部位指南",
     guide_desc: "点击耳部结构图上的各部位名称，即可查看对应的详细介绍、平均愈合时间以及疼痛指数。",
+    guide_touch_hint: "点击任意部位查看疼痛感与技巧！",
     
     stat_healing_label: "平均愈合时间",
     stat_pain_label: "疼痛指数",

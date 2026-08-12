@@ -349,6 +349,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 5. Interactive Ear Map Placement Click Handler
+  const earChips = document.querySelectorAll(".ear-select-chip");
+
   function updateEarInfo(placementKey) {
     activeEarPlacement = placementKey;
     const placementData = PIERCING_INFO[placementKey];
@@ -357,12 +359,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get current language data or fallback to English/Korean
     const data = placementData[currentLanguage] || placementData["ko"];
 
-    // Remove active class from all points
+    // Remove active class from all points & chips
     piercingPoints.forEach(pt => pt.classList.remove("active"));
+    earChips.forEach(chip => chip.classList.remove("active"));
     
-    // Add active class to corresponding SVG node
+    // Add active class to corresponding SVG node & chip
     const activePoint = document.querySelector(`.piercing-point[data-piercing="${placementKey}"]`);
     if (activePoint) activePoint.classList.add("active");
+
+    const activeChip = document.querySelector(`.ear-select-chip[data-piercing="${placementKey}"]`);
+    if (activeChip) activeChip.classList.add("active");
 
     // Update panel texts
     earKr.textContent = data.name;
@@ -392,6 +398,13 @@ document.addEventListener("DOMContentLoaded", () => {
   piercingPoints.forEach(point => {
     point.addEventListener("click", () => {
       const placement = point.getAttribute("data-piercing");
+      updateEarInfo(placement);
+    });
+  });
+
+  earChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      const placement = chip.getAttribute("data-piercing");
       updateEarInfo(placement);
     });
   });
