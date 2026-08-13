@@ -711,13 +711,36 @@ window.showToast = function(message) {
     fabBtn.addEventListener('click', toggleChat);
     closeBtn.addEventListener('click', closeChat);
     sendBtn.addEventListener('click', handleSend);
-    inputEl.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); }
-    });
-    inputEl.addEventListener('input', function() {
-      this.style.height = 'auto';
-      this.style.height = Math.min(this.scrollHeight, 100) + 'px';
-    });
+    
+    // Instant 1-tap focus handling for iOS WebKit / iPhone
+    if (inputEl) {
+      inputEl.addEventListener('touchstart', function(e) {
+        inputEl.focus();
+      }, { passive: true });
+      inputEl.addEventListener('click', function(e) {
+        inputEl.focus();
+      });
+      inputEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); }
+      });
+      inputEl.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+      });
+    }
+
+    var inputArea = document.querySelector('.ai-chat-input-area');
+    if (inputArea) {
+      inputArea.addEventListener('click', function(e) {
+        if (sendBtn && (e.target === sendBtn || sendBtn.contains(e.target))) return;
+        if (inputEl) inputEl.focus();
+      });
+      inputArea.addEventListener('touchstart', function(e) {
+        if (sendBtn && (e.target === sendBtn || sendBtn.contains(e.target))) return;
+        if (inputEl) inputEl.focus();
+      }, { passive: true });
+    }
+
     if (quickBtnsEl) {
       quickBtnsEl.querySelectorAll('.ai-quick-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -727,7 +750,8 @@ window.showToast = function(message) {
       });
     }
     document.addEventListener('click', function(e) {
-      if (isOpen && !document.getElementById('ai-chat-fab').contains(e.target)) closeChat();
+      var fab = document.getElementById('ai-chat-fab');
+      if (isOpen && fab && !fab.contains(e.target)) closeChat();
     });
     setTimeout(function() {
       if (!hasShownWelcome && fabNotif) fabNotif.style.display = 'block';

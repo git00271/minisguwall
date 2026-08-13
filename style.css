@@ -2535,7 +2535,7 @@ footer {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.09);
   color: var(--text-main);
-  font-size: 0.85rem;
+  font-size: 16px;
   padding: 9px 13px;
   border-radius: 22px;
   outline: none;
@@ -2545,6 +2545,10 @@ footer {
   min-height: 38px;
   max-height: 100px;
   overflow-y: auto;
+  -webkit-user-select: text;
+  user-select: text;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ai-chat-input::placeholder { color: var(--text-muted); }
@@ -2612,6 +2616,10 @@ footer {
     border-radius: 22px 22px 0 0;
     transform-origin: bottom center;
     max-height: 72vh;
+  }
+
+  .ai-chat-input {
+    font-size: 16px !important;
   }
 
   .ai-chat-fab {
