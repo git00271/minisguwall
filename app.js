@@ -712,6 +712,16 @@ window.showToast = function(message) {
     closeBtn.addEventListener('click', closeChat);
     sendBtn.addEventListener('click', handleSend);
     
+    // Prevent clicks/touches inside chat window from bubbling to document closeChat handler
+    if (chatWindow) {
+      chatWindow.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      chatWindow.addEventListener('touchstart', function(e) {
+        e.stopPropagation();
+      }, { passive: true });
+    }
+
     // Instant 1-tap focus handling for iOS WebKit / iPhone
     if (inputEl) {
       inputEl.addEventListener('touchstart', function(e) {
@@ -729,18 +739,6 @@ window.showToast = function(message) {
       });
     }
 
-    var inputArea = document.querySelector('.ai-chat-input-area');
-    if (inputArea) {
-      inputArea.addEventListener('click', function(e) {
-        if (sendBtn && (e.target === sendBtn || sendBtn.contains(e.target))) return;
-        if (inputEl) inputEl.focus();
-      });
-      inputArea.addEventListener('touchstart', function(e) {
-        if (sendBtn && (e.target === sendBtn || sendBtn.contains(e.target))) return;
-        if (inputEl) inputEl.focus();
-      }, { passive: true });
-    }
-
     if (quickBtnsEl) {
       quickBtnsEl.querySelectorAll('.ai-quick-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -750,8 +748,11 @@ window.showToast = function(message) {
       });
     }
     document.addEventListener('click', function(e) {
-      var fab = document.getElementById('ai-chat-fab');
-      if (isOpen && fab && !fab.contains(e.target)) closeChat();
+      var fabBtnEl = document.getElementById('ai-chat-fab-btn');
+      var winEl = document.getElementById('ai-chat-window');
+      if (isOpen && winEl && !winEl.contains(e.target) && fabBtnEl && !fabBtnEl.contains(e.target)) {
+        closeChat();
+      }
     });
     setTimeout(function() {
       if (!hasShownWelcome && fabNotif) fabNotif.style.display = 'block';
