@@ -672,32 +672,25 @@ section {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Hover & Active State for Piercing Points */
+/* Hover & Active State for Piercing Points (Touch-focused glowing design) */
+.piercing-point .touch-target {
+  cursor: pointer;
+}
+
 .piercing-point:hover circle.outer,
 .piercing-point.active circle.outer {
   fill: #ff2a7a;
   stroke: #ffffff;
-  stroke-width: 2.5;
-  r: 17px;
+  stroke-width: 3;
+  r: 18px;
+  filter: drop-shadow(0 0 12px #ff2a7a);
 }
 
 .piercing-point:hover circle.inner,
 .piercing-point.active circle.inner {
   fill: #ffffff;
-  r: 5.5px;
-}
-
-.piercing-point:hover .label-bg,
-.piercing-point.active .label-bg {
-  fill: #ff2a7a;
-  stroke: #ffffff;
-  stroke-width: 2;
-}
-
-.piercing-point:hover .label-text,
-.piercing-point.active .label-text {
-  fill: #ffffff;
-  font-weight: 800;
+  r: 6px;
+  filter: drop-shadow(0 0 6px #ffffff);
 }
 
 /* Quick Select Header & Buttons Bar */
