@@ -2120,6 +2120,9 @@ footer {
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
 }
 
 .bgm-btn:hover {

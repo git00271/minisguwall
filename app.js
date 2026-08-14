@@ -552,49 +552,56 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialLang = detectLanguage();
   setLanguage(initialLang);
 
-  // 7. Floating BGM Player Controller (Auto-play on scroll / first interaction)
+  // 7. Floating BGM Player Controller (iOS Safari & WebKit Optimized)
   const bgmAudio = document.getElementById("bgm-audio");
   const bgmToggleBtn = document.getElementById("bgm-toggle-btn");
 
   if (bgmAudio && bgmToggleBtn) {
-    const isExplicitlyMuted = localStorage.getItem("minis_bgm_play") === "false";
+    let isPlaying = false;
 
-    const startBgm = () => {
-      if (bgmAudio.paused && !isExplicitlyMuted) {
-        bgmAudio.play()
-          .then(() => {
-            bgmToggleBtn.classList.add("playing");
-            localStorage.setItem("minis_bgm_play", "true");
-          })
-          .catch(() => {});
+    function playAudio() {
+      bgmAudio.play()
+        .then(() => {
+          isPlaying = true;
+          bgmToggleBtn.classList.add("playing");
+          localStorage.setItem("minis_bgm_play", "true");
+        })
+        .catch(err => {
+          console.warn("Audio play prevented:", err);
+        });
+    }
+
+    function pauseAudio() {
+      bgmAudio.pause();
+      isPlaying = false;
+      bgmToggleBtn.classList.remove("playing");
+      localStorage.setItem("minis_bgm_play", "false");
+    }
+
+    function toggleAudio(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
       }
-    };
-
-    bgmToggleBtn.addEventListener("click", () => {
       if (bgmAudio.paused) {
-        bgmAudio.play()
-          .then(() => {
-            bgmToggleBtn.classList.add("playing");
-            localStorage.setItem("minis_bgm_play", "true");
-          })
-          .catch(err => {
-            console.log("Audio play failed: ", err);
-          });
+        playAudio();
       } else {
-        bgmAudio.pause();
-        bgmToggleBtn.classList.remove("playing");
-        localStorage.setItem("minis_bgm_play", "false");
+        pauseAudio();
       }
-    });
+    }
 
+    // Direct user tap handlers (both click and touchend for iOS)
+    bgmToggleBtn.addEventListener("click", toggleAudio);
+    bgmToggleBtn.addEventListener("touchend", toggleAudio, { passive: false });
+
+    // Auto-play on first scroll or interaction if not explicitly muted
+    const isExplicitlyMuted = localStorage.getItem("minis_bgm_play") === "false";
     if (!isExplicitlyMuted) {
-      // 1. Try immediate autoplay
-      startBgm();
-
-      // 2. Auto-play on first scroll, touch, or click interaction
       const autoEvents = ["scroll", "touchstart", "touchmove", "pointerdown", "click", "keydown"];
       const triggerAutoPlay = () => {
-        startBgm();
+        if (bgmAudio.paused) {
+          playAudio();
+        }
         autoEvents.forEach(evt => window.removeEventListener(evt, triggerAutoPlay));
       };
 
