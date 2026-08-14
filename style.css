@@ -170,10 +170,15 @@ header.scrolled {
   border: 1px solid var(--accent-pink);
   padding: 8px 18px;
   border-radius: 30px;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 0.88rem;
   cursor: pointer;
   transition: var(--transition-smooth);
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn:hover {
@@ -1806,6 +1811,40 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    gap: 4px;
+  }
+
+  .logo span {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+
+  .header-right {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .lang-select {
+    padding: 6px 20px 6px 7px;
+    font-size: 0.76rem;
+  }
+
+  .nav-btn {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    border-radius: 20px;
+  }
+
+  .hamburger {
+    margin-left: 2px;
+  }
   section {
     padding: 60px 16px;
   }
