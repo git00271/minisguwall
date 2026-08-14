@@ -6,12 +6,17 @@
   <title>minisguwall.shop</title>
   <script>
     (function() {
-      var p = window.location.pathname.toLowerCase().replace(/\/+$/, '');
-      if (p === '/privacy') { window.location.replace('/privacy.html'); }
-      else if (p === '/terms') { window.location.replace('/terms.html'); }
-      else if (p === '/user') { window.location.replace('/user.html'); }
-      else if (p === '/staff') { window.location.replace('cttps://161.33.208.191.sslip.io/staff'); }
-      else if (p === '/data-deletion') { window.location.replace('/data-deletion.html'); }
+      var p = window.location.pathname;
+      var pLower = p.toLowerCase().replace(/\/+$/, '');
+      if (pLower === '/privacy') { window.location.replace('/privacy.html'); return; }
+      if (pLower === '/terms') { window.location.replace('/terms.html'); return; }
+      if (pLower === '/user') { window.location.replace('/user.html'); return; }
+      if (pLower === '/staff') { window.location.replace('https://161.33.208.191.sslip.io/staff'); return; }
+      if (pLower === '/data-deletion') { window.location.replace('/data-deletion.html'); return; }
+      if (pLower.startsWith('/media/') || pLower.startsWith('/manual_images/') || pLower.startsWith('/api/') || pLower.startsWith('/webhook/')) {
+        window.location.replace('https://161.33.208.191.sslip.io' + p);
+        return;
+      }
     })();
   </script>
   <style>
