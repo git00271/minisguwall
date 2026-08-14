@@ -6,7 +6,7 @@ const TRANSLATIONS = {
     nav_gallery: "갤러리",
     nav_safety: "위생 & 안전",
     nav_location: "매장 안내",
-    nav_booking_btn: "예약 / 문의",
+    nav_booking_btn: "예약·문의",
     
     hero_title: "나만의 스타일을 찾다,<br><span class=\"gradient\">Define Your Style</span>",
     hero_sub: "인천 구월동 로데오거리의 피어싱 전문샵, <strong>미니스 피어싱 구월점</strong>입니다. 페이스 라인과 귀 모양에 최적화된 맞춤형 귀테리어와 100% 위생 멸균 시술로 당신만의 유니크한 무드를 완성해 드립니다.",

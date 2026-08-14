@@ -168,17 +168,19 @@ header.scrolled {
   background: transparent;
   color: var(--text-main);
   border: 1px solid var(--accent-pink);
-  padding: 8px 18px;
+  padding: 7px 15px;
   border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.88rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: var(--transition-smooth);
-  white-space: nowrap;
-  flex-shrink: 0;
-  display: inline-flex;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  min-width: fit-content;
 }
 
 .nav-btn:hover {
@@ -1836,10 +1838,13 @@ footer {
   }
 
   .nav-btn {
-    padding: 6px 11px;
-    font-size: 0.78rem;
-    white-space: nowrap;
-    border-radius: 20px;
+    padding: 5px 11px !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    border-radius: 20px !important;
   }
 
   .hamburger {
