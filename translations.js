@@ -289,7 +289,7 @@ const TRANSLATIONS = {
     guide_desc: "耳の部位名をクリックすると、詳細な説明、完成までの期間、痛みの目安を確認できます。",
     guide_touch_hint: "ご希望の部位をタップしてください！",
     
-    p_name_industrial: "인더스트리얼",
+    p_name_industrial: "インダストリアル",
     p_name_helix: "ヘリックス",
     p_name_rook: "ルック",
     p_name_outconch: "アウターコンク",
@@ -542,10 +542,10 @@ const TRANSLATIONS = {
     guide_touch_hint: "اضغط على أي موضع لتفقد التفاصيل!",
     
     p_name_industrial: "ثقب صناعي",
-    p_name_helix: "غضروف 외곽",
+    p_name_helix: "غضروف خارجي",
     p_name_rook: "الروك",
     p_name_outconch: "غضروف مسطح",
-    p_name_conch: "غضروف 내각",
+    p_name_conch: "غضروف داخلي",
     p_name_tragus: "وتد",
     p_name_lobe: "شحمة",
     
