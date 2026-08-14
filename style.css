@@ -2099,8 +2099,8 @@ footer {
 .bgm-player-container {
   position: fixed;
   bottom: 24px;
-  right: 24px;
-  z-index: 999;
+  left: 24px;
+  z-index: 8990;
 }
 
 .bgm-btn {
@@ -2197,7 +2197,7 @@ footer {
 /* ── 플로팅 채팅 버튼 ── */
 .ai-chat-fab {
   position: fixed;
-  bottom: 90px;
+  bottom: 24px;
   right: 24px;
   z-index: 9000;
   display: flex;
@@ -2656,6 +2656,16 @@ footer {
   .ai-chat-fab {
     bottom: 18px;
     right: 18px;
+  }
+
+  .bgm-player-container {
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .bgm-btn {
+    width: 46px;
+    height: 46px;
   }
 }
 

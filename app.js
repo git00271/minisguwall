@@ -552,12 +552,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialLang = detectLanguage();
   setLanguage(initialLang);
 
-  // 7. Floating BGM Player Controller
+  // 7. Floating BGM Player Controller (Auto-play on scroll / first interaction)
   const bgmAudio = document.getElementById("bgm-audio");
   const bgmToggleBtn = document.getElementById("bgm-toggle-btn");
 
   if (bgmAudio && bgmToggleBtn) {
-    const bgmPref = localStorage.getItem("minis_bgm_play") === "true";
+    const isExplicitlyMuted = localStorage.getItem("minis_bgm_play") === "false";
+
+    const startBgm = () => {
+      if (bgmAudio.paused && !isExplicitlyMuted) {
+        bgmAudio.play()
+          .then(() => {
+            bgmToggleBtn.classList.add("playing");
+            localStorage.setItem("minis_bgm_play", "true");
+          })
+          .catch(() => {});
+      }
+    };
 
     bgmToggleBtn.addEventListener("click", () => {
       if (bgmAudio.paused) {
@@ -576,16 +587,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    if (bgmPref) {
-      const playOnInteraction = () => {
-        bgmAudio.play().then(() => {
-          bgmToggleBtn.classList.add("playing");
-          window.removeEventListener("click", playOnInteraction);
-          window.removeEventListener("touchstart", playOnInteraction);
-        }).catch(() => {});
+    if (!isExplicitlyMuted) {
+      // 1. Try immediate autoplay
+      startBgm();
+
+      // 2. Auto-play on first scroll, touch, or click interaction
+      const autoEvents = ["scroll", "touchstart", "touchmove", "pointerdown", "click", "keydown"];
+      const triggerAutoPlay = () => {
+        startBgm();
+        autoEvents.forEach(evt => window.removeEventListener(evt, triggerAutoPlay));
       };
-      window.addEventListener("click", playOnInteraction);
-      window.addEventListener("touchstart", playOnInteraction);
+
+      autoEvents.forEach(evt => {
+        window.addEventListener(evt, triggerAutoPlay, { passive: true, once: true });
+      });
     }
   }
 
