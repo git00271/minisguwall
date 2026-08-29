@@ -1,5 +1,20 @@
 const INSTAGRAM_POSTS = [
   {
+    "id": "sync_DcnjT8tp8Nb",
+    "category": "ear",
+    "image": "images/sync_DcnjT8tp8Nb.webp",
+    "image_mobile": "images/mobile/sync_DcnjT8tp8Nb.webp",
+    "link": "https://www.instagram.com/p/DcnjT8tp8Nb/",
+    "description": {
+      "ko": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "en": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "ja": "＃九月洞ピアス＃仁川ピアス＃ピアス＃ミニスピアス by @guwall.minis",
+      "ru": "#Пирсинг Гуволь-дон #Пирсинг Инчхон #пирсинг #мини-пирсинг от @guwall.minis",
+      "ar": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis",
+      "zh": "#구월동피어싱 #인천피어싱 #피어싱 #미니스피어싱 by @guwall.minis"
+    }
+  },
+  {
     "id": "sync_DcQEwseJkBa",
     "category": "ear",
     "image": "images/sync_DcQEwseJkBa.webp",
